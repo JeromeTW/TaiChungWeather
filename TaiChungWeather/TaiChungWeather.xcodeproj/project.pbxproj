@@ -14,6 +14,9 @@
 		023729812023365C009D4187 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0237297F2023365C009D4187 /* LaunchScreen.storyboard */; };
 		0241D10D20241EF1005D9F91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0241D10F20241EF1005D9F91 /* InfoPlist.strings */; };
 		0241D11020241EF7005D9F91 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0241D11220241EF7005D9F91 /* Localizable.strings */; };
+		02C5671E2024408600A5DAB8 /* WeekWeather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 02C5671C2024408600A5DAB8 /* WeekWeather.xcdatamodeld */; };
+		02C567202024416300A5DAB8 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5671F2024416300A5DAB8 /* Weather.swift */; };
+		02C567222024451500A5DAB8 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C567212024451500A5DAB8 /* NetworkController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		023729822023365C009D4187 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0241D10E20241EF1005D9F91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0241D11120241EF7005D9F91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		02C5671D2024408600A5DAB8 /* WeekWeather.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WeekWeather.xcdatamodel; sourceTree = "<group>"; };
+		02C5671F2024416300A5DAB8 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		02C567212024451500A5DAB8 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,8 @@
 				0237297A2023365C009D4187 /* Main.storyboard */,
 				0237297F2023365C009D4187 /* LaunchScreen.storyboard */,
 				02372988202336F8009D4187 /* Support */,
+				02C5671F2024416300A5DAB8 /* Weather.swift */,
+				02C567212024451500A5DAB8 /* NetworkController.swift */,
 			);
 			path = TaiChungWeather;
 			sourceTree = "<group>";
@@ -74,6 +82,7 @@
 				0241D11220241EF7005D9F91 /* Localizable.strings */,
 				0237297D2023365C009D4187 /* Assets.xcassets */,
 				023729822023365C009D4187 /* Info.plist */,
+				02C5671C2024408600A5DAB8 /* WeekWeather.xcdatamodeld */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -153,6 +162,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02C567222024451500A5DAB8 /* NetworkController.swift in Sources */,
+				02C567202024416300A5DAB8 /* Weather.swift in Sources */,
+				02C5671E2024408600A5DAB8 /* WeekWeather.xcdatamodeld in Sources */,
 				023729792023365C009D4187 /* ViewController.swift in Sources */,
 				023729772023365C009D4187 /* AppDelegate.swift in Sources */,
 			);
@@ -339,6 +351,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		02C5671C2024408600A5DAB8 /* WeekWeather.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				02C5671D2024408600A5DAB8 /* WeekWeather.xcdatamodel */,
+			);
+			currentVersion = 02C5671D2024408600A5DAB8 /* WeekWeather.xcdatamodel */;
+			path = WeekWeather.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0237296B2023365C009D4187 /* Project object */;
 }
