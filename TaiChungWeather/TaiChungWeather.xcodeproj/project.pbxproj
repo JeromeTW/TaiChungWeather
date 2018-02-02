@@ -12,6 +12,8 @@
 		0237297C2023365C009D4187 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0237297A2023365C009D4187 /* Main.storyboard */; };
 		0237297E2023365C009D4187 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0237297D2023365C009D4187 /* Assets.xcassets */; };
 		023729812023365C009D4187 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0237297F2023365C009D4187 /* LaunchScreen.storyboard */; };
+		0241D10D20241EF1005D9F91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0241D10F20241EF1005D9F91 /* InfoPlist.strings */; };
+		0241D11020241EF7005D9F91 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0241D11220241EF7005D9F91 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		0237297D2023365C009D4187 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		023729802023365C009D4187 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		023729822023365C009D4187 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0241D10E20241EF1005D9F91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0241D11120241EF7005D9F91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 		02372988202336F8009D4187 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				0241D10F20241EF1005D9F91 /* InfoPlist.strings */,
+				0241D11220241EF7005D9F91 /* Localizable.strings */,
 				0237297D2023365C009D4187 /* Assets.xcassets */,
 				023729822023365C009D4187 /* Info.plist */,
 			);
@@ -132,7 +138,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0241D11020241EF7005D9F91 /* Localizable.strings in Resources */,
 				023729812023365C009D4187 /* LaunchScreen.storyboard in Resources */,
+				0241D10D20241EF1005D9F91 /* InfoPlist.strings in Resources */,
 				0237297E2023365C009D4187 /* Assets.xcassets in Resources */,
 				0237297C2023365C009D4187 /* Main.storyboard in Resources */,
 			);
@@ -167,6 +175,22 @@
 				023729802023365C009D4187 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		0241D10F20241EF1005D9F91 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0241D10E20241EF1005D9F91 /* Base */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0241D11220241EF7005D9F91 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0241D11120241EF7005D9F91 /* Base */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -312,6 +336,7 @@
 				023729872023365C009D4187 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

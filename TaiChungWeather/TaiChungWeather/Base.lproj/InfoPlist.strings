@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+
+  Created by JEROME on 2017/10/6.
+  Copyright © 2017年 JEROME. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "Tai Chung Weather";
+"CFBundleName" = "Tai Chung Weather";
