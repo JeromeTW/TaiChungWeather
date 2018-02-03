@@ -20,7 +20,6 @@
 		02C567242024632B00A5DAB8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C567232024632B00A5DAB8 /* Utils.swift */; };
 		02C567262024633E00A5DAB8 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C567252024633E00A5DAB8 /* Define.swift */; };
 		02C567282024635400A5DAB8 /* String+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C567272024635400A5DAB8 /* String+Path.swift */; };
-		1A11EDADCBF8D4BF06309B94 /* Pods_TaiChungWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB24B7D9384AC9FCB6D63E1 /* Pods_TaiChungWeather.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,9 +38,6 @@
 		02C567232024632B00A5DAB8 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		02C567252024633E00A5DAB8 /* Define.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
 		02C567272024635400A5DAB8 /* String+Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Path.swift"; sourceTree = "<group>"; };
-		5FB24B7D9384AC9FCB6D63E1 /* Pods_TaiChungWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaiChungWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6128084B3C518F43C9283FC4 /* Pods-TaiChungWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiChungWeather.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaiChungWeather/Pods-TaiChungWeather.release.xcconfig"; sourceTree = "<group>"; };
-		73DBFEDD4346DB7983CDFC47 /* Pods-TaiChungWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiChungWeather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaiChungWeather/Pods-TaiChungWeather.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +45,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A11EDADCBF8D4BF06309B94 /* Pods_TaiChungWeather.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,8 +56,6 @@
 			children = (
 				023729752023365C009D4187 /* TaiChungWeather */,
 				023729742023365C009D4187 /* Products */,
-				1D236A9B1C4251A3EF63476B /* Pods */,
-				885EBFF2CA0841A6FE8D2FB6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,23 +104,6 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
-		1D236A9B1C4251A3EF63476B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				73DBFEDD4346DB7983CDFC47 /* Pods-TaiChungWeather.debug.xcconfig */,
-				6128084B3C518F43C9283FC4 /* Pods-TaiChungWeather.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		885EBFF2CA0841A6FE8D2FB6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5FB24B7D9384AC9FCB6D63E1 /* Pods_TaiChungWeather.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,12 +111,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 023729852023365C009D4187 /* Build configuration list for PBXNativeTarget "TaiChungWeather" */;
 			buildPhases = (
-				A0100C104EDC7749E2C2C45F /* [CP] Check Pods Manifest.lock */,
 				0237296F2023365C009D4187 /* Sources */,
 				023729702023365C009D4187 /* Frameworks */,
 				023729712023365C009D4187 /* Resources */,
-				533E557B3F1A516BFE41106C /* [CP] Embed Pods Frameworks */,
-				FEBA99FB43812AE1DB8720F8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -200,60 +173,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		533E557B3F1A516BFE41106C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TaiChungWeather/Pods-TaiChungWeather-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWXMLHash.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaiChungWeather/Pods-TaiChungWeather-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A0100C104EDC7749E2C2C45F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TaiChungWeather-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FEBA99FB43812AE1DB8720F8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaiChungWeather/Pods-TaiChungWeather-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0237296F2023365C009D4187 /* Sources */ = {
@@ -406,7 +325,6 @@
 		};
 		023729862023365C009D4187 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 73DBFEDD4346DB7983CDFC47 /* Pods-TaiChungWeather.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 47FGBWZVJ9;
@@ -421,7 +339,6 @@
 		};
 		023729872023365C009D4187 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6128084B3C518F43C9283FC4 /* Pods-TaiChungWeather.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 47FGBWZVJ9;
