@@ -17,30 +17,12 @@ class CoreDataConnect {
     }
     
     // insert
-    func insert(_ myEntityName:String, attributeInfo:[String:String]) -> Bool {
+    func insert(_ myEntityName:String, attributeInfo:[String: Any]) -> Bool {
 
         let insetData = NSEntityDescription.insertNewObject(forEntityName: myEntityName, into: myContext)
         
         for (key,value) in attributeInfo {
-            let t = insetData.entity.attributesByName[key]?.attributeType
-            
-            if t == .integer16AttributeType || t == .integer32AttributeType || t == .integer64AttributeType {
-                insetData.setValue(Int(value), forKey: key)
-            } else if t == .doubleAttributeType || t == .floatAttributeType {
-                insetData.setValue(Double(value), forKey: key)
-            } else if t == .booleanAttributeType {
-                insetData.setValue((value == "true" ? true : false), forKey: key)
-            } else {
-              if key == Constant.timeKey {
-                guard let date = Date.dateFromString(dateTimeString: value) else {
-                  assertionFailure()
-                  return false
-                }
-                insetData.setValue(date, forKey: key)
-              } else {
-                insetData.setValue(value, forKey: key)
-              }
-            }
+          insetData.setValue(value, forKey: key) 
         }
         
         do {
@@ -55,12 +37,12 @@ class CoreDataConnect {
     }
     
     // retrieve
-    func retrieve(_ myEntityName:String, predicate:String?, sort:[[String:Bool]]?, limit:Int?) -> [NSManagedObject]? {
+    func retrieve(_ myEntityName:String, predicate:NSPredicate?, sort:[[String:Bool]]?, limit:Int?) -> [NSManagedObject]? {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: myEntityName)
         
         // predicate
         if let myPredicate = predicate {
-            request.predicate = NSPredicate(format: myPredicate)
+          request.predicate = predicate
         }
         
         // sort
@@ -92,7 +74,7 @@ class CoreDataConnect {
     }
     
     // update
-    func update(_ myEntityName:String, predicate:String?, attributeInfo:[String:String]) -> Bool {
+    func update(_ myEntityName:String, predicate:NSPredicate?, attributeInfo:[String:String]) -> Bool {
         if let results = self.retrieve(myEntityName, predicate: predicate, sort: nil, limit: nil) {
             for result in results {
                 for (key,value) in attributeInfo {
@@ -123,7 +105,7 @@ class CoreDataConnect {
     }
     
     // delete
-    func delete(_ myEntityName:String, predicate:String?) -> Bool {
+    func delete(_ myEntityName:String, predicate:NSPredicate?) -> Bool {
         if let results = self.retrieve(myEntityName, predicate: predicate, sort: nil, limit: nil) {
             for result in results {
                 myContext.delete(result)

@@ -47,11 +47,21 @@ class ParserManager {
     let myContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let coreDataConnect = CoreDataConnect(context: myContext)
     
+    guard let date = Date.dateFromString(dateTimeString: pubDateString) else {
+      assertionFailure()
+      return false
+    }
+    
+    let temp = NSPredicate(format: "time = %@", date as CVarArg)
+    guard let results = coreDataConnect.retrieve(Constant.weatherEntityName, predicate: temp, sort: nil, limit: nil), results.isEmpty else {
+      return true
+    }
+    
     // insert
     let insertResult = coreDataConnect.insert(
       Constant.weatherEntityName, attributeInfo: [
-        Constant.timeKey : pubDateString,
-        Constant.contentKey : weekWeatherString
+        Constant.timeKey : date as Any,
+        Constant.contentKey : weekWeatherString as Any
       ])
     if insertResult {
       DLog("Insert successfully.")

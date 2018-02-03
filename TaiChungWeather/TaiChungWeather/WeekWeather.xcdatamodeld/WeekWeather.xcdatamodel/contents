@@ -6,7 +6,7 @@
         <attribute name="time" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
     <elements>
-        <element name="WeekWeather" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="WeekWeather" positionX="-63" positionY="-18" width="128" height="73"/>
         <element name="DailySentence" positionX="99" positionY="-18" width="128" height="45"/>
     </elements>
 </model>
