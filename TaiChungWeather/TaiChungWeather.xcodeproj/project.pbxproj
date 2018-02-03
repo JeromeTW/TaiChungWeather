@@ -20,6 +20,10 @@
 		02C567242024632B00A5DAB8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C567232024632B00A5DAB8 /* Utils.swift */; };
 		02C567262024633E00A5DAB8 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C567252024633E00A5DAB8 /* Define.swift */; };
 		02C567282024635400A5DAB8 /* String+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C567272024635400A5DAB8 /* String+Path.swift */; };
+		02C5672B202556B900A5DAB8 /* ParserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5672A202556B900A5DAB8 /* ParserManager.swift */; };
+		02C5672D2025604100A5DAB8 /* CoreDataConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5672C2025604100A5DAB8 /* CoreDataConnect.swift */; };
+		02C5672F2025814100A5DAB8 /* Date+ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5672E2025814100A5DAB8 /* Date+ISO8601.swift */; };
+		175B2CE79FE9E5E2051722C3 /* Pods_TaiChungWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C8B4650C26D40FC233D3EA /* Pods_TaiChungWeather.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,12 @@
 		02C567232024632B00A5DAB8 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		02C567252024633E00A5DAB8 /* Define.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
 		02C567272024635400A5DAB8 /* String+Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Path.swift"; sourceTree = "<group>"; };
+		02C5672A202556B900A5DAB8 /* ParserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserManager.swift; sourceTree = "<group>"; };
+		02C5672C2025604100A5DAB8 /* CoreDataConnect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataConnect.swift; sourceTree = "<group>"; };
+		02C5672E2025814100A5DAB8 /* Date+ISO8601.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+ISO8601.swift"; sourceTree = "<group>"; };
+		4F570888C24A82027359EF28 /* Pods-TaiChungWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiChungWeather.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaiChungWeather/Pods-TaiChungWeather.release.xcconfig"; sourceTree = "<group>"; };
+		83C8B4650C26D40FC233D3EA /* Pods_TaiChungWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaiChungWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E5B44ED3D4125319371DE3A /* Pods-TaiChungWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiChungWeather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaiChungWeather/Pods-TaiChungWeather.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				175B2CE79FE9E5E2051722C3 /* Pods_TaiChungWeather.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +67,8 @@
 			children = (
 				023729752023365C009D4187 /* TaiChungWeather */,
 				023729742023365C009D4187 /* Products */,
+				3281A5F726B6D29CD6536E12 /* Pods */,
+				226EEFBA9121BA95C554302B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +91,8 @@
 				02372988202336F8009D4187 /* Support */,
 				02C5671F2024416300A5DAB8 /* Weather.swift */,
 				02C567212024451500A5DAB8 /* NetworkController.swift */,
+				02C5672A202556B900A5DAB8 /* ParserManager.swift */,
+				02C5672C2025604100A5DAB8 /* CoreDataConnect.swift */,
 			);
 			path = TaiChungWeather;
 			sourceTree = "<group>";
@@ -100,8 +115,26 @@
 				02C567252024633E00A5DAB8 /* Define.swift */,
 				02C567232024632B00A5DAB8 /* Utils.swift */,
 				02C567272024635400A5DAB8 /* String+Path.swift */,
+				02C5672E2025814100A5DAB8 /* Date+ISO8601.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		226EEFBA9121BA95C554302B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83C8B4650C26D40FC233D3EA /* Pods_TaiChungWeather.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3281A5F726B6D29CD6536E12 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E5B44ED3D4125319371DE3A /* Pods-TaiChungWeather.debug.xcconfig */,
+				4F570888C24A82027359EF28 /* Pods-TaiChungWeather.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,9 +144,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 023729852023365C009D4187 /* Build configuration list for PBXNativeTarget "TaiChungWeather" */;
 			buildPhases = (
+				4DCE0FBBAB2C3073167B4C74 /* [CP] Check Pods Manifest.lock */,
 				0237296F2023365C009D4187 /* Sources */,
 				023729702023365C009D4187 /* Frameworks */,
 				023729712023365C009D4187 /* Resources */,
+				D6D07CD8204BDD2C45B769E6 /* [CP] Embed Pods Frameworks */,
+				01449A68F12E39CE2A91F0CE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -174,6 +210,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01449A68F12E39CE2A91F0CE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaiChungWeather/Pods-TaiChungWeather-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DCE0FBBAB2C3073167B4C74 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TaiChungWeather-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6D07CD8204BDD2C45B769E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TaiChungWeather/Pods-TaiChungWeather-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Ji/Ji.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Ji.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaiChungWeather/Pods-TaiChungWeather-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0237296F2023365C009D4187 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -185,8 +275,11 @@
 				02C567282024635400A5DAB8 /* String+Path.swift in Sources */,
 				023729792023365C009D4187 /* ViewController.swift in Sources */,
 				023729772023365C009D4187 /* AppDelegate.swift in Sources */,
+				02C5672B202556B900A5DAB8 /* ParserManager.swift in Sources */,
 				02C567242024632B00A5DAB8 /* Utils.swift in Sources */,
 				02C567262024633E00A5DAB8 /* Define.swift in Sources */,
+				02C5672D2025604100A5DAB8 /* CoreDataConnect.swift in Sources */,
+				02C5672F2025814100A5DAB8 /* Date+ISO8601.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +418,7 @@
 		};
 		023729862023365C009D4187 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E5B44ED3D4125319371DE3A /* Pods-TaiChungWeather.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 47FGBWZVJ9;
@@ -339,6 +433,7 @@
 		};
 		023729872023365C009D4187 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F570888C24A82027359EF28 /* Pods-TaiChungWeather.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 47FGBWZVJ9;

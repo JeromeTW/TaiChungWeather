@@ -12,9 +12,16 @@ import CoreData
 
 public typealias DoneHandler = (_ error: Error?) -> Void
 
+public enum NetworkError: Error {
+  case unknown
+  case noData
+  case invalidDecoding
+}
+
 class NetworkController {
   static let shared = NetworkController()  // Singleton
   public var didQueryWeatherHandler: DoneHandler?
+  private let parserManager = ParserManager.shared
   
   private let feedWeatherURLString = "http://www.cwb.gov.tw/rss/forecast/36_08.xml"
   private init() {
@@ -34,12 +41,15 @@ class NetworkController {
         self.didQueryWeatherHandler?(error)
       return
       }
-      guard let data = data, let string = String(data: data, encoding: .utf8) else {
-        // TODO:
+      guard let data = data else {
+        self.didQueryWeatherHandler?(NetworkError.noData)
         return
       }
-      DLog(string)
-      
+      guard let string = String(data: data, encoding: .utf8) else {
+        self.didQueryWeatherHandler?(NetworkError.invalidDecoding)
+        return
+      }
+      self.parserManager.parseWeatherXML(xmlString: string)
       self.didQueryWeatherHandler?(nil)
     })
     task.resume()

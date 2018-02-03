@@ -9,6 +9,17 @@
 import UIKit
 
 enum Constant {
+  // NSPersistentContainer
+  static let perisistentContainerName = "WeekWeather" // .xcdatamodeld file name.
+  
+  static let weatherEntityName = "WeekWeather"
+  static let dailySentenceEntityName = "DailySentence"  // TODO: modeld
+  
+  // Weather Entity Key
+  static let timeKey = "time"
+  static let contentKey = "content"
+  
+  
 }
 
 enum Localization: String {

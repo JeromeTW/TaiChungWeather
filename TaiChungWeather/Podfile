@@ -1,0 +1,8 @@
+platform :ios, '10.0'
+
+target 'TaiChungWeather' do
+  use_frameworks!
+
+  pod 'Ji', '~> 2.1.0'
+
+end
