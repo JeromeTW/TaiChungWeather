@@ -38,7 +38,7 @@ class NetworkController {
         // TODO:
         return
       }
-      print(string)
+      DLog(string)
       
       self.didQueryWeatherHandler?(nil)
     })
