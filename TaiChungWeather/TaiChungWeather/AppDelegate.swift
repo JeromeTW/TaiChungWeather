@@ -16,8 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    #if false // Develop
+      // Delete all records.
+      // Create Fetch Request
+      let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constant.weatherEntityName)
+      // Create Batch Delete Request
+      let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+      
+      do {
+        try persistentContainer.viewContext.execute(batchDeleteRequest)
+      } catch {
+        DLog(error)
+      }
+    #endif
+    // Start to fetch data.
     let networkController = NetworkController.shared
-    
     return true
   }
   func applicationWillTerminate(_ application: UIApplication) {

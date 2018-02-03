@@ -31,8 +31,14 @@ class CoreDataConnect {
             } else if t == .booleanAttributeType {
                 insetData.setValue((value == "true" ? true : false), forKey: key)
             } else {
-              if let date = Date.dateFromISO8601String(dateTimeString: value) {
+              if key == Constant.timeKey {
+                guard let date = Date.dateFromString(dateTimeString: value) else {
+                  assertionFailure()
+                  return false
+                }
                 insetData.setValue(date, forKey: key)
+              } else {
+                insetData.setValue(value, forKey: key)
               }
             }
         }
