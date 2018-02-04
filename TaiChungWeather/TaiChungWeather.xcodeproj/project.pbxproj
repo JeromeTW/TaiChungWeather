@@ -24,6 +24,7 @@
 		02C5672D2025604100A5DAB8 /* CoreDataConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5672C2025604100A5DAB8 /* CoreDataConnect.swift */; };
 		02C5672F2025814100A5DAB8 /* Date+ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5672E2025814100A5DAB8 /* Date+ISO8601.swift */; };
 		02C5673120258F0C00A5DAB8 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5673020258F0C00A5DAB8 /* Date+String.swift */; };
+		02DA0537202702E600954ABE /* Date+LocalTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA0536202702E600954ABE /* Date+LocalTime.swift */; };
 		175B2CE79FE9E5E2051722C3 /* Pods_TaiChungWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C8B4650C26D40FC233D3EA /* Pods_TaiChungWeather.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		02C5672C2025604100A5DAB8 /* CoreDataConnect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataConnect.swift; sourceTree = "<group>"; };
 		02C5672E2025814100A5DAB8 /* Date+ISO8601.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+ISO8601.swift"; sourceTree = "<group>"; };
 		02C5673020258F0C00A5DAB8 /* Date+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
+		02DA0536202702E600954ABE /* Date+LocalTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+LocalTime.swift"; sourceTree = "<group>"; };
 		4F570888C24A82027359EF28 /* Pods-TaiChungWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiChungWeather.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaiChungWeather/Pods-TaiChungWeather.release.xcconfig"; sourceTree = "<group>"; };
 		83C8B4650C26D40FC233D3EA /* Pods_TaiChungWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaiChungWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E5B44ED3D4125319371DE3A /* Pods-TaiChungWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiChungWeather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaiChungWeather/Pods-TaiChungWeather.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				02C567272024635400A5DAB8 /* String+Path.swift */,
 				02C5672E2025814100A5DAB8 /* Date+ISO8601.swift */,
 				02C5673020258F0C00A5DAB8 /* Date+String.swift */,
+				02DA0536202702E600954ABE /* Date+LocalTime.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				023729772023365C009D4187 /* AppDelegate.swift in Sources */,
 				02C5672B202556B900A5DAB8 /* ParserManager.swift in Sources */,
 				02C567242024632B00A5DAB8 /* Utils.swift in Sources */,
+				02DA0537202702E600954ABE /* Date+LocalTime.swift in Sources */,
 				02C5673120258F0C00A5DAB8 /* Date+String.swift in Sources */,
 				02C567262024633E00A5DAB8 /* Define.swift in Sources */,
 				02C5672D2025604100A5DAB8 /* CoreDataConnect.swift in Sources */,

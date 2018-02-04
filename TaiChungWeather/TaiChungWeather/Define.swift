@@ -15,9 +15,11 @@ enum Constant {
   static let weatherEntityName = "WeekWeather"
   static let dailyQuoteEntityName = "DailyQuote"  // TODO: modeld
   
-  // Weather Entity Key
+  // Entity Key
   static let timeKey = "time"
   static let contentKey = "content"
+  static let authorKey = "author"
+  static let articleKey = "article"
   
   
 }

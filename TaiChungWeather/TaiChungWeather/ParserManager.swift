@@ -95,31 +95,28 @@ class ParserManager {
     let numberOfCharactersToRemove = 8
     let range = authorAndDateString.index(authorAndDateString.endIndex, offsetBy: -numberOfCharactersToRemove)..<authorAndDateString.endIndex
     authorAndDateString.removeSubrange(range)
-    return true
-    /*
-    guard let pubDateString = targetItemNode.xPath(XMLKey.pubDate.rawValue).first?.content, let weekWeatherString = targetItemNode.xPath(XMLKey.description.rawValue).first?.content else {
-      return false
-    }
     
     let myContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let coreDataConnect = CoreDataConnect(context: myContext)
-    
-    guard let date = Date.dateFromString(dateTimeString: pubDateString) else {
+    let dateFormatString = "yyyyMMdd"
+    // NOTE: It will covert to local timezone automatically. dateString is +08 timezone date.
+    guard let date = Date.dateFromISO8601String(dateTimeString: dateString, with: dateFormatString) else {
       assertionFailure()
       return false
     }
     
     let temp = NSPredicate(format: "time = %@", date as CVarArg)
-    guard let results = coreDataConnect.retrieve(Constant.weatherEntityName, predicate: temp, sort: nil, limit: nil), results.isEmpty else {
+    guard let results = coreDataConnect.retrieve(Constant.dailyQuoteEntityName, predicate: temp, sort: nil, limit: nil), results.isEmpty else {
       DLog("The record is already existed.")
       return true
     }
     
     // insert
     let insertResult = coreDataConnect.insert(
-      Constant.weatherEntityName, attributeInfo: [
+      Constant.dailyQuoteEntityName, attributeInfo: [
         Constant.timeKey : date as Any,
-        Constant.contentKey : weekWeatherString as Any
+        Constant.articleKey : dailyQuetoString as Any,
+        Constant.authorKey : authorAndDateString as Any
       ])
     if insertResult {
       DLog("Insert successfully.")
@@ -127,7 +124,7 @@ class ParserManager {
     } else {
       DLog("Insert failed.")
       return false
-    }*/
+    }
   }
 }
 
