@@ -54,6 +54,7 @@ class ParserManager {
     
     let temp = NSPredicate(format: "time = %@", date as CVarArg)
     guard let results = coreDataConnect.retrieve(Constant.weatherEntityName, predicate: temp, sort: nil, limit: nil), results.isEmpty else {
+      DLog("The record is already existed.")
       return true
     }
     

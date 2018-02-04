@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="17C88" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="DailySentence" representedClassName="DailySentence" syncable="YES" codeGenerationType="class"/>
+    <entity name="DailyQuote" representedClassName="DailyQuote" syncable="YES" codeGenerationType="class"/>
     <entity name="WeekWeather" representedClassName="WeekWeather" syncable="YES" codeGenerationType="class">
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="time" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
     <elements>
         <element name="WeekWeather" positionX="-63" positionY="-18" width="128" height="73"/>
-        <element name="DailySentence" positionX="99" positionY="-18" width="128" height="45"/>
+        <element name="DailyQuote" positionX="99" positionY="-18" width="128" height="43"/>
     </elements>
 </model>
