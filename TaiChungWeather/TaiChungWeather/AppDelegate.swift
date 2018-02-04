@@ -13,20 +13,22 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
-
+  private let clearAllRecord = false  // For developing.
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    #if false // Develop
-      // Delete all records.
-      // Create Fetch Request
-      let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constant.weatherEntityName)
-      // Create Batch Delete Request
-      let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-      
-      do {
-        try persistentContainer.viewContext.execute(batchDeleteRequest)
-      } catch {
-        DLog(error)
+    #if DEBUG // Develop
+      if clearAllRecord {
+        // Delete all records.
+        // Create Fetch Request
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constant.weatherEntityName)
+        // Create Batch Delete Request
+        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        
+        do {
+          try persistentContainer.viewContext.execute(batchDeleteRequest)
+        } catch {
+          DLog(error)
+        }
       }
     #endif
     // Start to fetch data.
