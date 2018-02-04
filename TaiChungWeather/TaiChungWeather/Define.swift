@@ -29,5 +29,5 @@ enum Localization: String {
 }
 
 enum ImageName: String {
-  case name
+  case background
 }

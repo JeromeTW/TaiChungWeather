@@ -9,14 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+  
+  @IBOutlet weak var tableView: UITableView!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     let myContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let coreDataConnect = CoreDataConnect(context: myContext)
     
-    if let results = coreDataConnect.retrieve(Constant.weatherEntityName, predicate: nil, sort: nil, limit: nil) {
+    if let results = coreDataConnect.retrieveWeekWeatherResults(predicate: nil, sort: nil, limit: nil) {
       for result in results {
         DLog("\(result.value(forKey: Constant.timeKey)!). \(result.value(forKey: Constant.contentKey)!)")
       }
