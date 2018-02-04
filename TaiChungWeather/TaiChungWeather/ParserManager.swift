@@ -72,5 +72,62 @@ class ParserManager {
       return false
     }
   }
+  
+  /// Parse daily queto HTML string.
+  ///
+  /// - Parameter htmlString: HTML string.
+  /// - Returns: Return true means success.
+  public func parseDailyQuoteHTML(htmlString: String) -> Bool {
+    // XPath: //*[@id="maincontent"]/div[2]/article
+    let xpathString = "//*[@id=\"maincontent\"]/div[2]/article"
+    guard let jiDoc = Ji(htmlString: htmlString) else {
+      return false
+    }
+      
+    guard let targetNode = jiDoc.xPath(xpathString)?.first else {
+      return false
+    }
+    
+    guard let dailyQuetoString = targetNode.xPath("p").first?.content, var authorAndDateString = targetNode.xPath("h1").first?.content, let dateString = targetNode.xPath("h1/time").first?.content else {
+      return false
+    }
+    // Remove the last date string in "誠致教育基金會創辦人 方新舟20180204".
+    let numberOfCharactersToRemove = 8
+    let range = authorAndDateString.index(authorAndDateString.endIndex, offsetBy: -numberOfCharactersToRemove)..<authorAndDateString.endIndex
+    authorAndDateString.removeSubrange(range)
+    return true
+    /*
+    guard let pubDateString = targetItemNode.xPath(XMLKey.pubDate.rawValue).first?.content, let weekWeatherString = targetItemNode.xPath(XMLKey.description.rawValue).first?.content else {
+      return false
+    }
+    
+    let myContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let coreDataConnect = CoreDataConnect(context: myContext)
+    
+    guard let date = Date.dateFromString(dateTimeString: pubDateString) else {
+      assertionFailure()
+      return false
+    }
+    
+    let temp = NSPredicate(format: "time = %@", date as CVarArg)
+    guard let results = coreDataConnect.retrieve(Constant.weatherEntityName, predicate: temp, sort: nil, limit: nil), results.isEmpty else {
+      DLog("The record is already existed.")
+      return true
+    }
+    
+    // insert
+    let insertResult = coreDataConnect.insert(
+      Constant.weatherEntityName, attributeInfo: [
+        Constant.timeKey : date as Any,
+        Constant.contentKey : weekWeatherString as Any
+      ])
+    if insertResult {
+      DLog("Insert successfully.")
+      return true
+    } else {
+      DLog("Insert failed.")
+      return false
+    }*/
+  }
 }
 
