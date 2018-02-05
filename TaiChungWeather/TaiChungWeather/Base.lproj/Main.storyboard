@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -43,8 +44,8 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="PkZ-9N-qxj">
-                                                    <rect key="frame" x="318" y="68" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="322.5" y="68" width="37.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -80,35 +81,37 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="yQQ-z0-NYR">
-                                                    <rect key="frame" x="318" y="19" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="yQQ-z0-NYR">
+                                                    <rect key="frame" x="328" y="19" width="32" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="5H1-9p-Qeb">
-                                                    <rect key="frame" x="268" y="19" width="42" height="21"/>
+                                                    <rect key="frame" x="278" y="19" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="PTz-mV-iss">
-                                                    <rect key="frame" x="65" y="19" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="172" y="12.5" width="71" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="yQQ-z0-NYR" firstAttribute="centerY" secondItem="fqX-sV-JaS" secondAttribute="centerY" id="3Lg-dU-JTn"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="5H1-9p-Qeb" secondAttribute="trailing" constant="40" id="4dU-Fi-iAA"/>
+                                                <constraint firstItem="PTz-mV-iss" firstAttribute="centerX" secondItem="UUI-xF-08Z" secondAttribute="centerX" multiplier="1.1" priority="750" id="8fw-hh-oFd"/>
                                                 <constraint firstItem="fqX-sV-JaS" firstAttribute="centerY" secondItem="UUI-xF-08Z" secondAttribute="centerY" id="AMa-Kw-yYn"/>
                                                 <constraint firstItem="fqX-sV-JaS" firstAttribute="leading" secondItem="UUI-xF-08Z" secondAttribute="leadingMargin" id="K3o-2V-odo"/>
                                                 <constraint firstItem="5H1-9p-Qeb" firstAttribute="centerY" secondItem="yQQ-z0-NYR" secondAttribute="centerY" id="Oec-Ti-FjI"/>
-                                                <constraint firstItem="yQQ-z0-NYR" firstAttribute="leading" secondItem="5H1-9p-Qeb" secondAttribute="trailing" constant="8" id="VLm-GD-yIN"/>
+                                                <constraint firstItem="yQQ-z0-NYR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5H1-9p-Qeb" secondAttribute="trailing" constant="8" id="VLm-GD-yIN"/>
                                                 <constraint firstItem="yQQ-z0-NYR" firstAttribute="trailing" secondItem="UUI-xF-08Z" secondAttribute="trailingMargin" id="WtL-SW-DEm"/>
                                                 <constraint firstItem="5H1-9p-Qeb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PTz-mV-iss" secondAttribute="trailing" id="eHB-Zq-OFt"/>
                                                 <constraint firstItem="PTz-mV-iss" firstAttribute="centerY" secondItem="fqX-sV-JaS" secondAttribute="centerY" id="lUo-Al-M3G"/>
-                                                <constraint firstItem="PTz-mV-iss" firstAttribute="leading" secondItem="fqX-sV-JaS" secondAttribute="trailing" constant="8" symbolic="YES" id="zyf-P5-27a"/>
+                                                <constraint firstItem="PTz-mV-iss" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fqX-sV-JaS" secondAttribute="trailing" constant="8" symbolic="YES" id="zyf-P5-27a"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
