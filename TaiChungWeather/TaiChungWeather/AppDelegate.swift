@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       }
     #endif
     // Start to fetch data.
-    let networkController = NetworkController.shared
+    let _ = NetworkController.shared
     return true
   }
   func applicationWillTerminate(_ application: UIApplication) {
