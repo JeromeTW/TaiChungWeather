@@ -39,11 +39,6 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
       setupTableViewDataSource()
     }
   }
-  
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    
-  }
 
   deinit {
     if let _ = tableView {
@@ -53,11 +48,13 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
   
   private func didFetchNewData() {
     if networkController.isQueryDailyQuoteFinished && networkController.isQueryWeatherFinished {
-      // TODO: stop HUD.
-      tableView.dg_stopLoading()
-      fetchData()
-      setupTableViewDataSource()
-      tableView.reloadData()
+      DispatchQueue.main.async {
+        [weak self] in
+        self?.tableView.dg_stopLoading()
+        self?.fetchData()
+        self?.setupTableViewDataSource()
+        self?.tableView.reloadData()
+      }
     }
   }
   
