@@ -37,6 +37,6 @@ enum ImageName: String {
 
 enum Color {
   static let tiffanyBlue = UIColor(redInt: 165, greenInt: 218, blueInt: 219)
-  static let lightTiffanyBlue = UIColor(redInt: 240, greenInt: 250, blueInt: 250)
+  static let lightTiffanyBlue = UIColor(redInt: 242, greenInt: 251, blueInt: 251)
   static let orange = UIColor(redInt: 247, greenInt: 201, blueInt: 3)
 }
