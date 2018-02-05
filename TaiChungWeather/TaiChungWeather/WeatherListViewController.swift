@@ -62,7 +62,9 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
     
     let tempImageView = UIImageView(image: backgroundImage)
     tempImageView.frame = tableView.frame
-    tableView.backgroundView = tempImageView;
+    tableView.backgroundView = tempImageView
+    tableView.rowHeight = UITableViewAutomaticDimension
+    self.tableView.estimatedRowHeight = view.frame.width * 60 / 375
     tableView.dataSource = self
     tableView.delegate = self
   }
@@ -95,10 +97,6 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
       cell.weatherLabel.text = weather.description.rawValue
       return cell
     }
-  }
-  
-  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return view.frame.width * 75 / 375
   }
   
   // MARK: - UITableViewDelegate

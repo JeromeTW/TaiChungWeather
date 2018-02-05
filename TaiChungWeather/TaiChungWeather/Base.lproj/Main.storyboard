@@ -30,19 +30,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ACx-co-52F">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ACx-co-52F">
                                                     <rect key="frame" x="15" y="11" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="t7f-Iy-tRP">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="t7f-Iy-tRP">
                                                     <rect key="frame" x="15" y="40" width="340" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="PkZ-9N-qxj">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="PkZ-9N-qxj">
                                                     <rect key="frame" x="318" y="68" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -56,7 +56,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="t7f-Iy-tRP" secondAttribute="trailing" constant="20" symbolic="YES" id="UVk-eq-Djx"/>
                                                 <constraint firstItem="PkZ-9N-qxj" firstAttribute="bottom" secondItem="gkt-v3-E0q" secondAttribute="bottomMargin" id="a6W-3k-SQx"/>
                                                 <constraint firstItem="t7f-Iy-tRP" firstAttribute="leading" secondItem="ACx-co-52F" secondAttribute="leading" id="h3W-J1-art"/>
-                                                <constraint firstItem="PkZ-9N-qxj" firstAttribute="top" secondItem="t7f-Iy-tRP" secondAttribute="bottom" constant="7" id="i02-gs-aLv"/>
+                                                <constraint firstItem="PkZ-9N-qxj" firstAttribute="top" secondItem="t7f-Iy-tRP" secondAttribute="bottom" constant="8" symbolic="YES" id="i02-gs-aLv"/>
                                                 <constraint firstItem="PkZ-9N-qxj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gkt-v3-E0q" secondAttribute="leading" id="rwu-ij-s5k"/>
                                                 <constraint firstItem="ACx-co-52F" firstAttribute="top" secondItem="gkt-v3-E0q" secondAttribute="topMargin" id="yLM-Dw-95l"/>
                                             </constraints>
