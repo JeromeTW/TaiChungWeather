@@ -30,6 +30,9 @@ enum Localization: String {
   case night
   case today
   case monday, tuesday, wednesday, thursday, friday, saturday, sunday
+  case ok
+  case internetNotReachable
+  case loading
 }
 
 enum ImageName: String {

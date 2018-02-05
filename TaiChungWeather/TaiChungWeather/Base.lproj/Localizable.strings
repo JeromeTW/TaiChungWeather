@@ -17,3 +17,8 @@
 "friday" = "星期五";
 "saturday" = "星期六";
 "sunday" = "星期日";
+
+"ok" = "確定";
+"internetNotReachable" = "無法連上網路，請檢查連線狀態。";
+"loading" = "更新中...";
+

@@ -7,180 +7,246 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05B924C7CF1651901997599CBBB34124 /* chvalid.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AA41E3817C028DE22450EF9D83B9AC4 /* chvalid.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0B7820EEC22CE6A6EB76285119EC1622 /* DGElasticPullToRefresh-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 604D36F6B23B797AA6D642DDFB6102C4 /* DGElasticPullToRefresh-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0BED52A5484ED18DC103436E76EEF034 /* xmlmodule.h in Headers */ = {isa = PBXBuildFile; fileRef = 784B340243CEFDF7AE0FDAAC1DD6EB99 /* xmlmodule.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1117D9F56156A0C01B3FBB5A66FD9A82 /* xmlerror.h in Headers */ = {isa = PBXBuildFile; fileRef = 253A4F0092B7B5A8341F3C3499BEE699 /* xmlerror.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		11A8B056AEB80B70363118641B4FBE2F /* xmlschemas.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CEDD32148DE265FCA2CEB86ECC188D7 /* xmlschemas.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1575B9776677A1912E43B8DA75E88025 /* debugXML.h in Headers */ = {isa = PBXBuildFile; fileRef = 757609C78538D6AF8D1B44F0177B03B0 /* debugXML.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1FA69A142697D5399B74F8E4658C1798 /* list.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D7803FA64E8B3FD7456B9C146A2AE00 /* list.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24FC30BB6C3EB8ADF057F22522C40757 /* hash.h in Headers */ = {isa = PBXBuildFile; fileRef = A0D15C5E2AEC5F12607062D6C43E9302 /* hash.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		30B97708AD348ED88D188743630C4A7F /* nanoftp.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B73BB0A8678184B5492939A638E80DB /* nanoftp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		374C05B6392D535B60D928B0CABF9600 /* xmlmemory.h in Headers */ = {isa = PBXBuildFile; fileRef = BC13C26106CF2E86F2960F496E7C70C2 /* xmlmemory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		39AB5FBE6C3F6D456DAAE74BBB3DC03D /* xlink.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F80B75179EF80A2E6EA1951FE74C10A /* xlink.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		404A0B12FCE7CB3B3ED2DD7216D4083F /* xmlsave.h in Headers */ = {isa = PBXBuildFile; fileRef = A45E76B523FFD44023F251E3E9A8B801 /* xmlsave.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4482EBED80CEE7733EA5335069D63660 /* xmlstring.h in Headers */ = {isa = PBXBuildFile; fileRef = 5223D96D1083729D174C426A274B3954 /* xmlstring.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		44AA9BC67A0D1B4AC3E3EC614BCC2C58 /* c14n.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F6BB2B8BE4DA2C749458E4D7D2ECB3A /* c14n.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5044C16E89474AA88B99FFFD23049451 /* DGElasticPullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4C6AD8F6044D97F0ABCAD936772D90 /* DGElasticPullToRefreshView.swift */; };
-		51CAB18B1D6A61881C7401EA1C3BDD77 /* catalog.h in Headers */ = {isa = PBXBuildFile; fileRef = BF8951C457115F329973068A9E5B640F /* catalog.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		52D2DD7EE891B3719A475CE30E81CABD /* DGElasticPullToRefreshLoadingViewCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAF5E6C5304D357884CA740C4122BDD /* DGElasticPullToRefreshLoadingViewCircle.swift */; };
-		542EA745200BCFEFAA4C66A73CE1B0CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		5479FB593D82015E580988EE077EB8C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		55A9819C974B8584262F5E35074DA06F /* relaxng.h in Headers */ = {isa = PBXBuildFile; fileRef = 2369589CE06E53A00BD5C2D78D2F4494 /* relaxng.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5AFC5BC1B68C5722A18AA5F672B2E75F /* xinclude.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E9A0D0A4B8779720501FA3501A2CB0 /* xinclude.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5D329EECB2AA07415DE4E2AF03E7B948 /* JiNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3785888D0B3A8734395ED0C02DE81 /* JiNode.swift */; };
-		5FA7EB2449FFE04484F74187C94EFCEA /* JiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B7BC867BAC889E4D0BBBED826A13A2 /* JiHelper.swift */; };
-		640AD45D8166EEFEAD3BAB1DB5C862B2 /* valid.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DE00EC986D99D1A4CC38D72448BC3CD /* valid.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6735E8B002340C61FA0AEDEBCD28726B /* xmlreader.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BC92F424F15D055A1EF591AF4202D2F /* xmlreader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6A8C46BD7D904E3D3B5CBDE6DBDF49DF /* parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BCF8C585330387440008A5880C1368E /* parser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		70F03896E20DD15CFD6EC993A6FBA7DC /* xpathInternals.h in Headers */ = {isa = PBXBuildFile; fileRef = C95698945220AB690D19F407CA111C02 /* xpathInternals.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		756E80535937CA090C793A234EC9C69E /* uri.h in Headers */ = {isa = PBXBuildFile; fileRef = AA28952291BE130F690BB03A7C705CAC /* uri.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7B186EF11F870CB994FA4A2E07F3BCC4 /* pattern.h in Headers */ = {isa = PBXBuildFile; fileRef = FA0425C1103CE705E488AAF951A826D2 /* pattern.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7DA81F7BBCCE35F154DEA361B441FE2F /* xmlschemastypes.h in Headers */ = {isa = PBXBuildFile; fileRef = C247B21BF82C09D562B88185BA061714 /* xmlschemastypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7E4DC421623A2E5AE5254E76CBAC16AA /* Ji-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 560AEF552BCB1F719EFAA131818ADA1F /* Ji-dummy.m */; };
-		7EA6875151D9A3FF420CF3A877C44EB6 /* HTMLparser.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A16E3FBACA0180FB64AC9E530BB1E59 /* HTMLparser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		83170CE3B0A6BECFD8F522D903DA7D98 /* Pods-TaiChungWeather-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F734570001744B6AE1850B68D913AE3A /* Pods-TaiChungWeather-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8795F63CFBD5CB512DEB348CE83A064A /* Ji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4053F0465A5BAA53A5826959065DF1E7 /* Ji.swift */; };
-		8A7D9757C74D3B6422D68D8D935ECACC /* xmlregexp.h in Headers */ = {isa = PBXBuildFile; fileRef = 6204BF72EA1C05B8EF3DCC14F4699797 /* xmlregexp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8A8AC5DD98A121BAD486BA9783B9C8AC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
-		8FF668144CA3C15295E430437463E0A2 /* Ji-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 56FD32E51A0F47F2D04F23CF3F396D9F /* Ji-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		931A0D3E5D4D5403BC0B89CB2338A8CF /* SAX.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5B5C0B6EAFACDBD8BC02D539E12533 /* SAX.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9A38654BB6511825C26FE6434B651B17 /* SAX2.h in Headers */ = {isa = PBXBuildFile; fileRef = 931D7EF35807781635C9FB65C62CD4DD /* SAX2.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9B49C5ED4BAD09D07D0A1B10F1380265 /* globals.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D091C57D2B7AAFCDAD0CCAFDEFFD26 /* globals.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9F074D42C938325AFF55A4C9FF8D4CFB /* DGElasticPullToRefreshConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C24A3599A9F0F634F0FADC636C1B91 /* DGElasticPullToRefreshConstants.swift */; };
-		A1C4A03C909A386F415E09244F0BAD85 /* xmlexports.h in Headers */ = {isa = PBXBuildFile; fileRef = 2506CA746CBF7DF50AF9933BC7F75851 /* xmlexports.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A27226839B74309EEEA9E486C4CBCA07 /* DGElasticPullToRefresh-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B082451611106EA285306B2C549DF65A /* DGElasticPullToRefresh-dummy.m */; };
-		A3A01938DD36078C677C5A175471130A /* HTMLtree.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B6138B03D875124D645A56842EE3478 /* HTMLtree.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA6B9DA312F640814FCB50532BC2CA17 /* entities.h in Headers */ = {isa = PBXBuildFile; fileRef = FC49126C8E1FF130B83230661CF2E23B /* entities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AC5855BDA061E3B4B911FB5C36CAFC57 /* xmlversion.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B88139D760593D850FBEAC55CE5188E /* xmlversion.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B021350AE4291B22A9796CFFAB4D4720 /* Pods-TaiChungWeather-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74014B76895882A7F73B406E6906CBFE /* Pods-TaiChungWeather-dummy.m */; };
-		B4044E945D83D8F1A3D73423D4A30252 /* threads.h in Headers */ = {isa = PBXBuildFile; fileRef = D58ECB9FE3D27DCD3411C280CEB12DCC /* threads.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B4B6FFE7B4349A5BD1001E8287A21E6C /* DGElasticPullToRefreshExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD23100849066AB94E614251E1AE9072 /* DGElasticPullToRefreshExtensions.swift */; };
-		C3E2C608FF5FFD07467C6845B0909293 /* xpointer.h in Headers */ = {isa = PBXBuildFile; fileRef = C3D438774A006F56C57F10BC9A868968 /* xpointer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C43AE484E5E81645D0C817533D8031B0 /* schemasInternals.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C1224C01E33F9757F95268342929549 /* schemasInternals.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CB5C5DD4E49A14E8498766204D66F018 /* dict.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EFA3EB7D71750ED0DBBD3733339392A /* dict.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CC4894790422A31E15F751C950D6F685 /* xmlIO.h in Headers */ = {isa = PBXBuildFile; fileRef = B98164D9C47681C874E9D43B7EAD5BC6 /* xmlIO.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D6554131FBB4054066722C0ED070E17A /* xmlautomata.h in Headers */ = {isa = PBXBuildFile; fileRef = 316E8BA8726BA0CB81D645A869615174 /* xmlautomata.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D89DB12AB63FC0F659719705976A32DD /* DGElasticPullToRefreshLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2472676692634BE39A145FB0CC35426D /* DGElasticPullToRefreshLoadingView.swift */; };
-		DDA17A16E009086A7777094A348A7C4D /* xmlunicode.h in Headers */ = {isa = PBXBuildFile; fileRef = C123C26F98598EEACAE4F7AF4C4A0B75 /* xmlunicode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDC03FA35A688149F4FE7425592EA645 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		E193B13D048E31E0EE01566809663AE9 /* tree.h in Headers */ = {isa = PBXBuildFile; fileRef = AA64CFE4A35FD5859B4DC53BEBCD8981 /* tree.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E20C36BCCDEFB0692DC1E5238A13746B /* schematron.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D1D07EF30DA983B4E8068AD4224DC24 /* schematron.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E238D5ABABCD3DF0E5DE2F2119F795EA /* encoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D30C6F61D0431ED321FB8017ECDBD91 /* encoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E423E2EAED9BFE32EDB07EBBE01A8911 /* xpath.h in Headers */ = {isa = PBXBuildFile; fileRef = A15EF066885A38E0E88C2D6D2A8CAE19 /* xpath.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5A86FD7F9105BA29D3D79479A7F9834 /* nanohttp.h in Headers */ = {isa = PBXBuildFile; fileRef = F640252E47DCD6D14FF089BA70ED2B21 /* nanohttp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA47C67D31B8AEAC63BD9340C7BE61EB /* parserInternals.h in Headers */ = {isa = PBXBuildFile; fileRef = 69440C6330B59BE1FF91C4EEFBC0AD72 /* parserInternals.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EB80CFBCA2795FE03CE26CE31A63D53E /* xmlwriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 48CBFA2DBA8AE236DA7CBF8B341F025B /* xmlwriter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03CA80A930C75EBEAB64BFA46BE61FD9 /* KRActivityIndicatorView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DDACFAB99685AE30D7AC28D33322E6 /* KRActivityIndicatorView-dummy.m */; };
+		05B924C7CF1651901997599CBBB34124 /* chvalid.h in Headers */ = {isa = PBXBuildFile; fileRef = 0106CB926AF447E88D6FB4157789226E /* chvalid.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B7820EEC22CE6A6EB76285119EC1622 /* DGElasticPullToRefresh-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FC719208C36903F90B8C2AB5A95A0F7 /* DGElasticPullToRefresh-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0BED52A5484ED18DC103436E76EEF034 /* xmlmodule.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F45FC5FD4868D43F0A8087424C8F6A2 /* xmlmodule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F3C6269A06B4762CC9619CB2CDD69CA /* Pods-TaiChungWeather-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74014B76895882A7F73B406E6906CBFE /* Pods-TaiChungWeather-dummy.m */; };
+		1117D9F56156A0C01B3FBB5A66FD9A82 /* xmlerror.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FF7118E69B3DCAE1B6CEEFA829BCB51 /* xmlerror.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11A8B056AEB80B70363118641B4FBE2F /* xmlschemas.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BAD565DAFD9B4D9F8371E0E71B789FE /* xmlschemas.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1575B9776677A1912E43B8DA75E88025 /* debugXML.h in Headers */ = {isa = PBXBuildFile; fileRef = AA8BA3A67680EFFED5CC941185A3F6CF /* debugXML.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FA69A142697D5399B74F8E4658C1798 /* list.h in Headers */ = {isa = PBXBuildFile; fileRef = 92BD291FE8C85624990013F07A5222D8 /* list.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24FC30BB6C3EB8ADF057F22522C40757 /* hash.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B74B35890B2A294FA79BF456B726ED9 /* hash.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2585E9CECBA937D94E07D3A0A798151D /* KRProgressHUDIconType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81B7E7364E026EBC137578005C08F88 /* KRProgressHUDIconType.swift */; };
+		30B97708AD348ED88D188743630C4A7F /* nanoftp.h in Headers */ = {isa = PBXBuildFile; fileRef = 27934DCDB6B48D9E1CD3B8B2B6D33AD6 /* nanoftp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		374C05B6392D535B60D928B0CABF9600 /* xmlmemory.h in Headers */ = {isa = PBXBuildFile; fileRef = B982336EF014AD65846574798BACFAF3 /* xmlmemory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		39AB5FBE6C3F6D456DAAE74BBB3DC03D /* xlink.h in Headers */ = {isa = PBXBuildFile; fileRef = 376563A03FEA2BDDDB9E78F82BEE0104 /* xlink.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		404A0B12FCE7CB3B3ED2DD7216D4083F /* xmlsave.h in Headers */ = {isa = PBXBuildFile; fileRef = C32623FE9253E7E42DDDCC3C77D1CFE2 /* xmlsave.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4482EBED80CEE7733EA5335069D63660 /* xmlstring.h in Headers */ = {isa = PBXBuildFile; fileRef = 75CE42935C52461C595DD57B18097D2A /* xmlstring.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44AA9BC67A0D1B4AC3E3EC614BCC2C58 /* c14n.h in Headers */ = {isa = PBXBuildFile; fileRef = 784981CCE3261A59D3F995693A0BE9F0 /* c14n.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5044C16E89474AA88B99FFFD23049451 /* DGElasticPullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AE16EC869A42F2BE8F4C9F15DAE4FC /* DGElasticPullToRefreshView.swift */; };
+		51CAB18B1D6A61881C7401EA1C3BDD77 /* catalog.h in Headers */ = {isa = PBXBuildFile; fileRef = 90F894D85A4291DF634B12F45343A3D6 /* catalog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52D2DD7EE891B3719A475CE30E81CABD /* DGElasticPullToRefreshLoadingViewCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50686F36744E79937229EE183D2DEF72 /* DGElasticPullToRefreshLoadingViewCircle.swift */; };
+		542EA745200BCFEFAA4C66A73CE1B0CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B724C4A2E1A4298A64518029D51B894E /* Foundation.framework */; };
+		542F7F51CDA9FF96A41FB0E5DF299623 /* Pods-TaiChungWeather-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F734570001744B6AE1850B68D913AE3A /* Pods-TaiChungWeather-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5479FB593D82015E580988EE077EB8C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B724C4A2E1A4298A64518029D51B894E /* Foundation.framework */; };
+		55A9819C974B8584262F5E35074DA06F /* relaxng.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EB147DCF5E6675D851FEB29F234EE60 /* relaxng.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AFC5BC1B68C5722A18AA5F672B2E75F /* xinclude.h in Headers */ = {isa = PBXBuildFile; fileRef = FC05701353210AE39EBAFC062949ED43 /* xinclude.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D329EECB2AA07415DE4E2AF03E7B948 /* JiNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC0398B41CC64BA354B74A47CA202B5 /* JiNode.swift */; };
+		5E8A4903CFE27D3BF77A3F74CE459700 /* KRProgressHUDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5FB6AB43A2DEE72373179925416ECF /* KRProgressHUDViewController.swift */; };
+		5FA7EB2449FFE04484F74187C94EFCEA /* JiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94B37A7474FB02FD02F72DD91486782 /* JiHelper.swift */; };
+		640AD45D8166EEFEAD3BAB1DB5C862B2 /* valid.h in Headers */ = {isa = PBXBuildFile; fileRef = 25B6D22997CC6A4C11094E2385C0018D /* valid.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64D4590DEB65F811A837E1815F7B1D1F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B724C4A2E1A4298A64518029D51B894E /* Foundation.framework */; };
+		6735E8B002340C61FA0AEDEBCD28726B /* xmlreader.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D29B182FC1BEDAC9FE8E6A53BAB7858 /* xmlreader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A8C46BD7D904E3D3B5CBDE6DBDF49DF /* parser.h in Headers */ = {isa = PBXBuildFile; fileRef = E03FD2F5CC1CDDBB8C6EFEFAE62B7B14 /* parser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		70B88ED34C8324943F6064E4B1D55F83 /* KRProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6AAC4BCD276D2AA4EBE2603BA2764A /* KRProgressHUD.swift */; };
+		70F03896E20DD15CFD6EC993A6FBA7DC /* xpathInternals.h in Headers */ = {isa = PBXBuildFile; fileRef = 835F14F353F72F3B7C5EBA8740713C90 /* xpathInternals.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		756E80535937CA090C793A234EC9C69E /* uri.h in Headers */ = {isa = PBXBuildFile; fileRef = AAAB5EEA31B846B33334EFE96A45CDC9 /* uri.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B186EF11F870CB994FA4A2E07F3BCC4 /* pattern.h in Headers */ = {isa = PBXBuildFile; fileRef = B663A1667C3E4643CBEDEC8CFAEF2860 /* pattern.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7DA81F7BBCCE35F154DEA361B441FE2F /* xmlschemastypes.h in Headers */ = {isa = PBXBuildFile; fileRef = F49CEAB8CB011965C968B6F3618833EC /* xmlschemastypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E4DC421623A2E5AE5254E76CBAC16AA /* Ji-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CCCD851FEFAF6372F422D671B958CDE /* Ji-dummy.m */; };
+		7EA6875151D9A3FF420CF3A877C44EB6 /* HTMLparser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B0DAAF3E703171CC9858332B1ED48D0 /* HTMLparser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8795F63CFBD5CB512DEB348CE83A064A /* Ji.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB49692F1A934B9F5BE1DD84F0B71223 /* Ji.swift */; };
+		8A7D9757C74D3B6422D68D8D935ECACC /* xmlregexp.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E1DE0A14C3480971394CEE6F41D16FE /* xmlregexp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A8AC5DD98A121BAD486BA9783B9C8AC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32E882861D0650C64E2EB494AC51AC9D /* UIKit.framework */; };
+		8FF668144CA3C15295E430437463E0A2 /* Ji-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A623B254425127FB2EEDB7167FA6E240 /* Ji-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92664741D031D8278A316BA7EFC84446 /* KRActivityIndicatorPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BD4D3160038688905E973AA7D1CD6D /* KRActivityIndicatorPath.swift */; };
+		931A0D3E5D4D5403BC0B89CB2338A8CF /* SAX.h in Headers */ = {isa = PBXBuildFile; fileRef = 7953F00BF664219FFBE80973DF25ED8D /* SAX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A38654BB6511825C26FE6434B651B17 /* SAX2.h in Headers */ = {isa = PBXBuildFile; fileRef = 798B88D5FF4872B2CCA32D05C1E0DDCC /* SAX2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B49C5ED4BAD09D07D0A1B10F1380265 /* globals.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CC915E8DCBBC8EEE98A4C4B730FADAA /* globals.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F074D42C938325AFF55A4C9FF8D4CFB /* DGElasticPullToRefreshConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90325DB29F6849698AE9E0DD83269AB1 /* DGElasticPullToRefreshConstants.swift */; };
+		A1C4A03C909A386F415E09244F0BAD85 /* xmlexports.h in Headers */ = {isa = PBXBuildFile; fileRef = A39328AA06986D8FACB20480C004800F /* xmlexports.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A27226839B74309EEEA9E486C4CBCA07 /* DGElasticPullToRefresh-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E6DDDFB386FDAF50E8934B4D136CB0B9 /* DGElasticPullToRefresh-dummy.m */; };
+		A3A01938DD36078C677C5A175471130A /* HTMLtree.h in Headers */ = {isa = PBXBuildFile; fileRef = A2D5EDBB907629387839D16A23126DAA /* HTMLtree.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA6B9DA312F640814FCB50532BC2CA17 /* entities.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A90FC71CA00281C416BC5F5B61D387 /* entities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC5855BDA061E3B4B911FB5C36CAFC57 /* xmlversion.h in Headers */ = {isa = PBXBuildFile; fileRef = 807FB5B4302FDC4C7DF68160180EBA57 /* xmlversion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4044E945D83D8F1A3D73423D4A30252 /* threads.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A8B115B3F40E5D5768006C1D677D1E0 /* threads.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4B6FFE7B4349A5BD1001E8287A21E6C /* DGElasticPullToRefreshExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F69A0100E881E0E69B88DD431EB31B9 /* DGElasticPullToRefreshExtensions.swift */; };
+		C3E2C608FF5FFD07467C6845B0909293 /* xpointer.h in Headers */ = {isa = PBXBuildFile; fileRef = AE5F4BA60EF66483BEEA45A32F5BA710 /* xpointer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C43AE484E5E81645D0C817533D8031B0 /* schemasInternals.h in Headers */ = {isa = PBXBuildFile; fileRef = 180A84001777EB6E513D12A586125AA4 /* schemasInternals.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB5C5DD4E49A14E8498766204D66F018 /* dict.h in Headers */ = {isa = PBXBuildFile; fileRef = EBB1B77197957F1E10360359332AF75A /* dict.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC4894790422A31E15F751C950D6F685 /* xmlIO.h in Headers */ = {isa = PBXBuildFile; fileRef = FB65B60EB51BE9026691BDDB1C33ABDA /* xmlIO.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D392D371C9E6B7F543A80951F1B6F350 /* KRActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7E771A343474A07ECBF88D6F1B7DB4 /* KRActivityIndicatorView.swift */; };
+		D569294BF0258E7912F100D56EB70D82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B724C4A2E1A4298A64518029D51B894E /* Foundation.framework */; };
+		D6554131FBB4054066722C0ED070E17A /* xmlautomata.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA7784CF2CBF436AADFC8C209FEFE2A /* xmlautomata.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D89DB12AB63FC0F659719705976A32DD /* DGElasticPullToRefreshLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8828C55D7E1F74A0C7B9078BF833E7C1 /* DGElasticPullToRefreshLoadingView.swift */; };
+		DDA17A16E009086A7777094A348A7C4D /* xmlunicode.h in Headers */ = {isa = PBXBuildFile; fileRef = DBCAED8C38CE0E762D5DD2653007F1E4 /* xmlunicode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF4BA74A59835882F643F9EB9279EABA /* KRProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C902D18C15D3747359A473F7DE76C61C /* KRProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E193B13D048E31E0EE01566809663AE9 /* tree.h in Headers */ = {isa = PBXBuildFile; fileRef = 7882A9DD61D6DAF9DF1CF0EA22D99A0E /* tree.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E20C36BCCDEFB0692DC1E5238A13746B /* schematron.h in Headers */ = {isa = PBXBuildFile; fileRef = 756F82EA4D1E105F7429F985B9F5DB53 /* schematron.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E238D5ABABCD3DF0E5DE2F2119F795EA /* encoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AD772FD9CAFB48E06DC67FF381A0C1F /* encoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E423E2EAED9BFE32EDB07EBBE01A8911 /* xpath.h in Headers */ = {isa = PBXBuildFile; fileRef = E79DF382F3C6F99ACB3E0557F89C55F3 /* xpath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5A86FD7F9105BA29D3D79479A7F9834 /* nanohttp.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CFF4CD3C888A4D23E5B029F28AFE117 /* nanohttp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6FCCCA78904777BFE4E5F45CB7D106E /* InnerKRProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA168FFA6039FCB58847399432EC7501 /* InnerKRProgressHUD.swift */; };
+		EA47C67D31B8AEAC63BD9340C7BE61EB /* parserInternals.h in Headers */ = {isa = PBXBuildFile; fileRef = F02EFF6974E37DAEE75A090E7B54F2C1 /* parserInternals.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA7DBE3CBE4BB064DEE23907B7B7E55A /* KRActivityIndicatorView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D35081F7B589D2C7F719969C150C071 /* KRActivityIndicatorView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB80CFBCA2795FE03CE26CE31A63D53E /* xmlwriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 37AACC96B31E5AD5D7114502536FDDC8 /* xmlwriter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECE1FD5F21DD80796C728BBEE57387F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B724C4A2E1A4298A64518029D51B894E /* Foundation.framework */; };
+		ECE957D50D64C19409B99E2FDBDEC9AC /* KRActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEB5272ECAD2896FD73EDD2461064629 /* KRActivityIndicatorView.framework */; };
+		EF31DEF966B6036D2D6C844979432D4D /* KRActivityIndicatorViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E3F53953F7C51012EB99AC581B949C /* KRActivityIndicatorViewStyle.swift */; };
+		FD3DE89FA8246E14773FED5C88EAEE2E /* KRProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B94317BECBC921A8B366687BE3C66B7E /* KRProgressHUD-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		609E8C6DE30CE60224FBB8B515EE9F29 /* PBXContainerItemProxy */ = {
+		6FBE22014D92753C04038D9522507DB0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 47D07B436D82BB983C8429FF84F919A3;
-			remoteInfo = DGElasticPullToRefresh;
+			remoteGlobalIDString = 9C4AED8E7F0E8047550BDB01102B0913;
+			remoteInfo = KRActivityIndicatorView;
 		};
-		9E560C51DA71AA966ED9953F514BA562 /* PBXContainerItemProxy */ = {
+		7C146900DB7D1B5E9F4DA719C1BEF386 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 42E68C024F0E41495C505F917CAB4426;
 			remoteInfo = Ji;
 		};
+		BBA19A5ED5970B8CDC67DEEED83C002D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBF6426868E6CA9AA6D5A4C0BAF80A9F;
+			remoteInfo = KRProgressHUD;
+		};
+		BE2678A9401BB13F1C305BB0B6F53957 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47D07B436D82BB983C8429FF84F919A3;
+			remoteInfo = DGElasticPullToRefresh;
+		};
+		D5785EEE35B152F9C5E3D006A7238520 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C4AED8E7F0E8047550BDB01102B0913;
+			remoteInfo = KRActivityIndicatorView;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03D091C57D2B7AAFCDAD0CCAFDEFFD26 /* globals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = globals.h; path = "Ji-libxml/globals.h"; sourceTree = "<group>"; };
-		06B7BC867BAC889E4D0BBBED826A13A2 /* JiHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JiHelper.swift; path = Source/JiHelper.swift; sourceTree = "<group>"; };
-		0AA41E3817C028DE22450EF9D83B9AC4 /* chvalid.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = chvalid.h; path = "Ji-libxml/chvalid.h"; sourceTree = "<group>"; };
-		0BC12E6F6127771832BF8461F529CCAD /* DGElasticPullToRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DGElasticPullToRefresh.framework; path = DGElasticPullToRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0D7803FA64E8B3FD7456B9C146A2AE00 /* list.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = list.h; path = "Ji-libxml/list.h"; sourceTree = "<group>"; };
+		0106CB926AF447E88D6FB4157789226E /* chvalid.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = chvalid.h; path = "Ji-libxml/chvalid.h"; sourceTree = "<group>"; };
+		0AD772FD9CAFB48E06DC67FF381A0C1F /* encoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = encoding.h; path = "Ji-libxml/encoding.h"; sourceTree = "<group>"; };
+		0B52C81604F5943FB07F241CBE78ED55 /* Pods_TaiChungWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TaiChungWeather.framework; path = "Pods-TaiChungWeather.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CCCD851FEFAF6372F422D671B958CDE /* Ji-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Ji-dummy.m"; sourceTree = "<group>"; };
+		180A84001777EB6E513D12A586125AA4 /* schemasInternals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = schemasInternals.h; path = "Ji-libxml/schemasInternals.h"; sourceTree = "<group>"; };
+		1AA7784CF2CBF436AADFC8C209FEFE2A /* xmlautomata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlautomata.h; path = "Ji-libxml/xmlautomata.h"; sourceTree = "<group>"; };
+		1B0DAAF3E703171CC9858332B1ED48D0 /* HTMLparser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLparser.h; path = "Ji-libxml/HTMLparser.h"; sourceTree = "<group>"; };
+		1B1B6413FF1B03D24CA03A34EF4C73A7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BBD7E890083CE3977C4D0E6BB3D1EBD /* Pods-TaiChungWeather-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TaiChungWeather-frameworks.sh"; sourceTree = "<group>"; };
-		1CAF5E6C5304D357884CA740C4122BDD /* DGElasticPullToRefreshLoadingViewCircle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DGElasticPullToRefreshLoadingViewCircle.swift; path = DGElasticPullToRefresh/DGElasticPullToRefreshLoadingViewCircle.swift; sourceTree = "<group>"; };
 		1CFEE5EAF75F69386252AFD6D81A6248 /* Pods-TaiChungWeather.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TaiChungWeather.modulemap"; sourceTree = "<group>"; };
-		1D30C6F61D0431ED321FB8017ECDBD91 /* encoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = encoding.h; path = "Ji-libxml/encoding.h"; sourceTree = "<group>"; };
+		1CFF4CD3C888A4D23E5B029F28AFE117 /* nanohttp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = nanohttp.h; path = "Ji-libxml/nanohttp.h"; sourceTree = "<group>"; };
 		2157287804D826E4F2C6B08B1C4CD42B /* Pods-TaiChungWeather-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TaiChungWeather-resources.sh"; sourceTree = "<group>"; };
-		2369589CE06E53A00BD5C2D78D2F4494 /* relaxng.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = relaxng.h; path = "Ji-libxml/relaxng.h"; sourceTree = "<group>"; };
-		2472676692634BE39A145FB0CC35426D /* DGElasticPullToRefreshLoadingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DGElasticPullToRefreshLoadingView.swift; path = DGElasticPullToRefresh/DGElasticPullToRefreshLoadingView.swift; sourceTree = "<group>"; };
-		2506CA746CBF7DF50AF9933BC7F75851 /* xmlexports.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlexports.h; path = "Ji-libxml/xmlexports.h"; sourceTree = "<group>"; };
-		253A4F0092B7B5A8341F3C3499BEE699 /* xmlerror.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlerror.h; path = "Ji-libxml/xmlerror.h"; sourceTree = "<group>"; };
-		29C24A3599A9F0F634F0FADC636C1B91 /* DGElasticPullToRefreshConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DGElasticPullToRefreshConstants.swift; path = DGElasticPullToRefresh/DGElasticPullToRefreshConstants.swift; sourceTree = "<group>"; };
-		2B88139D760593D850FBEAC55CE5188E /* xmlversion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlversion.h; path = "Ji-libxml/xmlversion.h"; sourceTree = "<group>"; };
-		2BCF8C585330387440008A5880C1368E /* parser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = parser.h; path = "Ji-libxml/parser.h"; sourceTree = "<group>"; };
-		2DE00EC986D99D1A4CC38D72448BC3CD /* valid.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = valid.h; path = "Ji-libxml/valid.h"; sourceTree = "<group>"; };
-		2EFA3EB7D71750ED0DBBD3733339392A /* dict.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dict.h; path = "Ji-libxml/dict.h"; sourceTree = "<group>"; };
-		316E8BA8726BA0CB81D645A869615174 /* xmlautomata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlautomata.h; path = "Ji-libxml/xmlautomata.h"; sourceTree = "<group>"; };
-		3B6138B03D875124D645A56842EE3478 /* HTMLtree.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLtree.h; path = "Ji-libxml/HTMLtree.h"; sourceTree = "<group>"; };
-		3D1D07EF30DA983B4E8068AD4224DC24 /* schematron.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = schematron.h; path = "Ji-libxml/schematron.h"; sourceTree = "<group>"; };
-		4053F0465A5BAA53A5826959065DF1E7 /* Ji.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Ji.swift; path = Source/Ji.swift; sourceTree = "<group>"; };
+		240655BCC23A0986D569DFA4DC69CB67 /* KRActivityIndicatorView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KRActivityIndicatorView-prefix.pch"; sourceTree = "<group>"; };
+		25B6D22997CC6A4C11094E2385C0018D /* valid.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = valid.h; path = "Ji-libxml/valid.h"; sourceTree = "<group>"; };
+		27934DCDB6B48D9E1CD3B8B2B6D33AD6 /* nanoftp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = nanoftp.h; path = "Ji-libxml/nanoftp.h"; sourceTree = "<group>"; };
+		2BAD565DAFD9B4D9F8371E0E71B789FE /* xmlschemas.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlschemas.h; path = "Ji-libxml/xmlschemas.h"; sourceTree = "<group>"; };
+		2E72BF0010FDAA5F580E759B0F5157F2 /* KRProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = KRProgressHUD.modulemap; sourceTree = "<group>"; };
+		32E882861D0650C64E2EB494AC51AC9D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		376563A03FEA2BDDDB9E78F82BEE0104 /* xlink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xlink.h; path = "Ji-libxml/xlink.h"; sourceTree = "<group>"; };
+		37AACC96B31E5AD5D7114502536FDDC8 /* xmlwriter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlwriter.h; path = "Ji-libxml/xmlwriter.h"; sourceTree = "<group>"; };
+		37D06C004178782851F03802D52F2CCA /* DGElasticPullToRefresh.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DGElasticPullToRefresh.xcconfig; sourceTree = "<group>"; };
+		3B74B35890B2A294FA79BF456B726ED9 /* hash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hash.h; path = "Ji-libxml/hash.h"; sourceTree = "<group>"; };
+		3C645AFBA83C7968530BDEDBE041BA56 /* KRProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KRProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		3E854E167DE58EEF698CE68B1284FC1A /* KRActivityIndicatorView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = KRActivityIndicatorView.modulemap; sourceTree = "<group>"; };
+		3FC719208C36903F90B8C2AB5A95A0F7 /* DGElasticPullToRefresh-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGElasticPullToRefresh-umbrella.h"; sourceTree = "<group>"; };
+		415CDDF0A50DE84BA6D0EE3B80C4088B /* KRProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KRProgressHUD.framework; path = KRProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4391A0D26E508135E2FEA8C8AA311173 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4510BB3BD52D5021FCC0DDB77ECBFE95 /* Ji-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Ji-prefix.pch"; sourceTree = "<group>"; };
 		483F80D0A2A8AC21DC309D5D69874DBC /* Pods-TaiChungWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaiChungWeather.release.xcconfig"; sourceTree = "<group>"; };
-		48CBFA2DBA8AE236DA7CBF8B341F025B /* xmlwriter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlwriter.h; path = "Ji-libxml/xmlwriter.h"; sourceTree = "<group>"; };
-		4B73BB0A8678184B5492939A638E80DB /* nanoftp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = nanoftp.h; path = "Ji-libxml/nanoftp.h"; sourceTree = "<group>"; };
-		4C1224C01E33F9757F95268342929549 /* schemasInternals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = schemasInternals.h; path = "Ji-libxml/schemasInternals.h"; sourceTree = "<group>"; };
-		4F80B75179EF80A2E6EA1951FE74C10A /* xlink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xlink.h; path = "Ji-libxml/xlink.h"; sourceTree = "<group>"; };
+		4CC915E8DCBBC8EEE98A4C4B730FADAA /* globals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = globals.h; path = "Ji-libxml/globals.h"; sourceTree = "<group>"; };
+		4D29B182FC1BEDAC9FE8E6A53BAB7858 /* xmlreader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlreader.h; path = "Ji-libxml/xmlreader.h"; sourceTree = "<group>"; };
+		4D6AAC4BCD276D2AA4EBE2603BA2764A /* KRProgressHUD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRProgressHUD.swift; path = KRProgressHUD/Classes/KRProgressHUD.swift; sourceTree = "<group>"; };
+		4EB147DCF5E6675D851FEB29F234EE60 /* relaxng.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = relaxng.h; path = "Ji-libxml/relaxng.h"; sourceTree = "<group>"; };
 		5036E517ECE56BFBEA543CC35E0CE508 /* Pods-TaiChungWeather-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TaiChungWeather-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5223D96D1083729D174C426A274B3954 /* xmlstring.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlstring.h; path = "Ji-libxml/xmlstring.h"; sourceTree = "<group>"; };
-		526FDF8087F9A31B7B0D5809A3451667 /* Pods_TaiChungWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TaiChungWeather.framework; path = "Pods-TaiChungWeather.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		55959DF8B033912E338E3E5C0EEF6C98 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		560AEF552BCB1F719EFAA131818ADA1F /* Ji-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Ji-dummy.m"; sourceTree = "<group>"; };
-		56FD32E51A0F47F2D04F23CF3F396D9F /* Ji-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Ji-umbrella.h"; sourceTree = "<group>"; };
-		59DA53266382D79E15AC49D04EC0A4C9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5CEDD32148DE265FCA2CEB86ECC188D7 /* xmlschemas.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlschemas.h; path = "Ji-libxml/xmlschemas.h"; sourceTree = "<group>"; };
-		604D36F6B23B797AA6D642DDFB6102C4 /* DGElasticPullToRefresh-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGElasticPullToRefresh-umbrella.h"; sourceTree = "<group>"; };
-		6204BF72EA1C05B8EF3DCC14F4699797 /* xmlregexp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlregexp.h; path = "Ji-libxml/xmlregexp.h"; sourceTree = "<group>"; };
-		67AFA486D10BE5EB1B3AE04067432D5F /* Ji.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Ji.modulemap; sourceTree = "<group>"; };
-		69440C6330B59BE1FF91C4EEFBC0AD72 /* parserInternals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = parserInternals.h; path = "Ji-libxml/parserInternals.h"; sourceTree = "<group>"; };
-		705979631511EB1C44DCA0457BF6C7A2 /* DGElasticPullToRefresh.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DGElasticPullToRefresh.xcconfig; sourceTree = "<group>"; };
+		50686F36744E79937229EE183D2DEF72 /* DGElasticPullToRefreshLoadingViewCircle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DGElasticPullToRefreshLoadingViewCircle.swift; path = DGElasticPullToRefresh/DGElasticPullToRefreshLoadingViewCircle.swift; sourceTree = "<group>"; };
+		53961A34CD82EDC8373C7BF7CF7382D4 /* DGElasticPullToRefresh-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGElasticPullToRefresh-prefix.pch"; sourceTree = "<group>"; };
+		5460B2680CEC76BA30E40B92296E54AA /* KRActivityIndicatorView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KRActivityIndicatorView.xcconfig; sourceTree = "<group>"; };
+		59E3F53953F7C51012EB99AC581B949C /* KRActivityIndicatorViewStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRActivityIndicatorViewStyle.swift; path = KRActivityIndicatorView/Classes/KRActivityIndicatorViewStyle.swift; sourceTree = "<group>"; };
+		5F69A0100E881E0E69B88DD431EB31B9 /* DGElasticPullToRefreshExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DGElasticPullToRefreshExtensions.swift; path = DGElasticPullToRefresh/DGElasticPullToRefreshExtensions.swift; sourceTree = "<group>"; };
+		61AE16EC869A42F2BE8F4C9F15DAE4FC /* DGElasticPullToRefreshView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DGElasticPullToRefreshView.swift; path = DGElasticPullToRefresh/DGElasticPullToRefreshView.swift; sourceTree = "<group>"; };
+		64BF2BF2933E5CAE06A4766C5E110C17 /* KRProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KRProgressHUD.xcconfig; sourceTree = "<group>"; };
+		6A8B115B3F40E5D5768006C1D677D1E0 /* threads.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = threads.h; path = "Ji-libxml/threads.h"; sourceTree = "<group>"; };
 		74014B76895882A7F73B406E6906CBFE /* Pods-TaiChungWeather-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TaiChungWeather-dummy.m"; sourceTree = "<group>"; };
 		74A3DA59604F877E49F1E0151D540FBC /* Pods-TaiChungWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaiChungWeather.debug.xcconfig"; sourceTree = "<group>"; };
-		757609C78538D6AF8D1B44F0177B03B0 /* debugXML.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = debugXML.h; path = "Ji-libxml/debugXML.h"; sourceTree = "<group>"; };
-		76A6AA4534F1AA4904E2699A25BEADF6 /* Ji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Ji.framework; path = Ji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		784B340243CEFDF7AE0FDAAC1DD6EB99 /* xmlmodule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlmodule.h; path = "Ji-libxml/xmlmodule.h"; sourceTree = "<group>"; };
+		756F82EA4D1E105F7429F985B9F5DB53 /* schematron.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = schematron.h; path = "Ji-libxml/schematron.h"; sourceTree = "<group>"; };
+		75CE42935C52461C595DD57B18097D2A /* xmlstring.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlstring.h; path = "Ji-libxml/xmlstring.h"; sourceTree = "<group>"; };
+		784981CCE3261A59D3F995693A0BE9F0 /* c14n.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = c14n.h; path = "Ji-libxml/c14n.h"; sourceTree = "<group>"; };
+		7882A9DD61D6DAF9DF1CF0EA22D99A0E /* tree.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tree.h; path = "Ji-libxml/tree.h"; sourceTree = "<group>"; };
+		7953F00BF664219FFBE80973DF25ED8D /* SAX.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAX.h; path = "Ji-libxml/SAX.h"; sourceTree = "<group>"; };
+		798B88D5FF4872B2CCA32D05C1E0DDCC /* SAX2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAX2.h; path = "Ji-libxml/SAX2.h"; sourceTree = "<group>"; };
+		7B5FB6AB43A2DEE72373179925416ECF /* KRProgressHUDViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRProgressHUDViewController.swift; path = KRProgressHUD/Classes/KRProgressHUDViewController.swift; sourceTree = "<group>"; };
+		7F45FC5FD4868D43F0A8087424C8F6A2 /* xmlmodule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlmodule.h; path = "Ji-libxml/xmlmodule.h"; sourceTree = "<group>"; };
 		7FCF1C6152E266AE2FCFC9677E1A2B83 /* Pods-TaiChungWeather-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaiChungWeather-acknowledgements.plist"; sourceTree = "<group>"; };
-		8A16E3FBACA0180FB64AC9E530BB1E59 /* HTMLparser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLparser.h; path = "Ji-libxml/HTMLparser.h"; sourceTree = "<group>"; };
-		8BC92F424F15D055A1EF591AF4202D2F /* xmlreader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlreader.h; path = "Ji-libxml/xmlreader.h"; sourceTree = "<group>"; };
-		8F6BB2B8BE4DA2C749458E4D7D2ECB3A /* c14n.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = c14n.h; path = "Ji-libxml/c14n.h"; sourceTree = "<group>"; };
-		931D7EF35807781635C9FB65C62CD4DD /* SAX2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAX2.h; path = "Ji-libxml/SAX2.h"; sourceTree = "<group>"; };
+		7FF7118E69B3DCAE1B6CEEFA829BCB51 /* xmlerror.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlerror.h; path = "Ji-libxml/xmlerror.h"; sourceTree = "<group>"; };
+		807FB5B4302FDC4C7DF68160180EBA57 /* xmlversion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlversion.h; path = "Ji-libxml/xmlversion.h"; sourceTree = "<group>"; };
+		82BD4D3160038688905E973AA7D1CD6D /* KRActivityIndicatorPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRActivityIndicatorPath.swift; path = KRActivityIndicatorView/Classes/KRActivityIndicatorPath.swift; sourceTree = "<group>"; };
+		835F14F353F72F3B7C5EBA8740713C90 /* xpathInternals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xpathInternals.h; path = "Ji-libxml/xpathInternals.h"; sourceTree = "<group>"; };
+		855C5482C185970DCEC6215A6EF8BD47 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8828C55D7E1F74A0C7B9078BF833E7C1 /* DGElasticPullToRefreshLoadingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DGElasticPullToRefreshLoadingView.swift; path = DGElasticPullToRefresh/DGElasticPullToRefreshLoadingView.swift; sourceTree = "<group>"; };
+		8BC3B7B992F958BB396CEDBFC038A2ED /* KRActivityIndicatorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KRActivityIndicatorView.framework; path = KRActivityIndicatorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D35081F7B589D2C7F719969C150C071 /* KRActivityIndicatorView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KRActivityIndicatorView-umbrella.h"; sourceTree = "<group>"; };
+		8E8D6E01DD702C16D66A70884E795DD5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90325DB29F6849698AE9E0DD83269AB1 /* DGElasticPullToRefreshConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DGElasticPullToRefreshConstants.swift; path = DGElasticPullToRefresh/DGElasticPullToRefreshConstants.swift; sourceTree = "<group>"; };
+		90F894D85A4291DF634B12F45343A3D6 /* catalog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = catalog.h; path = "Ji-libxml/catalog.h"; sourceTree = "<group>"; };
+		92BD291FE8C85624990013F07A5222D8 /* list.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = list.h; path = "Ji-libxml/list.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		99525455D5B0D28F1877F483C3A15BA4 /* DGElasticPullToRefresh-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGElasticPullToRefresh-prefix.pch"; sourceTree = "<group>"; };
-		A0D15C5E2AEC5F12607062D6C43E9302 /* hash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hash.h; path = "Ji-libxml/hash.h"; sourceTree = "<group>"; };
-		A15EF066885A38E0E88C2D6D2A8CAE19 /* xpath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xpath.h; path = "Ji-libxml/xpath.h"; sourceTree = "<group>"; };
-		A45E76B523FFD44023F251E3E9A8B801 /* xmlsave.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlsave.h; path = "Ji-libxml/xmlsave.h"; sourceTree = "<group>"; };
-		AA28952291BE130F690BB03A7C705CAC /* uri.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = uri.h; path = "Ji-libxml/uri.h"; sourceTree = "<group>"; };
-		AA64CFE4A35FD5859B4DC53BEBCD8981 /* tree.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tree.h; path = "Ji-libxml/tree.h"; sourceTree = "<group>"; };
-		AD23100849066AB94E614251E1AE9072 /* DGElasticPullToRefreshExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DGElasticPullToRefreshExtensions.swift; path = DGElasticPullToRefresh/DGElasticPullToRefreshExtensions.swift; sourceTree = "<group>"; };
-		B082451611106EA285306B2C549DF65A /* DGElasticPullToRefresh-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGElasticPullToRefresh-dummy.m"; sourceTree = "<group>"; };
-		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		B98164D9C47681C874E9D43B7EAD5BC6 /* xmlIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlIO.h; path = "Ji-libxml/xmlIO.h"; sourceTree = "<group>"; };
-		BC13C26106CF2E86F2960F496E7C70C2 /* xmlmemory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlmemory.h; path = "Ji-libxml/xmlmemory.h"; sourceTree = "<group>"; };
-		BF8951C457115F329973068A9E5B640F /* catalog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = catalog.h; path = "Ji-libxml/catalog.h"; sourceTree = "<group>"; };
-		C123C26F98598EEACAE4F7AF4C4A0B75 /* xmlunicode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlunicode.h; path = "Ji-libxml/xmlunicode.h"; sourceTree = "<group>"; };
-		C247B21BF82C09D562B88185BA061714 /* xmlschemastypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlschemastypes.h; path = "Ji-libxml/xmlschemastypes.h"; sourceTree = "<group>"; };
-		C3D438774A006F56C57F10BC9A868968 /* xpointer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xpointer.h; path = "Ji-libxml/xpointer.h"; sourceTree = "<group>"; };
-		C5E9A0D0A4B8779720501FA3501A2CB0 /* xinclude.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xinclude.h; path = "Ji-libxml/xinclude.h"; sourceTree = "<group>"; };
-		C95698945220AB690D19F407CA111C02 /* xpathInternals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xpathInternals.h; path = "Ji-libxml/xpathInternals.h"; sourceTree = "<group>"; };
-		CAF3785888D0B3A8734395ED0C02DE81 /* JiNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JiNode.swift; path = Source/JiNode.swift; sourceTree = "<group>"; };
-		CF4C6AD8F6044D97F0ABCAD936772D90 /* DGElasticPullToRefreshView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DGElasticPullToRefreshView.swift; path = DGElasticPullToRefresh/DGElasticPullToRefreshView.swift; sourceTree = "<group>"; };
-		D0B033839729A8DAE1E2D1E81F64E384 /* DGElasticPullToRefresh.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = DGElasticPullToRefresh.modulemap; sourceTree = "<group>"; };
-		D58ECB9FE3D27DCD3411C280CEB12DCC /* threads.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = threads.h; path = "Ji-libxml/threads.h"; sourceTree = "<group>"; };
-		D6457BD8F674693FABBDC33960BAA45E /* Ji-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Ji-prefix.pch"; sourceTree = "<group>"; };
-		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		DC6ACDDE0377BEC2A5B12365F50D8CED /* Ji.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Ji.xcconfig; sourceTree = "<group>"; };
-		EA5B5C0B6EAFACDBD8BC02D539E12533 /* SAX.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAX.h; path = "Ji-libxml/SAX.h"; sourceTree = "<group>"; };
-		F640252E47DCD6D14FF089BA70ED2B21 /* nanohttp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = nanohttp.h; path = "Ji-libxml/nanohttp.h"; sourceTree = "<group>"; };
+		93E623695D6A72187BBEBFF2C7409875 /* Ji.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Ji.xcconfig; sourceTree = "<group>"; };
+		999159864FFEDE35642926B6B2032F2A /* DGElasticPullToRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DGElasticPullToRefresh.framework; path = DGElasticPullToRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99C1BC83DB24F5B9F2CCC7EAE4A8D69D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E1DE0A14C3480971394CEE6F41D16FE /* xmlregexp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlregexp.h; path = "Ji-libxml/xmlregexp.h"; sourceTree = "<group>"; };
+		9F3E204C93109A9290D598EF5867A643 /* Ji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Ji.framework; path = Ji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2D5EDBB907629387839D16A23126DAA /* HTMLtree.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLtree.h; path = "Ji-libxml/HTMLtree.h"; sourceTree = "<group>"; };
+		A39328AA06986D8FACB20480C004800F /* xmlexports.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlexports.h; path = "Ji-libxml/xmlexports.h"; sourceTree = "<group>"; };
+		A623B254425127FB2EEDB7167FA6E240 /* Ji-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Ji-umbrella.h"; sourceTree = "<group>"; };
+		AA8BA3A67680EFFED5CC941185A3F6CF /* debugXML.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = debugXML.h; path = "Ji-libxml/debugXML.h"; sourceTree = "<group>"; };
+		AAAB5EEA31B846B33334EFE96A45CDC9 /* uri.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = uri.h; path = "Ji-libxml/uri.h"; sourceTree = "<group>"; };
+		AE5F4BA60EF66483BEEA45A32F5BA710 /* xpointer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xpointer.h; path = "Ji-libxml/xpointer.h"; sourceTree = "<group>"; };
+		B663A1667C3E4643CBEDEC8CFAEF2860 /* pattern.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pattern.h; path = "Ji-libxml/pattern.h"; sourceTree = "<group>"; };
+		B724C4A2E1A4298A64518029D51B894E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		B94317BECBC921A8B366687BE3C66B7E /* KRProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KRProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		B94B37A7474FB02FD02F72DD91486782 /* JiHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JiHelper.swift; path = Source/JiHelper.swift; sourceTree = "<group>"; };
+		B982336EF014AD65846574798BACFAF3 /* xmlmemory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlmemory.h; path = "Ji-libxml/xmlmemory.h"; sourceTree = "<group>"; };
+		BDC0398B41CC64BA354B74A47CA202B5 /* JiNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JiNode.swift; path = Source/JiNode.swift; sourceTree = "<group>"; };
+		BE9B4C190256402B77033FB0E0948D53 /* Ji.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Ji.modulemap; sourceTree = "<group>"; };
+		C2A90FC71CA00281C416BC5F5B61D387 /* entities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = entities.h; path = "Ji-libxml/entities.h"; sourceTree = "<group>"; };
+		C32623FE9253E7E42DDDCC3C77D1CFE2 /* xmlsave.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlsave.h; path = "Ji-libxml/xmlsave.h"; sourceTree = "<group>"; };
+		C81B7E7364E026EBC137578005C08F88 /* KRProgressHUDIconType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRProgressHUDIconType.swift; path = KRProgressHUD/Classes/KRProgressHUDIconType.swift; sourceTree = "<group>"; };
+		C902D18C15D3747359A473F7DE76C61C /* KRProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KRProgressHUD-umbrella.h"; sourceTree = "<group>"; };
+		CB49692F1A934B9F5BE1DD84F0B71223 /* Ji.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Ji.swift; path = Source/Ji.swift; sourceTree = "<group>"; };
+		CC7E771A343474A07ECBF88D6F1B7DB4 /* KRActivityIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KRActivityIndicatorView.swift; path = KRActivityIndicatorView/Classes/KRActivityIndicatorView.swift; sourceTree = "<group>"; };
+		D3DDACFAB99685AE30D7AC28D33322E6 /* KRActivityIndicatorView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KRActivityIndicatorView-dummy.m"; sourceTree = "<group>"; };
+		DBCAED8C38CE0E762D5DD2653007F1E4 /* xmlunicode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlunicode.h; path = "Ji-libxml/xmlunicode.h"; sourceTree = "<group>"; };
+		DEB5272ECAD2896FD73EDD2461064629 /* KRActivityIndicatorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KRActivityIndicatorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E03FD2F5CC1CDDBB8C6EFEFAE62B7B14 /* parser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = parser.h; path = "Ji-libxml/parser.h"; sourceTree = "<group>"; };
+		E6DDDFB386FDAF50E8934B4D136CB0B9 /* DGElasticPullToRefresh-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGElasticPullToRefresh-dummy.m"; sourceTree = "<group>"; };
+		E79DF382F3C6F99ACB3E0557F89C55F3 /* xpath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xpath.h; path = "Ji-libxml/xpath.h"; sourceTree = "<group>"; };
+		EA168FFA6039FCB58847399432EC7501 /* InnerKRProgressHUD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InnerKRProgressHUD.swift; path = KRProgressHUD/Classes/InnerKRProgressHUD.swift; sourceTree = "<group>"; };
+		EBB1B77197957F1E10360359332AF75A /* dict.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dict.h; path = "Ji-libxml/dict.h"; sourceTree = "<group>"; };
+		F02EFF6974E37DAEE75A090E7B54F2C1 /* parserInternals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = parserInternals.h; path = "Ji-libxml/parserInternals.h"; sourceTree = "<group>"; };
+		F49CEAB8CB011965C968B6F3618833EC /* xmlschemastypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlschemastypes.h; path = "Ji-libxml/xmlschemastypes.h"; sourceTree = "<group>"; };
+		F5E0CE7CE28B4BE24B0220FD28F35D74 /* DGElasticPullToRefresh.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = DGElasticPullToRefresh.modulemap; sourceTree = "<group>"; };
 		F734570001744B6AE1850B68D913AE3A /* Pods-TaiChungWeather-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TaiChungWeather-umbrella.h"; sourceTree = "<group>"; };
-		FA0425C1103CE705E488AAF951A826D2 /* pattern.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pattern.h; path = "Ji-libxml/pattern.h"; sourceTree = "<group>"; };
-		FC49126C8E1FF130B83230661CF2E23B /* entities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = entities.h; path = "Ji-libxml/entities.h"; sourceTree = "<group>"; };
+		FB65B60EB51BE9026691BDDB1C33ABDA /* xmlIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlIO.h; path = "Ji-libxml/xmlIO.h"; sourceTree = "<group>"; };
+		FC05701353210AE39EBAFC062949ED43 /* xinclude.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xinclude.h; path = "Ji-libxml/xinclude.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8849B2960B6BCACE8B48255B97993A51 /* Frameworks */ = {
+		64D4FB67F495F506C29A63AA80CCFB73 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDC03FA35A688149F4FE7425592EA645 /* Foundation.framework in Frameworks */,
+				ECE1FD5F21DD80796C728BBEE57387F2 /* Foundation.framework in Frameworks */,
+				ECE957D50D64C19409B99E2FDBDEC9AC /* KRActivityIndicatorView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D76057A3D5B2214266640A8F8B33EAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64D4590DEB65F811A837E1815F7B1D1F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +264,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5479FB593D82015E580988EE077EB8C6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBF74436FE71ECEB2755F616C14BE637 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D569294BF0258E7912F100D56EB70D82 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,108 +296,157 @@
 			path = "Target Support Files/Pods-TaiChungWeather";
 			sourceTree = "<group>";
 		};
-		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+		0504CFAAECA07614291EEC035D947246 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				438B396F6B4147076630CAEFE34282C1 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
-				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		456D2B155D67AEF57FDC95DF72E4F2ED /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				DD6AF8DC96AAC88E1F71BA780C619CA1 /* DGElasticPullToRefresh */,
-				9D7950A67E13352B091DEDC8A2F05819 /* Ji */,
+				EA1A99B0EEC086EE1BE8171ACC454A6C /* DGElasticPullToRefresh */,
+				1E4BEF33DB4C6DEDA813D03434EE83DC /* Ji */,
+				AD0F2E06E6783B322BA6DA80FB136A3B /* KRActivityIndicatorView */,
+				5E5415FE95C93DCED2E38330A43EF092 /* KRProgressHUD */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		7090BD14D47D0B6B090063F0574A5E3F /* Ji-libxml */ = {
+		1645D2C9298BCEDA2178504D70016EB6 /* Ji */ = {
 			isa = PBXGroup;
 			children = (
-				8F6BB2B8BE4DA2C749458E4D7D2ECB3A /* c14n.h */,
-				BF8951C457115F329973068A9E5B640F /* catalog.h */,
-				0AA41E3817C028DE22450EF9D83B9AC4 /* chvalid.h */,
-				757609C78538D6AF8D1B44F0177B03B0 /* debugXML.h */,
-				2EFA3EB7D71750ED0DBBD3733339392A /* dict.h */,
-				1D30C6F61D0431ED321FB8017ECDBD91 /* encoding.h */,
-				FC49126C8E1FF130B83230661CF2E23B /* entities.h */,
-				03D091C57D2B7AAFCDAD0CCAFDEFFD26 /* globals.h */,
-				A0D15C5E2AEC5F12607062D6C43E9302 /* hash.h */,
-				8A16E3FBACA0180FB64AC9E530BB1E59 /* HTMLparser.h */,
-				3B6138B03D875124D645A56842EE3478 /* HTMLtree.h */,
-				0D7803FA64E8B3FD7456B9C146A2AE00 /* list.h */,
-				4B73BB0A8678184B5492939A638E80DB /* nanoftp.h */,
-				F640252E47DCD6D14FF089BA70ED2B21 /* nanohttp.h */,
-				2BCF8C585330387440008A5880C1368E /* parser.h */,
-				69440C6330B59BE1FF91C4EEFBC0AD72 /* parserInternals.h */,
-				FA0425C1103CE705E488AAF951A826D2 /* pattern.h */,
-				2369589CE06E53A00BD5C2D78D2F4494 /* relaxng.h */,
-				EA5B5C0B6EAFACDBD8BC02D539E12533 /* SAX.h */,
-				931D7EF35807781635C9FB65C62CD4DD /* SAX2.h */,
-				4C1224C01E33F9757F95268342929549 /* schemasInternals.h */,
-				3D1D07EF30DA983B4E8068AD4224DC24 /* schematron.h */,
-				D58ECB9FE3D27DCD3411C280CEB12DCC /* threads.h */,
-				AA64CFE4A35FD5859B4DC53BEBCD8981 /* tree.h */,
-				AA28952291BE130F690BB03A7C705CAC /* uri.h */,
-				2DE00EC986D99D1A4CC38D72448BC3CD /* valid.h */,
-				C5E9A0D0A4B8779720501FA3501A2CB0 /* xinclude.h */,
-				4F80B75179EF80A2E6EA1951FE74C10A /* xlink.h */,
-				316E8BA8726BA0CB81D645A869615174 /* xmlautomata.h */,
-				253A4F0092B7B5A8341F3C3499BEE699 /* xmlerror.h */,
-				2506CA746CBF7DF50AF9933BC7F75851 /* xmlexports.h */,
-				B98164D9C47681C874E9D43B7EAD5BC6 /* xmlIO.h */,
-				BC13C26106CF2E86F2960F496E7C70C2 /* xmlmemory.h */,
-				784B340243CEFDF7AE0FDAAC1DD6EB99 /* xmlmodule.h */,
-				8BC92F424F15D055A1EF591AF4202D2F /* xmlreader.h */,
-				6204BF72EA1C05B8EF3DCC14F4699797 /* xmlregexp.h */,
-				A45E76B523FFD44023F251E3E9A8B801 /* xmlsave.h */,
-				5CEDD32148DE265FCA2CEB86ECC188D7 /* xmlschemas.h */,
-				C247B21BF82C09D562B88185BA061714 /* xmlschemastypes.h */,
-				5223D96D1083729D174C426A274B3954 /* xmlstring.h */,
-				C123C26F98598EEACAE4F7AF4C4A0B75 /* xmlunicode.h */,
-				2B88139D760593D850FBEAC55CE5188E /* xmlversion.h */,
-				48CBFA2DBA8AE236DA7CBF8B341F025B /* xmlwriter.h */,
-				A15EF066885A38E0E88C2D6D2A8CAE19 /* xpath.h */,
-				C95698945220AB690D19F407CA111C02 /* xpathInternals.h */,
-				C3D438774A006F56C57F10BC9A868968 /* xpointer.h */,
+				CB49692F1A934B9F5BE1DD84F0B71223 /* Ji.swift */,
+				B94B37A7474FB02FD02F72DD91486782 /* JiHelper.swift */,
+				BDC0398B41CC64BA354B74A47CA202B5 /* JiNode.swift */,
+			);
+			name = Ji;
+			sourceTree = "<group>";
+		};
+		1E4BEF33DB4C6DEDA813D03434EE83DC /* Ji */ = {
+			isa = PBXGroup;
+			children = (
+				1645D2C9298BCEDA2178504D70016EB6 /* Ji */,
+				47F1B7BAE17D99E23A2DD21F6E13E5EB /* Ji-libxml */,
+				CC01FE302C42037D32B71C5273037B2B /* Support Files */,
+			);
+			name = Ji;
+			path = Ji;
+			sourceTree = "<group>";
+		};
+		2A81ADA7D42C1F65981B0E858989A24A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				999159864FFEDE35642926B6B2032F2A /* DGElasticPullToRefresh.framework */,
+				9F3E204C93109A9290D598EF5867A643 /* Ji.framework */,
+				8BC3B7B992F958BB396CEDBFC038A2ED /* KRActivityIndicatorView.framework */,
+				415CDDF0A50DE84BA6D0EE3B80C4088B /* KRProgressHUD.framework */,
+				0B52C81604F5943FB07F241CBE78ED55 /* Pods_TaiChungWeather.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		47F1B7BAE17D99E23A2DD21F6E13E5EB /* Ji-libxml */ = {
+			isa = PBXGroup;
+			children = (
+				784981CCE3261A59D3F995693A0BE9F0 /* c14n.h */,
+				90F894D85A4291DF634B12F45343A3D6 /* catalog.h */,
+				0106CB926AF447E88D6FB4157789226E /* chvalid.h */,
+				AA8BA3A67680EFFED5CC941185A3F6CF /* debugXML.h */,
+				EBB1B77197957F1E10360359332AF75A /* dict.h */,
+				0AD772FD9CAFB48E06DC67FF381A0C1F /* encoding.h */,
+				C2A90FC71CA00281C416BC5F5B61D387 /* entities.h */,
+				4CC915E8DCBBC8EEE98A4C4B730FADAA /* globals.h */,
+				3B74B35890B2A294FA79BF456B726ED9 /* hash.h */,
+				1B0DAAF3E703171CC9858332B1ED48D0 /* HTMLparser.h */,
+				A2D5EDBB907629387839D16A23126DAA /* HTMLtree.h */,
+				92BD291FE8C85624990013F07A5222D8 /* list.h */,
+				27934DCDB6B48D9E1CD3B8B2B6D33AD6 /* nanoftp.h */,
+				1CFF4CD3C888A4D23E5B029F28AFE117 /* nanohttp.h */,
+				E03FD2F5CC1CDDBB8C6EFEFAE62B7B14 /* parser.h */,
+				F02EFF6974E37DAEE75A090E7B54F2C1 /* parserInternals.h */,
+				B663A1667C3E4643CBEDEC8CFAEF2860 /* pattern.h */,
+				4EB147DCF5E6675D851FEB29F234EE60 /* relaxng.h */,
+				7953F00BF664219FFBE80973DF25ED8D /* SAX.h */,
+				798B88D5FF4872B2CCA32D05C1E0DDCC /* SAX2.h */,
+				180A84001777EB6E513D12A586125AA4 /* schemasInternals.h */,
+				756F82EA4D1E105F7429F985B9F5DB53 /* schematron.h */,
+				6A8B115B3F40E5D5768006C1D677D1E0 /* threads.h */,
+				7882A9DD61D6DAF9DF1CF0EA22D99A0E /* tree.h */,
+				AAAB5EEA31B846B33334EFE96A45CDC9 /* uri.h */,
+				25B6D22997CC6A4C11094E2385C0018D /* valid.h */,
+				FC05701353210AE39EBAFC062949ED43 /* xinclude.h */,
+				376563A03FEA2BDDDB9E78F82BEE0104 /* xlink.h */,
+				1AA7784CF2CBF436AADFC8C209FEFE2A /* xmlautomata.h */,
+				7FF7118E69B3DCAE1B6CEEFA829BCB51 /* xmlerror.h */,
+				A39328AA06986D8FACB20480C004800F /* xmlexports.h */,
+				FB65B60EB51BE9026691BDDB1C33ABDA /* xmlIO.h */,
+				B982336EF014AD65846574798BACFAF3 /* xmlmemory.h */,
+				7F45FC5FD4868D43F0A8087424C8F6A2 /* xmlmodule.h */,
+				4D29B182FC1BEDAC9FE8E6A53BAB7858 /* xmlreader.h */,
+				9E1DE0A14C3480971394CEE6F41D16FE /* xmlregexp.h */,
+				C32623FE9253E7E42DDDCC3C77D1CFE2 /* xmlsave.h */,
+				2BAD565DAFD9B4D9F8371E0E71B789FE /* xmlschemas.h */,
+				F49CEAB8CB011965C968B6F3618833EC /* xmlschemastypes.h */,
+				75CE42935C52461C595DD57B18097D2A /* xmlstring.h */,
+				DBCAED8C38CE0E762D5DD2653007F1E4 /* xmlunicode.h */,
+				807FB5B4302FDC4C7DF68160180EBA57 /* xmlversion.h */,
+				37AACC96B31E5AD5D7114502536FDDC8 /* xmlwriter.h */,
+				E79DF382F3C6F99ACB3E0557F89C55F3 /* xpath.h */,
+				835F14F353F72F3B7C5EBA8740713C90 /* xpathInternals.h */,
+				AE5F4BA60EF66483BEEA45A32F5BA710 /* xpointer.h */,
 			);
 			name = "Ji-libxml";
+			sourceTree = "<group>";
+		};
+		5ADDCC030E1C1B73FB868F2665D25658 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DEB5272ECAD2896FD73EDD2461064629 /* KRActivityIndicatorView.framework */,
+				6EDA76D6828CEC1949B26859070C83CF /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E5415FE95C93DCED2E38330A43EF092 /* KRProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				EA168FFA6039FCB58847399432EC7501 /* InnerKRProgressHUD.swift */,
+				4D6AAC4BCD276D2AA4EBE2603BA2764A /* KRProgressHUD.swift */,
+				C81B7E7364E026EBC137578005C08F88 /* KRProgressHUDIconType.swift */,
+				7B5FB6AB43A2DEE72373179925416ECF /* KRProgressHUDViewController.swift */,
+				DC7230227A9C7529F0002036EC014ED5 /* Support Files */,
+			);
+			name = KRProgressHUD;
+			path = KRProgressHUD;
+			sourceTree = "<group>";
+		};
+		6EDA76D6828CEC1949B26859070C83CF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B724C4A2E1A4298A64518029D51B894E /* Foundation.framework */,
+				32E882861D0650C64E2EB494AC51AC9D /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7544EB044547816554E7010485EEDBF1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				99C1BC83DB24F5B9F2CCC7EAE4A8D69D /* Info.plist */,
+				3E854E167DE58EEF698CE68B1284FC1A /* KRActivityIndicatorView.modulemap */,
+				5460B2680CEC76BA30E40B92296E54AA /* KRActivityIndicatorView.xcconfig */,
+				D3DDACFAB99685AE30D7AC28D33322E6 /* KRActivityIndicatorView-dummy.m */,
+				240655BCC23A0986D569DFA4DC69CB67 /* KRActivityIndicatorView-prefix.pch */,
+				8D35081F7B589D2C7F719969C150C071 /* KRActivityIndicatorView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KRActivityIndicatorView";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				456D2B155D67AEF57FDC95DF72E4F2ED /* Pods */,
-				97F679B8B6417A4239A86DCA4A24EA13 /* Products */,
+				5ADDCC030E1C1B73FB868F2665D25658 /* Frameworks */,
+				0504CFAAECA07614291EEC035D947246 /* Pods */,
+				2A81ADA7D42C1F65981B0E858989A24A /* Products */,
 				95AABF23B909F669F3A82C7CF5FF5B02 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		9517A256221CB50783918D21B1A52F8B /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				59DA53266382D79E15AC49D04EC0A4C9 /* Info.plist */,
-				67AFA486D10BE5EB1B3AE04067432D5F /* Ji.modulemap */,
-				DC6ACDDE0377BEC2A5B12365F50D8CED /* Ji.xcconfig */,
-				560AEF552BCB1F719EFAA131818ADA1F /* Ji-dummy.m */,
-				D6457BD8F674693FABBDC33960BAA45E /* Ji-prefix.pch */,
-				56FD32E51A0F47F2D04F23CF3F396D9F /* Ji-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Ji";
 			sourceTree = "<group>";
 		};
 		95AABF23B909F669F3A82C7CF5FF5B02 /* Targets Support Files */ = {
@@ -334,60 +457,69 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		96FBB635B6104C5A0BCA937CCCF9A11F /* Ji */ = {
+		AD0F2E06E6783B322BA6DA80FB136A3B /* KRActivityIndicatorView */ = {
 			isa = PBXGroup;
 			children = (
-				4053F0465A5BAA53A5826959065DF1E7 /* Ji.swift */,
-				06B7BC867BAC889E4D0BBBED826A13A2 /* JiHelper.swift */,
-				CAF3785888D0B3A8734395ED0C02DE81 /* JiNode.swift */,
+				82BD4D3160038688905E973AA7D1CD6D /* KRActivityIndicatorPath.swift */,
+				CC7E771A343474A07ECBF88D6F1B7DB4 /* KRActivityIndicatorView.swift */,
+				59E3F53953F7C51012EB99AC581B949C /* KRActivityIndicatorViewStyle.swift */,
+				7544EB044547816554E7010485EEDBF1 /* Support Files */,
 			);
-			name = Ji;
+			name = KRActivityIndicatorView;
+			path = KRActivityIndicatorView;
 			sourceTree = "<group>";
 		};
-		97F679B8B6417A4239A86DCA4A24EA13 /* Products */ = {
+		C804A2ADB3FD15FC42851A4155CC4A31 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				0BC12E6F6127771832BF8461F529CCAD /* DGElasticPullToRefresh.framework */,
-				76A6AA4534F1AA4904E2699A25BEADF6 /* Ji.framework */,
-				526FDF8087F9A31B7B0D5809A3451667 /* Pods_TaiChungWeather.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		9D7950A67E13352B091DEDC8A2F05819 /* Ji */ = {
-			isa = PBXGroup;
-			children = (
-				96FBB635B6104C5A0BCA937CCCF9A11F /* Ji */,
-				7090BD14D47D0B6B090063F0574A5E3F /* Ji-libxml */,
-				9517A256221CB50783918D21B1A52F8B /* Support Files */,
-			);
-			name = Ji;
-			path = Ji;
-			sourceTree = "<group>";
-		};
-		C85F80B85BAA025289419B390C053A24 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D0B033839729A8DAE1E2D1E81F64E384 /* DGElasticPullToRefresh.modulemap */,
-				705979631511EB1C44DCA0457BF6C7A2 /* DGElasticPullToRefresh.xcconfig */,
-				B082451611106EA285306B2C549DF65A /* DGElasticPullToRefresh-dummy.m */,
-				99525455D5B0D28F1877F483C3A15BA4 /* DGElasticPullToRefresh-prefix.pch */,
-				604D36F6B23B797AA6D642DDFB6102C4 /* DGElasticPullToRefresh-umbrella.h */,
-				55959DF8B033912E338E3E5C0EEF6C98 /* Info.plist */,
+				F5E0CE7CE28B4BE24B0220FD28F35D74 /* DGElasticPullToRefresh.modulemap */,
+				37D06C004178782851F03802D52F2CCA /* DGElasticPullToRefresh.xcconfig */,
+				E6DDDFB386FDAF50E8934B4D136CB0B9 /* DGElasticPullToRefresh-dummy.m */,
+				53961A34CD82EDC8373C7BF7CF7382D4 /* DGElasticPullToRefresh-prefix.pch */,
+				3FC719208C36903F90B8C2AB5A95A0F7 /* DGElasticPullToRefresh-umbrella.h */,
+				855C5482C185970DCEC6215A6EF8BD47 /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/DGElasticPullToRefresh";
 			sourceTree = "<group>";
 		};
-		DD6AF8DC96AAC88E1F71BA780C619CA1 /* DGElasticPullToRefresh */ = {
+		CC01FE302C42037D32B71C5273037B2B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				29C24A3599A9F0F634F0FADC636C1B91 /* DGElasticPullToRefreshConstants.swift */,
-				AD23100849066AB94E614251E1AE9072 /* DGElasticPullToRefreshExtensions.swift */,
-				2472676692634BE39A145FB0CC35426D /* DGElasticPullToRefreshLoadingView.swift */,
-				1CAF5E6C5304D357884CA740C4122BDD /* DGElasticPullToRefreshLoadingViewCircle.swift */,
-				CF4C6AD8F6044D97F0ABCAD936772D90 /* DGElasticPullToRefreshView.swift */,
-				C85F80B85BAA025289419B390C053A24 /* Support Files */,
+				1B1B6413FF1B03D24CA03A34EF4C73A7 /* Info.plist */,
+				BE9B4C190256402B77033FB0E0948D53 /* Ji.modulemap */,
+				93E623695D6A72187BBEBFF2C7409875 /* Ji.xcconfig */,
+				0CCCD851FEFAF6372F422D671B958CDE /* Ji-dummy.m */,
+				4510BB3BD52D5021FCC0DDB77ECBFE95 /* Ji-prefix.pch */,
+				A623B254425127FB2EEDB7167FA6E240 /* Ji-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Ji";
+			sourceTree = "<group>";
+		};
+		DC7230227A9C7529F0002036EC014ED5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8E8D6E01DD702C16D66A70884E795DD5 /* Info.plist */,
+				2E72BF0010FDAA5F580E759B0F5157F2 /* KRProgressHUD.modulemap */,
+				64BF2BF2933E5CAE06A4766C5E110C17 /* KRProgressHUD.xcconfig */,
+				B94317BECBC921A8B366687BE3C66B7E /* KRProgressHUD-dummy.m */,
+				3C645AFBA83C7968530BDEDBE041BA56 /* KRProgressHUD-prefix.pch */,
+				C902D18C15D3747359A473F7DE76C61C /* KRProgressHUD-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KRProgressHUD";
+			sourceTree = "<group>";
+		};
+		EA1A99B0EEC086EE1BE8171ACC454A6C /* DGElasticPullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				90325DB29F6849698AE9E0DD83269AB1 /* DGElasticPullToRefreshConstants.swift */,
+				5F69A0100E881E0E69B88DD431EB31B9 /* DGElasticPullToRefreshExtensions.swift */,
+				8828C55D7E1F74A0C7B9078BF833E7C1 /* DGElasticPullToRefreshLoadingView.swift */,
+				50686F36744E79937229EE183D2DEF72 /* DGElasticPullToRefreshLoadingViewCircle.swift */,
+				61AE16EC869A42F2BE8F4C9F15DAE4FC /* DGElasticPullToRefreshView.swift */,
+				C804A2ADB3FD15FC42851A4155CC4A31 /* Support Files */,
 			);
 			name = DGElasticPullToRefresh;
 			path = DGElasticPullToRefresh;
@@ -396,11 +528,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0F5EF4C7609EA1657E73ABCCE908AB5B /* Headers */ = {
+		1AFA402B133226718AABC6A165A55592 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83170CE3B0A6BECFD8F522D903DA7D98 /* Pods-TaiChungWeather-umbrella.h in Headers */,
+				EA7DBE3CBE4BB064DEE23907B7B7E55A /* KRActivityIndicatorView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,11 +590,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		831F9F309487F86523D3CBD47DAE51F0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				542F7F51CDA9FF96A41FB0E5DF299623 /* Pods-TaiChungWeather-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C41DD70ED1E86FB8DA51EF3E973C63A9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0B7820EEC22CE6A6EB76285119EC1622 /* DGElasticPullToRefresh-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E092AFF9BCF46FB343D47842F32BDF82 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF4BA74A59835882F643F9EB9279EABA /* KRProgressHUD-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,7 +631,28 @@
 			);
 			name = Ji;
 			productName = Ji;
-			productReference = 76A6AA4534F1AA4904E2699A25BEADF6 /* Ji.framework */;
+			productReference = 9F3E204C93109A9290D598EF5867A643 /* Ji.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4470FCED1E63278898E26816F45AD2BF /* Pods-TaiChungWeather */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DDC8ADF1D2196A60A9B2BE30F970388 /* Build configuration list for PBXNativeTarget "Pods-TaiChungWeather" */;
+			buildPhases = (
+				E77612AE33CA8D9D3908C2FE137AA038 /* Sources */,
+				FBF74436FE71ECEB2755F616C14BE637 /* Frameworks */,
+				831F9F309487F86523D3CBD47DAE51F0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D9B0C85180EC258D217069F6AFB2BBB /* PBXTargetDependency */,
+				BBF4E1F97D4A333EB1F624B04FCBA83C /* PBXTargetDependency */,
+				AFC04BBE60309CBF96A0FC13FE2139D3 /* PBXTargetDependency */,
+				8C119C376D09F24DCB63AFA732F1C19B /* PBXTargetDependency */,
+			);
+			name = "Pods-TaiChungWeather";
+			productName = "Pods-TaiChungWeather";
+			productReference = 0B52C81604F5943FB07F241CBE78ED55 /* Pods_TaiChungWeather.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		47D07B436D82BB983C8429FF84F919A3 /* DGElasticPullToRefresh */ = {
@@ -500,26 +669,42 @@
 			);
 			name = DGElasticPullToRefresh;
 			productName = DGElasticPullToRefresh;
-			productReference = 0BC12E6F6127771832BF8461F529CCAD /* DGElasticPullToRefresh.framework */;
+			productReference = 999159864FFEDE35642926B6B2032F2A /* DGElasticPullToRefresh.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B2B1F32DD5520779EAE556459BB0B7B2 /* Pods-TaiChungWeather */ = {
+		9C4AED8E7F0E8047550BDB01102B0913 /* KRActivityIndicatorView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C787F9EAE187A404C49C2683F8F10D64 /* Build configuration list for PBXNativeTarget "Pods-TaiChungWeather" */;
+			buildConfigurationList = 81F1F1A589ED4790C4D46DC5717F91FC /* Build configuration list for PBXNativeTarget "KRActivityIndicatorView" */;
 			buildPhases = (
-				6E44183C8610BDD6AFB1309CF565964C /* Sources */,
-				8849B2960B6BCACE8B48255B97993A51 /* Frameworks */,
-				0F5EF4C7609EA1657E73ABCCE908AB5B /* Headers */,
+				71DC190568DB15AFC054F114C935BE71 /* Sources */,
+				7D76057A3D5B2214266640A8F8B33EAA /* Frameworks */,
+				1AFA402B133226718AABC6A165A55592 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				21A36395A9E105B10B40303919A26331 /* PBXTargetDependency */,
-				E3F7B3CAF8DA3C579C58A6DEF654CBFF /* PBXTargetDependency */,
 			);
-			name = "Pods-TaiChungWeather";
-			productName = "Pods-TaiChungWeather";
-			productReference = 526FDF8087F9A31B7B0D5809A3451667 /* Pods_TaiChungWeather.framework */;
+			name = KRActivityIndicatorView;
+			productName = KRActivityIndicatorView;
+			productReference = 8BC3B7B992F958BB396CEDBFC038A2ED /* KRActivityIndicatorView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DBF6426868E6CA9AA6D5A4C0BAF80A9F /* KRProgressHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C23AB856556AFD2691D28CEFF31A82C /* Build configuration list for PBXNativeTarget "KRProgressHUD" */;
+			buildPhases = (
+				DFEE21EE042608CAA393249432D31441 /* Sources */,
+				64D4FB67F495F506C29A63AA80CCFB73 /* Frameworks */,
+				E092AFF9BCF46FB343D47842F32BDF82 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				31566DF63BB392C3D25A05CA11411B33 /* PBXTargetDependency */,
+			);
+			name = KRProgressHUD;
+			productName = KRProgressHUD;
+			productReference = 415CDDF0A50DE84BA6D0EE3B80C4088B /* KRProgressHUD.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -539,23 +724,28 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 97F679B8B6417A4239A86DCA4A24EA13 /* Products */;
+			productRefGroup = 2A81ADA7D42C1F65981B0E858989A24A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				47D07B436D82BB983C8429FF84F919A3 /* DGElasticPullToRefresh */,
 				42E68C024F0E41495C505F917CAB4426 /* Ji */,
-				B2B1F32DD5520779EAE556459BB0B7B2 /* Pods-TaiChungWeather */,
+				9C4AED8E7F0E8047550BDB01102B0913 /* KRActivityIndicatorView */,
+				DBF6426868E6CA9AA6D5A4C0BAF80A9F /* KRProgressHUD */,
+				4470FCED1E63278898E26816F45AD2BF /* Pods-TaiChungWeather */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6E44183C8610BDD6AFB1309CF565964C /* Sources */ = {
+		71DC190568DB15AFC054F114C935BE71 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B021350AE4291B22A9796CFFAB4D4720 /* Pods-TaiChungWeather-dummy.m in Sources */,
+				92664741D031D8278A316BA7EFC84446 /* KRActivityIndicatorPath.swift in Sources */,
+				03CA80A930C75EBEAB64BFA46BE61FD9 /* KRActivityIndicatorView-dummy.m in Sources */,
+				D392D371C9E6B7F543A80951F1B6F350 /* KRActivityIndicatorView.swift in Sources */,
+				EF31DEF966B6036D2D6C844979432D4D /* KRActivityIndicatorViewStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,27 +773,65 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DFEE21EE042608CAA393249432D31441 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6FCCCA78904777BFE4E5F45CB7D106E /* InnerKRProgressHUD.swift in Sources */,
+				FD3DE89FA8246E14773FED5C88EAEE2E /* KRProgressHUD-dummy.m in Sources */,
+				70B88ED34C8324943F6064E4B1D55F83 /* KRProgressHUD.swift in Sources */,
+				2585E9CECBA937D94E07D3A0A798151D /* KRProgressHUDIconType.swift in Sources */,
+				5E8A4903CFE27D3BF77A3F74CE459700 /* KRProgressHUDViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E77612AE33CA8D9D3908C2FE137AA038 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F3C6269A06B4762CC9619CB2CDD69CA /* Pods-TaiChungWeather-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		21A36395A9E105B10B40303919A26331 /* PBXTargetDependency */ = {
+		31566DF63BB392C3D25A05CA11411B33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KRActivityIndicatorView;
+			target = 9C4AED8E7F0E8047550BDB01102B0913 /* KRActivityIndicatorView */;
+			targetProxy = 6FBE22014D92753C04038D9522507DB0 /* PBXContainerItemProxy */;
+		};
+		4D9B0C85180EC258D217069F6AFB2BBB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DGElasticPullToRefresh;
 			target = 47D07B436D82BB983C8429FF84F919A3 /* DGElasticPullToRefresh */;
-			targetProxy = 609E8C6DE30CE60224FBB8B515EE9F29 /* PBXContainerItemProxy */;
+			targetProxy = BE2678A9401BB13F1C305BB0B6F53957 /* PBXContainerItemProxy */;
 		};
-		E3F7B3CAF8DA3C579C58A6DEF654CBFF /* PBXTargetDependency */ = {
+		8C119C376D09F24DCB63AFA732F1C19B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KRProgressHUD;
+			target = DBF6426868E6CA9AA6D5A4C0BAF80A9F /* KRProgressHUD */;
+			targetProxy = BBA19A5ED5970B8CDC67DEEED83C002D /* PBXContainerItemProxy */;
+		};
+		AFC04BBE60309CBF96A0FC13FE2139D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KRActivityIndicatorView;
+			target = 9C4AED8E7F0E8047550BDB01102B0913 /* KRActivityIndicatorView */;
+			targetProxy = D5785EEE35B152F9C5E3D006A7238520 /* PBXContainerItemProxy */;
+		};
+		BBF4E1F97D4A333EB1F624B04FCBA83C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Ji;
 			target = 42E68C024F0E41495C505F917CAB4426 /* Ji */;
-			targetProxy = 9E560C51DA71AA966ED9953F514BA562 /* PBXContainerItemProxy */;
+			targetProxy = 7C146900DB7D1B5E9F4DA719C1BEF386 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0249F7A0EAE3720376E4EF0277C7C779 /* Debug */ = {
+		351E8D27E880778AA1E55F424ACC64A4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 74A3DA59604F877E49F1E0151D540FBC /* Pods-TaiChungWeather.debug.xcconfig */;
+			baseConfigurationReference = 5460B2680CEC76BA30E40B92296E54AA /* KRActivityIndicatorView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -614,30 +842,28 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-TaiChungWeather/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/KRActivityIndicatorView/KRActivityIndicatorView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KRActivityIndicatorView/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TaiChungWeather/Pods-TaiChungWeather.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TaiChungWeather;
+				MODULEMAP_FILE = "Target Support Files/KRActivityIndicatorView/KRActivityIndicatorView.modulemap";
+				PRODUCT_NAME = KRActivityIndicatorView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		3A438C2866D520A027761D9D6CA99C5C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC6ACDDE0377BEC2A5B12365F50D8CED /* Ji.xcconfig */;
+			baseConfigurationReference = 93E623695D6A72187BBEBFF2C7409875 /* Ji.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -728,7 +954,7 @@
 		};
 		90CF21B361B876FB2E27DDA6C6215A4B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC6ACDDE0377BEC2A5B12365F50D8CED /* Ji.xcconfig */;
+			baseConfigurationReference = 93E623695D6A72187BBEBFF2C7409875 /* Ji.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -813,7 +1039,38 @@
 			};
 			name = Release;
 		};
-		CE528B17F3D0603523B2256D061353BF /* Release */ = {
+		992966F68B1E81D10DC24A8F8240E56D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5460B2680CEC76BA30E40B92296E54AA /* KRActivityIndicatorView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KRActivityIndicatorView/KRActivityIndicatorView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KRActivityIndicatorView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KRActivityIndicatorView/KRActivityIndicatorView.modulemap";
+				PRODUCT_NAME = KRActivityIndicatorView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D079ECE5A906A841891390D92868569C /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 483F80D0A2A8AC21DC309D5D69874DBC /* Pods-TaiChungWeather.release.xcconfig */;
 			buildSettings = {
@@ -849,7 +1106,7 @@
 		};
 		E3D938D64C7C037C7D5B30D6991E18DB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 705979631511EB1C44DCA0457BF6C7A2 /* DGElasticPullToRefresh.xcconfig */;
+			baseConfigurationReference = 37D06C004178782851F03802D52F2CCA /* DGElasticPullToRefresh.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -880,7 +1137,7 @@
 		};
 		E49E5AF253DBD4696A68542D7E351361 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 705979631511EB1C44DCA0457BF6C7A2 /* DGElasticPullToRefresh.xcconfig */;
+			baseConfigurationReference = 37D06C004178782851F03802D52F2CCA /* DGElasticPullToRefresh.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -910,6 +1167,103 @@
 			};
 			name = Release;
 		};
+		EBC115D028EB9EAC791B62EB8E563DCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74A3DA59604F877E49F1E0151D540FBC /* Pods-TaiChungWeather.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TaiChungWeather/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TaiChungWeather/Pods-TaiChungWeather.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TaiChungWeather;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EC1DDC481CBC677ED88E865CE9DDC8D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64BF2BF2933E5CAE06A4766C5E110C17 /* KRProgressHUD.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KRProgressHUD/KRProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KRProgressHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KRProgressHUD/KRProgressHUD.modulemap";
+				PRODUCT_NAME = KRProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FFE318C088506A9E395E95E2F59A57A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64BF2BF2933E5CAE06A4766C5E110C17 /* KRProgressHUD.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/KRProgressHUD/KRProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KRProgressHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KRProgressHUD/KRProgressHUD.modulemap";
+				PRODUCT_NAME = KRProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -931,11 +1285,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C787F9EAE187A404C49C2683F8F10D64 /* Build configuration list for PBXNativeTarget "Pods-TaiChungWeather" */ = {
+		4C23AB856556AFD2691D28CEFF31A82C /* Build configuration list for PBXNativeTarget "KRProgressHUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0249F7A0EAE3720376E4EF0277C7C779 /* Debug */,
-				CE528B17F3D0603523B2256D061353BF /* Release */,
+				FFE318C088506A9E395E95E2F59A57A2 /* Debug */,
+				EC1DDC481CBC677ED88E865CE9DDC8D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DDC8ADF1D2196A60A9B2BE30F970388 /* Build configuration list for PBXNativeTarget "Pods-TaiChungWeather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBC115D028EB9EAC791B62EB8E563DCE /* Debug */,
+				D079ECE5A906A841891390D92868569C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81F1F1A589ED4790C4D46DC5717F91FC /* Build configuration list for PBXNativeTarget "KRActivityIndicatorView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				992966F68B1E81D10DC24A8F8240E56D /* Debug */,
+				351E8D27E880778AA1E55F424ACC64A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

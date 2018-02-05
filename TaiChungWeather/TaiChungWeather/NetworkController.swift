@@ -36,6 +36,9 @@ class NetworkController: NSObject, WKNavigationDelegate {
   
   private override init() {
     super.init()
+    guard currentReachabilityStatus != .notReachable else {
+      return
+    }
     requestWeatherData()
     requestDailyQuoteData()
   }

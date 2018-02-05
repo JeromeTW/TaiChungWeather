@@ -8,6 +8,7 @@
 
 import UIKit
 import DGElasticPullToRefresh
+import KRProgressHUD
 
 class WeatherListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
   
@@ -54,13 +55,19 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
         self?.fetchData()
         self?.setupTableViewDataSource()
         self?.tableView.reloadData()
+        KRProgressHUD.dismiss()
       }
     }
   }
   
   private func queryNewDataFromInternet() {
-    guard networkController.isQueryDailyQuoteFinished && networkController.isQueryWeatherFinished else {
+    guard currentReachabilityStatus != .notReachable else {
       tableView.dg_stopLoading()
+      // Show alert.
+      showOKAlert(LocStr(.internetNotReachable), message: nil, okTitle: LocStr(.ok))
+      return
+    }
+    guard networkController.isQueryDailyQuoteFinished && networkController.isQueryWeatherFinished else {
       return
     }
     networkController.requestDailyQuoteData()
@@ -82,6 +89,8 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
     if let results = coreDataConnect.retrieveWeekWeatherResults(predicate: nil, sort: [[Constant.timeKey: false]], limit: 1) {
       guard results.count == 1 else {
         // First time launch the app without history record.
+        KRProgressHUD.appearance().style = .black
+        KRProgressHUD.showInfo(withMessage: LocStr(.loading))
         return
       }
       guard let tempWeatherResults = results[0].covertToWeatherResults() else {
