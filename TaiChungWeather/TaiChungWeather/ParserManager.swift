@@ -53,7 +53,7 @@ class ParserManager {
     }
     
     let temp = NSPredicate(format: "time = %@", date as CVarArg)
-    guard let results = coreDataConnect.retrieveWeekWeatherResults(predicate: temp, sort: nil, limit: nil), results.isEmpty else {
+    guard let results = coreDataConnect.retrieveWeekWeatherResults(predicate: temp, sort: nil, limit: 1), results.isEmpty else {
       DLog("The record is already existed.")
       return true
     }
@@ -106,7 +106,7 @@ class ParserManager {
     }
     
     let temp = NSPredicate(format: "time = %@", date as CVarArg)
-    guard let results = coreDataConnect.retrieveWeekWeatherResults(predicate: temp, sort: nil, limit: nil), results.isEmpty else {
+    guard let results = coreDataConnect.retrieveDailyQuoteResults(predicate: temp, sort: nil, limit: 1), results.isEmpty else {
       DLog("The record is already existed.")
       return true
     }
