@@ -20,12 +20,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       if clearAllRecord {
         // Delete all records.
         // Create Fetch Request
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constant.weatherEntityName)
+        let weatherFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constant.weatherEntityName)
         // Create Batch Delete Request
-        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        let weatherBatchDeleteRequest = NSBatchDeleteRequest(fetchRequest: weatherFetchRequest)
+        
+        // Create Fetch Request
+        let dailyQuoteFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constant.dailyQuoteEntityName)
+        // Create Batch Delete Request
+        let dailyQuoteBatchDeleteRequest = NSBatchDeleteRequest(fetchRequest: dailyQuoteFetchRequest)
         
         do {
-          try persistentContainer.viewContext.execute(batchDeleteRequest)
+          try persistentContainer.viewContext.execute(weatherBatchDeleteRequest)
+          try persistentContainer.viewContext.execute(dailyQuoteBatchDeleteRequest)
         } catch {
           DLog(error)
         }
