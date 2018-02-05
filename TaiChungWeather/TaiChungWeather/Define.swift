@@ -28,6 +28,7 @@ enum Localization: String {
   case dailyQuote
   case day
   case night
+  case today
 }
 
 enum ImageName: String {

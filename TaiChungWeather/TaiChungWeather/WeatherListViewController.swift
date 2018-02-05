@@ -31,6 +31,7 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
       [weak self] error in
       self?.didFetchNewData()
     }
+    setupNavigationBar()
     fetchData()
     if dailyQuote != nil {
       setupTableView()
@@ -49,6 +50,16 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
       setupTableView()
       tableView.reloadData()
     }
+  }
+  
+  // MARK: - Navigation Bar
+  private func setupNavigationBar() {
+    // Add Date
+    let dateString = Date().localTimeString(format: "MM/dd")
+    title = LocStr(.today) + " \(dateString)"
+//    navigationController?.navigationBar.titleTextAttributes =
+//      [.foregroundColor: Color.grayishBrown,
+//       .font: Constant.titleFont]
   }
   
   private func fetchData() {
