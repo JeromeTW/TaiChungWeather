@@ -35,8 +35,8 @@ enum WeatherDescription: String {
   case partlySunny = "⛅️"     // 多雲時晴
   case partlyCloudy = "🌥"    // 多雲、多雲時陰
   case cloudy = "☁️"          // 陰天、陰時多雲
-  case sunnyCloudyRainy = "🌦"  // 多雲時陰短陣雨、多雲短陣雨
-  case rainy = "🌧"           // 陰時有雨、陰時多雲短陣雨
+  case sunnyCloudyRainy = "🌦"  // 多雲時陰短暫雨、多雲短暫雨
+  case rainy = "🌧"           // 陰時有雨、陰時多雲短暫雨
   case stormy = "⛈"          // 有“暴雨”字
   case snowy = "❄️"           // 有“雪”字
   case unknown = "❓"
@@ -52,9 +52,9 @@ enum WeatherDescription: String {
       self = .partlyCloudy
     } else if string == "陰天" || string == "陰時多雲" {
       self = .cloudy
-    } else if string == "多雲時陰短陣雨" || string == "多雲短陣雨" {
+    } else if string == "多雲時陰短暫雨" || string == "多雲短暫雨" {
       self = .sunnyCloudyRainy
-    } else if string == "陰時有雨" || string == "陰時多雲短陣雨" {
+    } else if string == "陰時有雨" || string == "陰時多雲短暫雨" || string == "陰短暫雨" {
       self = .rainy
     } else if string.contains("暴雨") {
       self = .stormy
