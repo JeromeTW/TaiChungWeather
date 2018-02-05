@@ -71,9 +71,7 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
   private func setupNavigationBar() {
     let dateString = Date().weekDay.getString()
     title = LocStr(.today) + " \(dateString)"
-//    navigationController?.navigationBar.titleTextAttributes =
-//      [.foregroundColor: Color.grayishBrown,
-//       .font: Constant.titleFont]
+    navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: Color.darkBlue]
   }
   
   private func fetchData() {
@@ -96,7 +94,6 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
     if let results = coreDataConnect.retrieveDailyQuoteResults(predicate: nil, sort: [[Constant.timeKey: false]], limit: 1) {
       guard results.count == 1 else {
         // First time launch the app without history record.
-        // TODO: HUD.
         return
       }
       dailyQuote = results[0]
@@ -148,6 +145,11 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
       cell.dailyQuoteLabel.text = LocStr(.dailyQuote)
       cell.articleLabel.text = quote.article
       cell.authorLabel.text = quote.author
+      
+      cell.dailyQuoteLabel.textColor = Color.darkBlue
+      cell.articleLabel.textColor = Color.darkOrange
+      cell.authorLabel.textColor = Color.darkBlue
+  
       return cell
     default:
       let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.weatherTableViewCell, for: indexPath) as! WeatherTableViewCell
@@ -156,6 +158,11 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
       cell.highestTemperatureLabel.text = String(weather.highestTemperature)
       cell.lowestTemperatureLabel.text = String(weather.lowestTemperature)
       cell.weatherLabel.text = weather.description.rawValue
+      
+      cell.dateLabel.textColor = Color.darkBlue
+      cell.highestTemperatureLabel.textColor = Color.darkBlue
+      cell.lowestTemperatureLabel.textColor = Color.darkBlue
+      cell.weatherLabel.textColor = Color.darkBlue
       return cell
     }
   }
