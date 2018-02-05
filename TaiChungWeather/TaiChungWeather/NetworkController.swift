@@ -78,11 +78,13 @@ class NetworkController: NSObject, WKNavigationDelegate {
         self.didQueryWeatherHandler?(NetworkError.invalidDecoding)
         return
       }
-      let success = self.parserManager.parseWeatherXML(xmlString: string)
-      if success {
-        self.didQueryWeatherHandler?(nil)
-      } else {
-        self.didQueryWeatherHandler?(NetworkError.invalidParse)
+      DispatchQueue.main.async {
+        let success = self.parserManager.parseWeatherXML(xmlString: string)
+        if success {
+          self.didQueryWeatherHandler?(nil)
+        } else {
+          self.didQueryWeatherHandler?(NetworkError.invalidParse)
+        }
       }
     }
   }
