@@ -1,6 +1,9 @@
 # 台中天氣(TaiChungWeather)APP說明:
 #### 環境:
-Swift3.2,僅支援iPhone直式，iOS 10.0+。以支援多國語的架構進行開發。
+- Swift3.2
+- 僅支援iPhone直式。
+- iOS 10.0+
+- 以支援多國語的架構進行開發。
 
 #### 新的挑戰:
 - MVC-n架構。
