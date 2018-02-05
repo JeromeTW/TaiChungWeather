@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DGElasticPullToRefresh
 
 class WeatherListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
   
@@ -33,8 +34,9 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
     }
     setupNavigationBar()
     fetchData()
+    setupTableView()
     if dailyQuote != nil {
-      setupTableView()
+      setupTableViewDataSource()
     }
   }
   
@@ -43,13 +45,29 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
     
   }
 
+  deinit {
+    if let _ = tableView {
+      tableView.dg_removePullToRefresh()
+    }
+  }
+  
   private func didFetchNewData() {
     if networkController.isQueryDailyQuoteFinished && networkController.isQueryWeatherFinished {
       // TODO: stop HUD.
+      tableView.dg_stopLoading()
       fetchData()
-      setupTableView()
+      setupTableViewDataSource()
       tableView.reloadData()
     }
+  }
+  
+  private func queryNewDataFromInternet() {
+    guard networkController.isQueryDailyQuoteFinished && networkController.isQueryWeatherFinished else {
+      tableView.dg_stopLoading()
+      return
+    }
+    networkController.requestDailyQuoteData()
+    networkController.requestWeatherData()
   }
   
   // MARK: - Navigation Bar
@@ -101,8 +119,19 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
     tableView.backgroundView = tempImageView
     tableView.rowHeight = UITableViewAutomaticDimension
     self.tableView.estimatedRowHeight = view.frame.width * 60 / 375
-    tableView.dataSource = self
     tableView.delegate = self
+    
+    let loadingView = DGElasticPullToRefreshLoadingViewCircle()
+    loadingView.tintColor = UIColor.white
+    tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
+      self?.queryNewDataFromInternet()
+      }, loadingView: loadingView)
+    tableView.dg_setPullToRefreshFillColor(Color.orange)
+    tableView.dg_setPullToRefreshBackgroundColor(Color.lightTiffanyBlue)
+  }
+  
+  private func setupTableViewDataSource() {
+    tableView.dataSource = self
   }
 
   // MARK: - UITableViewDataSource

@@ -4,5 +4,6 @@ target 'TaiChungWeather' do
   use_frameworks!
 
   pod 'Ji', '~> 2.1.0'
-
+  pod 'DGElasticPullToRefresh'
+  
 end

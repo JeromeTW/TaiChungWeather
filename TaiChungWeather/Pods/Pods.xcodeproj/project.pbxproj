@@ -7,65 +7,81 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05B924C7CF1651901997599CBBB34124 /* chvalid.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B2937AE151DB56B58FC3EE3C8C8DFFD /* chvalid.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0BED52A5484ED18DC103436E76EEF034 /* xmlmodule.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F132FF121FE7B785D6543721578F623 /* xmlmodule.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1117D9F56156A0C01B3FBB5A66FD9A82 /* xmlerror.h in Headers */ = {isa = PBXBuildFile; fileRef = 25DA28F890DA48F48265CFE203CCB854 /* xmlerror.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		11A8B056AEB80B70363118641B4FBE2F /* xmlschemas.h in Headers */ = {isa = PBXBuildFile; fileRef = 554DF2A51ECA28A9E5D2798F063D8266 /* xmlschemas.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1575B9776677A1912E43B8DA75E88025 /* debugXML.h in Headers */ = {isa = PBXBuildFile; fileRef = 26D402F054D70F77679F801AD585AD7D /* debugXML.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1FA69A142697D5399B74F8E4658C1798 /* list.h in Headers */ = {isa = PBXBuildFile; fileRef = 240E44334B952722C13C77A237C48918 /* list.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		24FC30BB6C3EB8ADF057F22522C40757 /* hash.h in Headers */ = {isa = PBXBuildFile; fileRef = 7679C95585D4316FE4839E3B4EDB7474 /* hash.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		30B97708AD348ED88D188743630C4A7F /* nanoftp.h in Headers */ = {isa = PBXBuildFile; fileRef = A0A341267EA3C4DE1A63554E7EFB145B /* nanoftp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		374C05B6392D535B60D928B0CABF9600 /* xmlmemory.h in Headers */ = {isa = PBXBuildFile; fileRef = 86224A458E67FF95DFAAE6419EB8D701 /* xmlmemory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		39AB5FBE6C3F6D456DAAE74BBB3DC03D /* xlink.h in Headers */ = {isa = PBXBuildFile; fileRef = B2E5FE0EC2B9506A92EDAE0C9C49D903 /* xlink.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		404A0B12FCE7CB3B3ED2DD7216D4083F /* xmlsave.h in Headers */ = {isa = PBXBuildFile; fileRef = 806D66843636115F6825E467C12C28B9 /* xmlsave.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4482EBED80CEE7733EA5335069D63660 /* xmlstring.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E03FF6889F8BCBDA8B8267AA0590895 /* xmlstring.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		44AA9BC67A0D1B4AC3E3EC614BCC2C58 /* c14n.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FB27F70C1C266E24AF4819F56308A89 /* c14n.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4615252BEB2196C7632DC182EFA82260 /* Pods-TaiChungWeather-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74014B76895882A7F73B406E6906CBFE /* Pods-TaiChungWeather-dummy.m */; };
-		51CAB18B1D6A61881C7401EA1C3BDD77 /* catalog.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BA687A3ACE1B622E1A1B60711D3931D /* catalog.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5479FB593D82015E580988EE077EB8C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		55A9819C974B8584262F5E35074DA06F /* relaxng.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C92EC904576409B2958A2F4FE23C8CD /* relaxng.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5AFC5BC1B68C5722A18AA5F672B2E75F /* xinclude.h in Headers */ = {isa = PBXBuildFile; fileRef = F314927A5750285CCFA13E6BCE922FB2 /* xinclude.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5D329EECB2AA07415DE4E2AF03E7B948 /* JiNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155E30F0F80FA1FEB4A598682A72B799 /* JiNode.swift */; };
-		5FA7EB2449FFE04484F74187C94EFCEA /* JiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD82F4E5C61BB0A9935964E472A50A51 /* JiHelper.swift */; };
-		640AD45D8166EEFEAD3BAB1DB5C862B2 /* valid.h in Headers */ = {isa = PBXBuildFile; fileRef = B2681DA69DA183824EEB39265106F42E /* valid.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6735E8B002340C61FA0AEDEBCD28726B /* xmlreader.h in Headers */ = {isa = PBXBuildFile; fileRef = 010E8278E68DFEA7DAA6AC8D792D2B1D /* xmlreader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6A8C46BD7D904E3D3B5CBDE6DBDF49DF /* parser.h in Headers */ = {isa = PBXBuildFile; fileRef = C9180823981A439243E3596C4510012B /* parser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		70F03896E20DD15CFD6EC993A6FBA7DC /* xpathInternals.h in Headers */ = {isa = PBXBuildFile; fileRef = 8472197169B2F7917C370660A16483C9 /* xpathInternals.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		756E80535937CA090C793A234EC9C69E /* uri.h in Headers */ = {isa = PBXBuildFile; fileRef = 465847D0FE7533B31A9FBAF9A8E689D4 /* uri.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7B186EF11F870CB994FA4A2E07F3BCC4 /* pattern.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E471A1956690E961E422EA750747147 /* pattern.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7DA81F7BBCCE35F154DEA361B441FE2F /* xmlschemastypes.h in Headers */ = {isa = PBXBuildFile; fileRef = E0C382FF40542AE340CC071F99BDA5FB /* xmlschemastypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7E4DC421623A2E5AE5254E76CBAC16AA /* Ji-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E035FF1C78EF0C5F26B54BE683E122A /* Ji-dummy.m */; };
-		7EA6875151D9A3FF420CF3A877C44EB6 /* HTMLparser.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F56CE4E066EB12C858B2460B2AB4E3E /* HTMLparser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8795F63CFBD5CB512DEB348CE83A064A /* Ji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851C25FE25DAA72DB66F633242DE21E7 /* Ji.swift */; };
-		8A7D9757C74D3B6422D68D8D935ECACC /* xmlregexp.h in Headers */ = {isa = PBXBuildFile; fileRef = 046CD952F8071BD63A087A3C01207955 /* xmlregexp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8FF668144CA3C15295E430437463E0A2 /* Ji-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7189F6F7E01F93D2B6857CD0D0861953 /* Ji-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		931A0D3E5D4D5403BC0B89CB2338A8CF /* SAX.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A0A15A0C9AAA72ED7EB16749234FCC5 /* SAX.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9A38654BB6511825C26FE6434B651B17 /* SAX2.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C696D9439BDA1426703939E77E969F4 /* SAX2.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9B49C5ED4BAD09D07D0A1B10F1380265 /* globals.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE23361506E8C9AFBDA1FC6E57D7E90 /* globals.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A1C4A03C909A386F415E09244F0BAD85 /* xmlexports.h in Headers */ = {isa = PBXBuildFile; fileRef = 6287D1536A80BAFA24E79EDEBA0E262E /* xmlexports.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A3A01938DD36078C677C5A175471130A /* HTMLtree.h in Headers */ = {isa = PBXBuildFile; fileRef = F8B320B50A86DFDD6B07A2CF0DACAC5A /* HTMLtree.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA6B9DA312F640814FCB50532BC2CA17 /* entities.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C22603FC033D614363DBA087A49927B /* entities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AC5855BDA061E3B4B911FB5C36CAFC57 /* xmlversion.h in Headers */ = {isa = PBXBuildFile; fileRef = F881B536B78EE852349F3D59270D5397 /* xmlversion.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B4044E945D83D8F1A3D73423D4A30252 /* threads.h in Headers */ = {isa = PBXBuildFile; fileRef = D4713A9B4446B8D096584C977F5FEE5C /* threads.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C0996C9B91BF280F8EBBA870ABA1F717 /* Pods-TaiChungWeather-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F734570001744B6AE1850B68D913AE3A /* Pods-TaiChungWeather-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C3E2C608FF5FFD07467C6845B0909293 /* xpointer.h in Headers */ = {isa = PBXBuildFile; fileRef = D85D27CAD15D7B6CDB6853B8C5910FD1 /* xpointer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C43AE484E5E81645D0C817533D8031B0 /* schemasInternals.h in Headers */ = {isa = PBXBuildFile; fileRef = E06260AAC9884B2A8A6CC7D85FA6D7DD /* schemasInternals.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CB5C5DD4E49A14E8498766204D66F018 /* dict.h in Headers */ = {isa = PBXBuildFile; fileRef = EF82B8839068690B13496FDBD128C3C5 /* dict.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CC4894790422A31E15F751C950D6F685 /* xmlIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 1868EE32249A47DE87FE1C2CED4FDDB6 /* xmlIO.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D6554131FBB4054066722C0ED070E17A /* xmlautomata.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FD601EA375CFA1454FA4F3F49B0E412 /* xmlautomata.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDA17A16E009086A7777094A348A7C4D /* xmlunicode.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A639EDD3389D1E53BA6544E4F28220 /* xmlunicode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E193B13D048E31E0EE01566809663AE9 /* tree.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ADE787979B0A615B5D48CC60EDA745A /* tree.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E20C36BCCDEFB0692DC1E5238A13746B /* schematron.h in Headers */ = {isa = PBXBuildFile; fileRef = 91F2B5FB82D7184FAB9D5363EDAAA0C7 /* schematron.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E238D5ABABCD3DF0E5DE2F2119F795EA /* encoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 03817AEC28037886397F69F6ACCB12C2 /* encoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E423E2EAED9BFE32EDB07EBBE01A8911 /* xpath.h in Headers */ = {isa = PBXBuildFile; fileRef = 47EBD0AD872991A6A91B0F4CCCA77C60 /* xpath.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5A86FD7F9105BA29D3D79479A7F9834 /* nanohttp.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BE297561DD3224D0EBE77847BDE04A7 /* nanohttp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA47C67D31B8AEAC63BD9340C7BE61EB /* parserInternals.h in Headers */ = {isa = PBXBuildFile; fileRef = ECEE2CD6B898873795B6782090C764D9 /* parserInternals.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EB80CFBCA2795FE03CE26CE31A63D53E /* xmlwriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 929DB0B763EB28442168433939F0BB1D /* xmlwriter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F1BD97B1BBA73FBA052C0C37EABE9E4D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		05B924C7CF1651901997599CBBB34124 /* chvalid.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AA41E3817C028DE22450EF9D83B9AC4 /* chvalid.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B7820EEC22CE6A6EB76285119EC1622 /* DGElasticPullToRefresh-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 604D36F6B23B797AA6D642DDFB6102C4 /* DGElasticPullToRefresh-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0BED52A5484ED18DC103436E76EEF034 /* xmlmodule.h in Headers */ = {isa = PBXBuildFile; fileRef = 784B340243CEFDF7AE0FDAAC1DD6EB99 /* xmlmodule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1117D9F56156A0C01B3FBB5A66FD9A82 /* xmlerror.h in Headers */ = {isa = PBXBuildFile; fileRef = 253A4F0092B7B5A8341F3C3499BEE699 /* xmlerror.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11A8B056AEB80B70363118641B4FBE2F /* xmlschemas.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CEDD32148DE265FCA2CEB86ECC188D7 /* xmlschemas.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1575B9776677A1912E43B8DA75E88025 /* debugXML.h in Headers */ = {isa = PBXBuildFile; fileRef = 757609C78538D6AF8D1B44F0177B03B0 /* debugXML.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FA69A142697D5399B74F8E4658C1798 /* list.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D7803FA64E8B3FD7456B9C146A2AE00 /* list.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24FC30BB6C3EB8ADF057F22522C40757 /* hash.h in Headers */ = {isa = PBXBuildFile; fileRef = A0D15C5E2AEC5F12607062D6C43E9302 /* hash.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30B97708AD348ED88D188743630C4A7F /* nanoftp.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B73BB0A8678184B5492939A638E80DB /* nanoftp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		374C05B6392D535B60D928B0CABF9600 /* xmlmemory.h in Headers */ = {isa = PBXBuildFile; fileRef = BC13C26106CF2E86F2960F496E7C70C2 /* xmlmemory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		39AB5FBE6C3F6D456DAAE74BBB3DC03D /* xlink.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F80B75179EF80A2E6EA1951FE74C10A /* xlink.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		404A0B12FCE7CB3B3ED2DD7216D4083F /* xmlsave.h in Headers */ = {isa = PBXBuildFile; fileRef = A45E76B523FFD44023F251E3E9A8B801 /* xmlsave.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4482EBED80CEE7733EA5335069D63660 /* xmlstring.h in Headers */ = {isa = PBXBuildFile; fileRef = 5223D96D1083729D174C426A274B3954 /* xmlstring.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44AA9BC67A0D1B4AC3E3EC614BCC2C58 /* c14n.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F6BB2B8BE4DA2C749458E4D7D2ECB3A /* c14n.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5044C16E89474AA88B99FFFD23049451 /* DGElasticPullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4C6AD8F6044D97F0ABCAD936772D90 /* DGElasticPullToRefreshView.swift */; };
+		51CAB18B1D6A61881C7401EA1C3BDD77 /* catalog.h in Headers */ = {isa = PBXBuildFile; fileRef = BF8951C457115F329973068A9E5B640F /* catalog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52D2DD7EE891B3719A475CE30E81CABD /* DGElasticPullToRefreshLoadingViewCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAF5E6C5304D357884CA740C4122BDD /* DGElasticPullToRefreshLoadingViewCircle.swift */; };
+		542EA745200BCFEFAA4C66A73CE1B0CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		5479FB593D82015E580988EE077EB8C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		55A9819C974B8584262F5E35074DA06F /* relaxng.h in Headers */ = {isa = PBXBuildFile; fileRef = 2369589CE06E53A00BD5C2D78D2F4494 /* relaxng.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AFC5BC1B68C5722A18AA5F672B2E75F /* xinclude.h in Headers */ = {isa = PBXBuildFile; fileRef = C5E9A0D0A4B8779720501FA3501A2CB0 /* xinclude.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D329EECB2AA07415DE4E2AF03E7B948 /* JiNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3785888D0B3A8734395ED0C02DE81 /* JiNode.swift */; };
+		5FA7EB2449FFE04484F74187C94EFCEA /* JiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B7BC867BAC889E4D0BBBED826A13A2 /* JiHelper.swift */; };
+		640AD45D8166EEFEAD3BAB1DB5C862B2 /* valid.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DE00EC986D99D1A4CC38D72448BC3CD /* valid.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6735E8B002340C61FA0AEDEBCD28726B /* xmlreader.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BC92F424F15D055A1EF591AF4202D2F /* xmlreader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A8C46BD7D904E3D3B5CBDE6DBDF49DF /* parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BCF8C585330387440008A5880C1368E /* parser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		70F03896E20DD15CFD6EC993A6FBA7DC /* xpathInternals.h in Headers */ = {isa = PBXBuildFile; fileRef = C95698945220AB690D19F407CA111C02 /* xpathInternals.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		756E80535937CA090C793A234EC9C69E /* uri.h in Headers */ = {isa = PBXBuildFile; fileRef = AA28952291BE130F690BB03A7C705CAC /* uri.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B186EF11F870CB994FA4A2E07F3BCC4 /* pattern.h in Headers */ = {isa = PBXBuildFile; fileRef = FA0425C1103CE705E488AAF951A826D2 /* pattern.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7DA81F7BBCCE35F154DEA361B441FE2F /* xmlschemastypes.h in Headers */ = {isa = PBXBuildFile; fileRef = C247B21BF82C09D562B88185BA061714 /* xmlschemastypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E4DC421623A2E5AE5254E76CBAC16AA /* Ji-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 560AEF552BCB1F719EFAA131818ADA1F /* Ji-dummy.m */; };
+		7EA6875151D9A3FF420CF3A877C44EB6 /* HTMLparser.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A16E3FBACA0180FB64AC9E530BB1E59 /* HTMLparser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83170CE3B0A6BECFD8F522D903DA7D98 /* Pods-TaiChungWeather-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F734570001744B6AE1850B68D913AE3A /* Pods-TaiChungWeather-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8795F63CFBD5CB512DEB348CE83A064A /* Ji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4053F0465A5BAA53A5826959065DF1E7 /* Ji.swift */; };
+		8A7D9757C74D3B6422D68D8D935ECACC /* xmlregexp.h in Headers */ = {isa = PBXBuildFile; fileRef = 6204BF72EA1C05B8EF3DCC14F4699797 /* xmlregexp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A8AC5DD98A121BAD486BA9783B9C8AC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		8FF668144CA3C15295E430437463E0A2 /* Ji-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 56FD32E51A0F47F2D04F23CF3F396D9F /* Ji-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		931A0D3E5D4D5403BC0B89CB2338A8CF /* SAX.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5B5C0B6EAFACDBD8BC02D539E12533 /* SAX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A38654BB6511825C26FE6434B651B17 /* SAX2.h in Headers */ = {isa = PBXBuildFile; fileRef = 931D7EF35807781635C9FB65C62CD4DD /* SAX2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B49C5ED4BAD09D07D0A1B10F1380265 /* globals.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D091C57D2B7AAFCDAD0CCAFDEFFD26 /* globals.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F074D42C938325AFF55A4C9FF8D4CFB /* DGElasticPullToRefreshConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C24A3599A9F0F634F0FADC636C1B91 /* DGElasticPullToRefreshConstants.swift */; };
+		A1C4A03C909A386F415E09244F0BAD85 /* xmlexports.h in Headers */ = {isa = PBXBuildFile; fileRef = 2506CA746CBF7DF50AF9933BC7F75851 /* xmlexports.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A27226839B74309EEEA9E486C4CBCA07 /* DGElasticPullToRefresh-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B082451611106EA285306B2C549DF65A /* DGElasticPullToRefresh-dummy.m */; };
+		A3A01938DD36078C677C5A175471130A /* HTMLtree.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B6138B03D875124D645A56842EE3478 /* HTMLtree.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA6B9DA312F640814FCB50532BC2CA17 /* entities.h in Headers */ = {isa = PBXBuildFile; fileRef = FC49126C8E1FF130B83230661CF2E23B /* entities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC5855BDA061E3B4B911FB5C36CAFC57 /* xmlversion.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B88139D760593D850FBEAC55CE5188E /* xmlversion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B021350AE4291B22A9796CFFAB4D4720 /* Pods-TaiChungWeather-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74014B76895882A7F73B406E6906CBFE /* Pods-TaiChungWeather-dummy.m */; };
+		B4044E945D83D8F1A3D73423D4A30252 /* threads.h in Headers */ = {isa = PBXBuildFile; fileRef = D58ECB9FE3D27DCD3411C280CEB12DCC /* threads.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4B6FFE7B4349A5BD1001E8287A21E6C /* DGElasticPullToRefreshExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD23100849066AB94E614251E1AE9072 /* DGElasticPullToRefreshExtensions.swift */; };
+		C3E2C608FF5FFD07467C6845B0909293 /* xpointer.h in Headers */ = {isa = PBXBuildFile; fileRef = C3D438774A006F56C57F10BC9A868968 /* xpointer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C43AE484E5E81645D0C817533D8031B0 /* schemasInternals.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C1224C01E33F9757F95268342929549 /* schemasInternals.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB5C5DD4E49A14E8498766204D66F018 /* dict.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EFA3EB7D71750ED0DBBD3733339392A /* dict.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC4894790422A31E15F751C950D6F685 /* xmlIO.h in Headers */ = {isa = PBXBuildFile; fileRef = B98164D9C47681C874E9D43B7EAD5BC6 /* xmlIO.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6554131FBB4054066722C0ED070E17A /* xmlautomata.h in Headers */ = {isa = PBXBuildFile; fileRef = 316E8BA8726BA0CB81D645A869615174 /* xmlautomata.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D89DB12AB63FC0F659719705976A32DD /* DGElasticPullToRefreshLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2472676692634BE39A145FB0CC35426D /* DGElasticPullToRefreshLoadingView.swift */; };
+		DDA17A16E009086A7777094A348A7C4D /* xmlunicode.h in Headers */ = {isa = PBXBuildFile; fileRef = C123C26F98598EEACAE4F7AF4C4A0B75 /* xmlunicode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDC03FA35A688149F4FE7425592EA645 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		E193B13D048E31E0EE01566809663AE9 /* tree.h in Headers */ = {isa = PBXBuildFile; fileRef = AA64CFE4A35FD5859B4DC53BEBCD8981 /* tree.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E20C36BCCDEFB0692DC1E5238A13746B /* schematron.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D1D07EF30DA983B4E8068AD4224DC24 /* schematron.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E238D5ABABCD3DF0E5DE2F2119F795EA /* encoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D30C6F61D0431ED321FB8017ECDBD91 /* encoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E423E2EAED9BFE32EDB07EBBE01A8911 /* xpath.h in Headers */ = {isa = PBXBuildFile; fileRef = A15EF066885A38E0E88C2D6D2A8CAE19 /* xpath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5A86FD7F9105BA29D3D79479A7F9834 /* nanohttp.h in Headers */ = {isa = PBXBuildFile; fileRef = F640252E47DCD6D14FF089BA70ED2B21 /* nanohttp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA47C67D31B8AEAC63BD9340C7BE61EB /* parserInternals.h in Headers */ = {isa = PBXBuildFile; fileRef = 69440C6330B59BE1FF91C4EEFBC0AD72 /* parserInternals.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB80CFBCA2795FE03CE26CE31A63D53E /* xmlwriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 48CBFA2DBA8AE236DA7CBF8B341F025B /* xmlwriter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6259B160F3B6A0E4CB4139D244D2AD84 /* PBXContainerItemProxy */ = {
+		609E8C6DE30CE60224FBB8B515EE9F29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47D07B436D82BB983C8429FF84F919A3;
+			remoteInfo = DGElasticPullToRefresh;
+		};
+		9E560C51DA71AA966ED9953F514BA562 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -75,83 +91,105 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		010E8278E68DFEA7DAA6AC8D792D2B1D /* xmlreader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlreader.h; path = "Ji-libxml/xmlreader.h"; sourceTree = "<group>"; };
-		03817AEC28037886397F69F6ACCB12C2 /* encoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = encoding.h; path = "Ji-libxml/encoding.h"; sourceTree = "<group>"; };
-		046CD952F8071BD63A087A3C01207955 /* xmlregexp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlregexp.h; path = "Ji-libxml/xmlregexp.h"; sourceTree = "<group>"; };
-		0C92EC904576409B2958A2F4FE23C8CD /* relaxng.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = relaxng.h; path = "Ji-libxml/relaxng.h"; sourceTree = "<group>"; };
-		155E30F0F80FA1FEB4A598682A72B799 /* JiNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JiNode.swift; path = Source/JiNode.swift; sourceTree = "<group>"; };
-		1868EE32249A47DE87FE1C2CED4FDDB6 /* xmlIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlIO.h; path = "Ji-libxml/xmlIO.h"; sourceTree = "<group>"; };
-		1ADE787979B0A615B5D48CC60EDA745A /* tree.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tree.h; path = "Ji-libxml/tree.h"; sourceTree = "<group>"; };
+		03D091C57D2B7AAFCDAD0CCAFDEFFD26 /* globals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = globals.h; path = "Ji-libxml/globals.h"; sourceTree = "<group>"; };
+		06B7BC867BAC889E4D0BBBED826A13A2 /* JiHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JiHelper.swift; path = Source/JiHelper.swift; sourceTree = "<group>"; };
+		0AA41E3817C028DE22450EF9D83B9AC4 /* chvalid.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = chvalid.h; path = "Ji-libxml/chvalid.h"; sourceTree = "<group>"; };
+		0BC12E6F6127771832BF8461F529CCAD /* DGElasticPullToRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DGElasticPullToRefresh.framework; path = DGElasticPullToRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D7803FA64E8B3FD7456B9C146A2AE00 /* list.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = list.h; path = "Ji-libxml/list.h"; sourceTree = "<group>"; };
 		1BBD7E890083CE3977C4D0E6BB3D1EBD /* Pods-TaiChungWeather-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TaiChungWeather-frameworks.sh"; sourceTree = "<group>"; };
+		1CAF5E6C5304D357884CA740C4122BDD /* DGElasticPullToRefreshLoadingViewCircle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DGElasticPullToRefreshLoadingViewCircle.swift; path = DGElasticPullToRefresh/DGElasticPullToRefreshLoadingViewCircle.swift; sourceTree = "<group>"; };
 		1CFEE5EAF75F69386252AFD6D81A6248 /* Pods-TaiChungWeather.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TaiChungWeather.modulemap"; sourceTree = "<group>"; };
-		1E471A1956690E961E422EA750747147 /* pattern.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pattern.h; path = "Ji-libxml/pattern.h"; sourceTree = "<group>"; };
+		1D30C6F61D0431ED321FB8017ECDBD91 /* encoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = encoding.h; path = "Ji-libxml/encoding.h"; sourceTree = "<group>"; };
 		2157287804D826E4F2C6B08B1C4CD42B /* Pods-TaiChungWeather-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TaiChungWeather-resources.sh"; sourceTree = "<group>"; };
-		240E44334B952722C13C77A237C48918 /* list.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = list.h; path = "Ji-libxml/list.h"; sourceTree = "<group>"; };
-		25DA28F890DA48F48265CFE203CCB854 /* xmlerror.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlerror.h; path = "Ji-libxml/xmlerror.h"; sourceTree = "<group>"; };
-		26D402F054D70F77679F801AD585AD7D /* debugXML.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = debugXML.h; path = "Ji-libxml/debugXML.h"; sourceTree = "<group>"; };
-		273898631B7F940FC8083DE659F48EE2 /* Pods_TaiChungWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TaiChungWeather.framework; path = "Pods-TaiChungWeather.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A0A15A0C9AAA72ED7EB16749234FCC5 /* SAX.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAX.h; path = "Ji-libxml/SAX.h"; sourceTree = "<group>"; };
-		34A639EDD3389D1E53BA6544E4F28220 /* xmlunicode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlunicode.h; path = "Ji-libxml/xmlunicode.h"; sourceTree = "<group>"; };
+		2369589CE06E53A00BD5C2D78D2F4494 /* relaxng.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = relaxng.h; path = "Ji-libxml/relaxng.h"; sourceTree = "<group>"; };
+		2472676692634BE39A145FB0CC35426D /* DGElasticPullToRefreshLoadingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DGElasticPullToRefreshLoadingView.swift; path = DGElasticPullToRefresh/DGElasticPullToRefreshLoadingView.swift; sourceTree = "<group>"; };
+		2506CA746CBF7DF50AF9933BC7F75851 /* xmlexports.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlexports.h; path = "Ji-libxml/xmlexports.h"; sourceTree = "<group>"; };
+		253A4F0092B7B5A8341F3C3499BEE699 /* xmlerror.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlerror.h; path = "Ji-libxml/xmlerror.h"; sourceTree = "<group>"; };
+		29C24A3599A9F0F634F0FADC636C1B91 /* DGElasticPullToRefreshConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DGElasticPullToRefreshConstants.swift; path = DGElasticPullToRefresh/DGElasticPullToRefreshConstants.swift; sourceTree = "<group>"; };
+		2B88139D760593D850FBEAC55CE5188E /* xmlversion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlversion.h; path = "Ji-libxml/xmlversion.h"; sourceTree = "<group>"; };
+		2BCF8C585330387440008A5880C1368E /* parser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = parser.h; path = "Ji-libxml/parser.h"; sourceTree = "<group>"; };
+		2DE00EC986D99D1A4CC38D72448BC3CD /* valid.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = valid.h; path = "Ji-libxml/valid.h"; sourceTree = "<group>"; };
+		2EFA3EB7D71750ED0DBBD3733339392A /* dict.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dict.h; path = "Ji-libxml/dict.h"; sourceTree = "<group>"; };
+		316E8BA8726BA0CB81D645A869615174 /* xmlautomata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlautomata.h; path = "Ji-libxml/xmlautomata.h"; sourceTree = "<group>"; };
+		3B6138B03D875124D645A56842EE3478 /* HTMLtree.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLtree.h; path = "Ji-libxml/HTMLtree.h"; sourceTree = "<group>"; };
+		3D1D07EF30DA983B4E8068AD4224DC24 /* schematron.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = schematron.h; path = "Ji-libxml/schematron.h"; sourceTree = "<group>"; };
+		4053F0465A5BAA53A5826959065DF1E7 /* Ji.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Ji.swift; path = Source/Ji.swift; sourceTree = "<group>"; };
 		4391A0D26E508135E2FEA8C8AA311173 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		465847D0FE7533B31A9FBAF9A8E689D4 /* uri.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = uri.h; path = "Ji-libxml/uri.h"; sourceTree = "<group>"; };
-		47EBD0AD872991A6A91B0F4CCCA77C60 /* xpath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xpath.h; path = "Ji-libxml/xpath.h"; sourceTree = "<group>"; };
 		483F80D0A2A8AC21DC309D5D69874DBC /* Pods-TaiChungWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaiChungWeather.release.xcconfig"; sourceTree = "<group>"; };
-		4BE23361506E8C9AFBDA1FC6E57D7E90 /* globals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = globals.h; path = "Ji-libxml/globals.h"; sourceTree = "<group>"; };
+		48CBFA2DBA8AE236DA7CBF8B341F025B /* xmlwriter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlwriter.h; path = "Ji-libxml/xmlwriter.h"; sourceTree = "<group>"; };
+		4B73BB0A8678184B5492939A638E80DB /* nanoftp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = nanoftp.h; path = "Ji-libxml/nanoftp.h"; sourceTree = "<group>"; };
+		4C1224C01E33F9757F95268342929549 /* schemasInternals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = schemasInternals.h; path = "Ji-libxml/schemasInternals.h"; sourceTree = "<group>"; };
+		4F80B75179EF80A2E6EA1951FE74C10A /* xlink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xlink.h; path = "Ji-libxml/xlink.h"; sourceTree = "<group>"; };
 		5036E517ECE56BFBEA543CC35E0CE508 /* Pods-TaiChungWeather-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TaiChungWeather-acknowledgements.markdown"; sourceTree = "<group>"; };
-		554DF2A51ECA28A9E5D2798F063D8266 /* xmlschemas.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlschemas.h; path = "Ji-libxml/xmlschemas.h"; sourceTree = "<group>"; };
-		5BA687A3ACE1B622E1A1B60711D3931D /* catalog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = catalog.h; path = "Ji-libxml/catalog.h"; sourceTree = "<group>"; };
-		5C22603FC033D614363DBA087A49927B /* entities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = entities.h; path = "Ji-libxml/entities.h"; sourceTree = "<group>"; };
-		5F132FF121FE7B785D6543721578F623 /* xmlmodule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlmodule.h; path = "Ji-libxml/xmlmodule.h"; sourceTree = "<group>"; };
-		6287D1536A80BAFA24E79EDEBA0E262E /* xmlexports.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlexports.h; path = "Ji-libxml/xmlexports.h"; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6846835AC859E6D2ABF34E31A266B55A /* Ji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Ji.framework; path = Ji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A2C48780EEC0B82AF0B6A31CF8870FA /* Ji.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Ji.modulemap; sourceTree = "<group>"; };
-		6C696D9439BDA1426703939E77E969F4 /* SAX2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAX2.h; path = "Ji-libxml/SAX2.h"; sourceTree = "<group>"; };
-		6E035FF1C78EF0C5F26B54BE683E122A /* Ji-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Ji-dummy.m"; sourceTree = "<group>"; };
-		7189F6F7E01F93D2B6857CD0D0861953 /* Ji-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Ji-umbrella.h"; sourceTree = "<group>"; };
+		5223D96D1083729D174C426A274B3954 /* xmlstring.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlstring.h; path = "Ji-libxml/xmlstring.h"; sourceTree = "<group>"; };
+		526FDF8087F9A31B7B0D5809A3451667 /* Pods_TaiChungWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TaiChungWeather.framework; path = "Pods-TaiChungWeather.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		55959DF8B033912E338E3E5C0EEF6C98 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		560AEF552BCB1F719EFAA131818ADA1F /* Ji-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Ji-dummy.m"; sourceTree = "<group>"; };
+		56FD32E51A0F47F2D04F23CF3F396D9F /* Ji-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Ji-umbrella.h"; sourceTree = "<group>"; };
+		59DA53266382D79E15AC49D04EC0A4C9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CEDD32148DE265FCA2CEB86ECC188D7 /* xmlschemas.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlschemas.h; path = "Ji-libxml/xmlschemas.h"; sourceTree = "<group>"; };
+		604D36F6B23B797AA6D642DDFB6102C4 /* DGElasticPullToRefresh-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGElasticPullToRefresh-umbrella.h"; sourceTree = "<group>"; };
+		6204BF72EA1C05B8EF3DCC14F4699797 /* xmlregexp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlregexp.h; path = "Ji-libxml/xmlregexp.h"; sourceTree = "<group>"; };
+		67AFA486D10BE5EB1B3AE04067432D5F /* Ji.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Ji.modulemap; sourceTree = "<group>"; };
+		69440C6330B59BE1FF91C4EEFBC0AD72 /* parserInternals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = parserInternals.h; path = "Ji-libxml/parserInternals.h"; sourceTree = "<group>"; };
+		705979631511EB1C44DCA0457BF6C7A2 /* DGElasticPullToRefresh.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DGElasticPullToRefresh.xcconfig; sourceTree = "<group>"; };
 		74014B76895882A7F73B406E6906CBFE /* Pods-TaiChungWeather-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TaiChungWeather-dummy.m"; sourceTree = "<group>"; };
 		74A3DA59604F877E49F1E0151D540FBC /* Pods-TaiChungWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TaiChungWeather.debug.xcconfig"; sourceTree = "<group>"; };
-		7679C95585D4316FE4839E3B4EDB7474 /* hash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hash.h; path = "Ji-libxml/hash.h"; sourceTree = "<group>"; };
-		7B2937AE151DB56B58FC3EE3C8C8DFFD /* chvalid.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = chvalid.h; path = "Ji-libxml/chvalid.h"; sourceTree = "<group>"; };
-		7E03FF6889F8BCBDA8B8267AA0590895 /* xmlstring.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlstring.h; path = "Ji-libxml/xmlstring.h"; sourceTree = "<group>"; };
+		757609C78538D6AF8D1B44F0177B03B0 /* debugXML.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = debugXML.h; path = "Ji-libxml/debugXML.h"; sourceTree = "<group>"; };
+		76A6AA4534F1AA4904E2699A25BEADF6 /* Ji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Ji.framework; path = Ji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		784B340243CEFDF7AE0FDAAC1DD6EB99 /* xmlmodule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlmodule.h; path = "Ji-libxml/xmlmodule.h"; sourceTree = "<group>"; };
 		7FCF1C6152E266AE2FCFC9677E1A2B83 /* Pods-TaiChungWeather-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TaiChungWeather-acknowledgements.plist"; sourceTree = "<group>"; };
-		7FD601EA375CFA1454FA4F3F49B0E412 /* xmlautomata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlautomata.h; path = "Ji-libxml/xmlautomata.h"; sourceTree = "<group>"; };
-		806D66843636115F6825E467C12C28B9 /* xmlsave.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlsave.h; path = "Ji-libxml/xmlsave.h"; sourceTree = "<group>"; };
-		8330212B33FC1EB3515D7AE5CC17B39F /* Ji.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Ji.xcconfig; sourceTree = "<group>"; };
-		8472197169B2F7917C370660A16483C9 /* xpathInternals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xpathInternals.h; path = "Ji-libxml/xpathInternals.h"; sourceTree = "<group>"; };
-		851C25FE25DAA72DB66F633242DE21E7 /* Ji.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Ji.swift; path = Source/Ji.swift; sourceTree = "<group>"; };
-		86224A458E67FF95DFAAE6419EB8D701 /* xmlmemory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlmemory.h; path = "Ji-libxml/xmlmemory.h"; sourceTree = "<group>"; };
-		8A1A2B93B4823172875B13036DA2F376 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8F56CE4E066EB12C858B2460B2AB4E3E /* HTMLparser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLparser.h; path = "Ji-libxml/HTMLparser.h"; sourceTree = "<group>"; };
-		91F2B5FB82D7184FAB9D5363EDAAA0C7 /* schematron.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = schematron.h; path = "Ji-libxml/schematron.h"; sourceTree = "<group>"; };
-		929DB0B763EB28442168433939F0BB1D /* xmlwriter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlwriter.h; path = "Ji-libxml/xmlwriter.h"; sourceTree = "<group>"; };
+		8A16E3FBACA0180FB64AC9E530BB1E59 /* HTMLparser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLparser.h; path = "Ji-libxml/HTMLparser.h"; sourceTree = "<group>"; };
+		8BC92F424F15D055A1EF591AF4202D2F /* xmlreader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlreader.h; path = "Ji-libxml/xmlreader.h"; sourceTree = "<group>"; };
+		8F6BB2B8BE4DA2C749458E4D7D2ECB3A /* c14n.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = c14n.h; path = "Ji-libxml/c14n.h"; sourceTree = "<group>"; };
+		931D7EF35807781635C9FB65C62CD4DD /* SAX2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAX2.h; path = "Ji-libxml/SAX2.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9BE297561DD3224D0EBE77847BDE04A7 /* nanohttp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = nanohttp.h; path = "Ji-libxml/nanohttp.h"; sourceTree = "<group>"; };
-		9FB27F70C1C266E24AF4819F56308A89 /* c14n.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = c14n.h; path = "Ji-libxml/c14n.h"; sourceTree = "<group>"; };
-		A0A341267EA3C4DE1A63554E7EFB145B /* nanoftp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = nanoftp.h; path = "Ji-libxml/nanoftp.h"; sourceTree = "<group>"; };
-		B2681DA69DA183824EEB39265106F42E /* valid.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = valid.h; path = "Ji-libxml/valid.h"; sourceTree = "<group>"; };
-		B2E5FE0EC2B9506A92EDAE0C9C49D903 /* xlink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xlink.h; path = "Ji-libxml/xlink.h"; sourceTree = "<group>"; };
-		C9180823981A439243E3596C4510012B /* parser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = parser.h; path = "Ji-libxml/parser.h"; sourceTree = "<group>"; };
-		D4713A9B4446B8D096584C977F5FEE5C /* threads.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = threads.h; path = "Ji-libxml/threads.h"; sourceTree = "<group>"; };
-		D85D27CAD15D7B6CDB6853B8C5910FD1 /* xpointer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xpointer.h; path = "Ji-libxml/xpointer.h"; sourceTree = "<group>"; };
-		E06260AAC9884B2A8A6CC7D85FA6D7DD /* schemasInternals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = schemasInternals.h; path = "Ji-libxml/schemasInternals.h"; sourceTree = "<group>"; };
-		E0C382FF40542AE340CC071F99BDA5FB /* xmlschemastypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlschemastypes.h; path = "Ji-libxml/xmlschemastypes.h"; sourceTree = "<group>"; };
-		ECEE2CD6B898873795B6782090C764D9 /* parserInternals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = parserInternals.h; path = "Ji-libxml/parserInternals.h"; sourceTree = "<group>"; };
-		EF82B8839068690B13496FDBD128C3C5 /* dict.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dict.h; path = "Ji-libxml/dict.h"; sourceTree = "<group>"; };
-		F314927A5750285CCFA13E6BCE922FB2 /* xinclude.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xinclude.h; path = "Ji-libxml/xinclude.h"; sourceTree = "<group>"; };
-		F34F039218BBB93B1894BAFECB5A7409 /* Ji-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Ji-prefix.pch"; sourceTree = "<group>"; };
+		99525455D5B0D28F1877F483C3A15BA4 /* DGElasticPullToRefresh-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DGElasticPullToRefresh-prefix.pch"; sourceTree = "<group>"; };
+		A0D15C5E2AEC5F12607062D6C43E9302 /* hash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hash.h; path = "Ji-libxml/hash.h"; sourceTree = "<group>"; };
+		A15EF066885A38E0E88C2D6D2A8CAE19 /* xpath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xpath.h; path = "Ji-libxml/xpath.h"; sourceTree = "<group>"; };
+		A45E76B523FFD44023F251E3E9A8B801 /* xmlsave.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlsave.h; path = "Ji-libxml/xmlsave.h"; sourceTree = "<group>"; };
+		AA28952291BE130F690BB03A7C705CAC /* uri.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = uri.h; path = "Ji-libxml/uri.h"; sourceTree = "<group>"; };
+		AA64CFE4A35FD5859B4DC53BEBCD8981 /* tree.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tree.h; path = "Ji-libxml/tree.h"; sourceTree = "<group>"; };
+		AD23100849066AB94E614251E1AE9072 /* DGElasticPullToRefreshExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DGElasticPullToRefreshExtensions.swift; path = DGElasticPullToRefresh/DGElasticPullToRefreshExtensions.swift; sourceTree = "<group>"; };
+		B082451611106EA285306B2C549DF65A /* DGElasticPullToRefresh-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DGElasticPullToRefresh-dummy.m"; sourceTree = "<group>"; };
+		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		B98164D9C47681C874E9D43B7EAD5BC6 /* xmlIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlIO.h; path = "Ji-libxml/xmlIO.h"; sourceTree = "<group>"; };
+		BC13C26106CF2E86F2960F496E7C70C2 /* xmlmemory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlmemory.h; path = "Ji-libxml/xmlmemory.h"; sourceTree = "<group>"; };
+		BF8951C457115F329973068A9E5B640F /* catalog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = catalog.h; path = "Ji-libxml/catalog.h"; sourceTree = "<group>"; };
+		C123C26F98598EEACAE4F7AF4C4A0B75 /* xmlunicode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlunicode.h; path = "Ji-libxml/xmlunicode.h"; sourceTree = "<group>"; };
+		C247B21BF82C09D562B88185BA061714 /* xmlschemastypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlschemastypes.h; path = "Ji-libxml/xmlschemastypes.h"; sourceTree = "<group>"; };
+		C3D438774A006F56C57F10BC9A868968 /* xpointer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xpointer.h; path = "Ji-libxml/xpointer.h"; sourceTree = "<group>"; };
+		C5E9A0D0A4B8779720501FA3501A2CB0 /* xinclude.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xinclude.h; path = "Ji-libxml/xinclude.h"; sourceTree = "<group>"; };
+		C95698945220AB690D19F407CA111C02 /* xpathInternals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xpathInternals.h; path = "Ji-libxml/xpathInternals.h"; sourceTree = "<group>"; };
+		CAF3785888D0B3A8734395ED0C02DE81 /* JiNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JiNode.swift; path = Source/JiNode.swift; sourceTree = "<group>"; };
+		CF4C6AD8F6044D97F0ABCAD936772D90 /* DGElasticPullToRefreshView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DGElasticPullToRefreshView.swift; path = DGElasticPullToRefresh/DGElasticPullToRefreshView.swift; sourceTree = "<group>"; };
+		D0B033839729A8DAE1E2D1E81F64E384 /* DGElasticPullToRefresh.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = DGElasticPullToRefresh.modulemap; sourceTree = "<group>"; };
+		D58ECB9FE3D27DCD3411C280CEB12DCC /* threads.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = threads.h; path = "Ji-libxml/threads.h"; sourceTree = "<group>"; };
+		D6457BD8F674693FABBDC33960BAA45E /* Ji-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Ji-prefix.pch"; sourceTree = "<group>"; };
+		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DC6ACDDE0377BEC2A5B12365F50D8CED /* Ji.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Ji.xcconfig; sourceTree = "<group>"; };
+		EA5B5C0B6EAFACDBD8BC02D539E12533 /* SAX.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAX.h; path = "Ji-libxml/SAX.h"; sourceTree = "<group>"; };
+		F640252E47DCD6D14FF089BA70ED2B21 /* nanohttp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = nanohttp.h; path = "Ji-libxml/nanohttp.h"; sourceTree = "<group>"; };
 		F734570001744B6AE1850B68D913AE3A /* Pods-TaiChungWeather-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TaiChungWeather-umbrella.h"; sourceTree = "<group>"; };
-		F881B536B78EE852349F3D59270D5397 /* xmlversion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlversion.h; path = "Ji-libxml/xmlversion.h"; sourceTree = "<group>"; };
-		F8B320B50A86DFDD6B07A2CF0DACAC5A /* HTMLtree.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLtree.h; path = "Ji-libxml/HTMLtree.h"; sourceTree = "<group>"; };
-		FD82F4E5C61BB0A9935964E472A50A51 /* JiHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JiHelper.swift; path = Source/JiHelper.swift; sourceTree = "<group>"; };
+		FA0425C1103CE705E488AAF951A826D2 /* pattern.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pattern.h; path = "Ji-libxml/pattern.h"; sourceTree = "<group>"; };
+		FC49126C8E1FF130B83230661CF2E23B /* entities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = entities.h; path = "Ji-libxml/entities.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A3BA43EA90DE12C65AAE517F014D1E86 /* Frameworks */ = {
+		8849B2960B6BCACE8B48255B97993A51 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1BD97B1BBA73FBA052C0C37EABE9E4D /* Foundation.framework in Frameworks */,
+				DDC03FA35A688149F4FE7425592EA645 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACC58F40726B75D6008E25A6126B233A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				542EA745200BCFEFAA4C66A73CE1B0CF /* Foundation.framework in Frameworks */,
+				8A8AC5DD98A121BAD486BA9783B9C8AC /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,33 +222,108 @@
 			path = "Target Support Files/Pods-TaiChungWeather";
 			sourceTree = "<group>";
 		};
-		50FCA6DF46B52264016842429D536A06 /* Ji */ = {
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				851C25FE25DAA72DB66F633242DE21E7 /* Ji.swift */,
-				FD82F4E5C61BB0A9935964E472A50A51 /* JiHelper.swift */,
-				155E30F0F80FA1FEB4A598682A72B799 /* JiNode.swift */,
+				438B396F6B4147076630CAEFE34282C1 /* iOS */,
 			);
-			name = Ji;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
+				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		456D2B155D67AEF57FDC95DF72E4F2ED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD6AF8DC96AAC88E1F71BA780C619CA1 /* DGElasticPullToRefresh */,
+				9D7950A67E13352B091DEDC8A2F05819 /* Ji */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7090BD14D47D0B6B090063F0574A5E3F /* Ji-libxml */ = {
+			isa = PBXGroup;
+			children = (
+				8F6BB2B8BE4DA2C749458E4D7D2ECB3A /* c14n.h */,
+				BF8951C457115F329973068A9E5B640F /* catalog.h */,
+				0AA41E3817C028DE22450EF9D83B9AC4 /* chvalid.h */,
+				757609C78538D6AF8D1B44F0177B03B0 /* debugXML.h */,
+				2EFA3EB7D71750ED0DBBD3733339392A /* dict.h */,
+				1D30C6F61D0431ED321FB8017ECDBD91 /* encoding.h */,
+				FC49126C8E1FF130B83230661CF2E23B /* entities.h */,
+				03D091C57D2B7AAFCDAD0CCAFDEFFD26 /* globals.h */,
+				A0D15C5E2AEC5F12607062D6C43E9302 /* hash.h */,
+				8A16E3FBACA0180FB64AC9E530BB1E59 /* HTMLparser.h */,
+				3B6138B03D875124D645A56842EE3478 /* HTMLtree.h */,
+				0D7803FA64E8B3FD7456B9C146A2AE00 /* list.h */,
+				4B73BB0A8678184B5492939A638E80DB /* nanoftp.h */,
+				F640252E47DCD6D14FF089BA70ED2B21 /* nanohttp.h */,
+				2BCF8C585330387440008A5880C1368E /* parser.h */,
+				69440C6330B59BE1FF91C4EEFBC0AD72 /* parserInternals.h */,
+				FA0425C1103CE705E488AAF951A826D2 /* pattern.h */,
+				2369589CE06E53A00BD5C2D78D2F4494 /* relaxng.h */,
+				EA5B5C0B6EAFACDBD8BC02D539E12533 /* SAX.h */,
+				931D7EF35807781635C9FB65C62CD4DD /* SAX2.h */,
+				4C1224C01E33F9757F95268342929549 /* schemasInternals.h */,
+				3D1D07EF30DA983B4E8068AD4224DC24 /* schematron.h */,
+				D58ECB9FE3D27DCD3411C280CEB12DCC /* threads.h */,
+				AA64CFE4A35FD5859B4DC53BEBCD8981 /* tree.h */,
+				AA28952291BE130F690BB03A7C705CAC /* uri.h */,
+				2DE00EC986D99D1A4CC38D72448BC3CD /* valid.h */,
+				C5E9A0D0A4B8779720501FA3501A2CB0 /* xinclude.h */,
+				4F80B75179EF80A2E6EA1951FE74C10A /* xlink.h */,
+				316E8BA8726BA0CB81D645A869615174 /* xmlautomata.h */,
+				253A4F0092B7B5A8341F3C3499BEE699 /* xmlerror.h */,
+				2506CA746CBF7DF50AF9933BC7F75851 /* xmlexports.h */,
+				B98164D9C47681C874E9D43B7EAD5BC6 /* xmlIO.h */,
+				BC13C26106CF2E86F2960F496E7C70C2 /* xmlmemory.h */,
+				784B340243CEFDF7AE0FDAAC1DD6EB99 /* xmlmodule.h */,
+				8BC92F424F15D055A1EF591AF4202D2F /* xmlreader.h */,
+				6204BF72EA1C05B8EF3DCC14F4699797 /* xmlregexp.h */,
+				A45E76B523FFD44023F251E3E9A8B801 /* xmlsave.h */,
+				5CEDD32148DE265FCA2CEB86ECC188D7 /* xmlschemas.h */,
+				C247B21BF82C09D562B88185BA061714 /* xmlschemastypes.h */,
+				5223D96D1083729D174C426A274B3954 /* xmlstring.h */,
+				C123C26F98598EEACAE4F7AF4C4A0B75 /* xmlunicode.h */,
+				2B88139D760593D850FBEAC55CE5188E /* xmlversion.h */,
+				48CBFA2DBA8AE236DA7CBF8B341F025B /* xmlwriter.h */,
+				A15EF066885A38E0E88C2D6D2A8CAE19 /* xpath.h */,
+				C95698945220AB690D19F407CA111C02 /* xpathInternals.h */,
+				C3D438774A006F56C57F10BC9A868968 /* xpointer.h */,
+			);
+			name = "Ji-libxml";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				7EEC4DFDB9898E51217179C48DFA6ED7 /* Pods */,
-				BD1D5A4FB33DD611F7B4957C923C5969 /* Products */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				456D2B155D67AEF57FDC95DF72E4F2ED /* Pods */,
+				97F679B8B6417A4239A86DCA4A24EA13 /* Products */,
 				95AABF23B909F669F3A82C7CF5FF5B02 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		7EEC4DFDB9898E51217179C48DFA6ED7 /* Pods */ = {
+		9517A256221CB50783918D21B1A52F8B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				B094E57444C497562FA22BD761A335F4 /* Ji */,
+				59DA53266382D79E15AC49D04EC0A4C9 /* Info.plist */,
+				67AFA486D10BE5EB1B3AE04067432D5F /* Ji.modulemap */,
+				DC6ACDDE0377BEC2A5B12365F50D8CED /* Ji.xcconfig */,
+				560AEF552BCB1F719EFAA131818ADA1F /* Ji-dummy.m */,
+				D6457BD8F674693FABBDC33960BAA45E /* Ji-prefix.pch */,
+				56FD32E51A0F47F2D04F23CF3F396D9F /* Ji-umbrella.h */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/Ji";
 			sourceTree = "<group>";
 		};
 		95AABF23B909F669F3A82C7CF5FF5B02 /* Targets Support Files */ = {
@@ -221,112 +334,76 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		B094E57444C497562FA22BD761A335F4 /* Ji */ = {
+		96FBB635B6104C5A0BCA937CCCF9A11F /* Ji */ = {
 			isa = PBXGroup;
 			children = (
-				50FCA6DF46B52264016842429D536A06 /* Ji */,
-				F80D61FD3EE54671E91E8486682BC499 /* Ji-libxml */,
-				FC129F873C8046937630858D131339D1 /* Support Files */,
+				4053F0465A5BAA53A5826959065DF1E7 /* Ji.swift */,
+				06B7BC867BAC889E4D0BBBED826A13A2 /* JiHelper.swift */,
+				CAF3785888D0B3A8734395ED0C02DE81 /* JiNode.swift */,
+			);
+			name = Ji;
+			sourceTree = "<group>";
+		};
+		97F679B8B6417A4239A86DCA4A24EA13 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0BC12E6F6127771832BF8461F529CCAD /* DGElasticPullToRefresh.framework */,
+				76A6AA4534F1AA4904E2699A25BEADF6 /* Ji.framework */,
+				526FDF8087F9A31B7B0D5809A3451667 /* Pods_TaiChungWeather.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9D7950A67E13352B091DEDC8A2F05819 /* Ji */ = {
+			isa = PBXGroup;
+			children = (
+				96FBB635B6104C5A0BCA937CCCF9A11F /* Ji */,
+				7090BD14D47D0B6B090063F0574A5E3F /* Ji-libxml */,
+				9517A256221CB50783918D21B1A52F8B /* Support Files */,
 			);
 			name = Ji;
 			path = Ji;
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		C85F80B85BAA025289419B390C053A24 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BD1D5A4FB33DD611F7B4957C923C5969 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6846835AC859E6D2ABF34E31A266B55A /* Ji.framework */,
-				273898631B7F940FC8083DE659F48EE2 /* Pods_TaiChungWeather.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		F80D61FD3EE54671E91E8486682BC499 /* Ji-libxml */ = {
-			isa = PBXGroup;
-			children = (
-				9FB27F70C1C266E24AF4819F56308A89 /* c14n.h */,
-				5BA687A3ACE1B622E1A1B60711D3931D /* catalog.h */,
-				7B2937AE151DB56B58FC3EE3C8C8DFFD /* chvalid.h */,
-				26D402F054D70F77679F801AD585AD7D /* debugXML.h */,
-				EF82B8839068690B13496FDBD128C3C5 /* dict.h */,
-				03817AEC28037886397F69F6ACCB12C2 /* encoding.h */,
-				5C22603FC033D614363DBA087A49927B /* entities.h */,
-				4BE23361506E8C9AFBDA1FC6E57D7E90 /* globals.h */,
-				7679C95585D4316FE4839E3B4EDB7474 /* hash.h */,
-				8F56CE4E066EB12C858B2460B2AB4E3E /* HTMLparser.h */,
-				F8B320B50A86DFDD6B07A2CF0DACAC5A /* HTMLtree.h */,
-				240E44334B952722C13C77A237C48918 /* list.h */,
-				A0A341267EA3C4DE1A63554E7EFB145B /* nanoftp.h */,
-				9BE297561DD3224D0EBE77847BDE04A7 /* nanohttp.h */,
-				C9180823981A439243E3596C4510012B /* parser.h */,
-				ECEE2CD6B898873795B6782090C764D9 /* parserInternals.h */,
-				1E471A1956690E961E422EA750747147 /* pattern.h */,
-				0C92EC904576409B2958A2F4FE23C8CD /* relaxng.h */,
-				2A0A15A0C9AAA72ED7EB16749234FCC5 /* SAX.h */,
-				6C696D9439BDA1426703939E77E969F4 /* SAX2.h */,
-				E06260AAC9884B2A8A6CC7D85FA6D7DD /* schemasInternals.h */,
-				91F2B5FB82D7184FAB9D5363EDAAA0C7 /* schematron.h */,
-				D4713A9B4446B8D096584C977F5FEE5C /* threads.h */,
-				1ADE787979B0A615B5D48CC60EDA745A /* tree.h */,
-				465847D0FE7533B31A9FBAF9A8E689D4 /* uri.h */,
-				B2681DA69DA183824EEB39265106F42E /* valid.h */,
-				F314927A5750285CCFA13E6BCE922FB2 /* xinclude.h */,
-				B2E5FE0EC2B9506A92EDAE0C9C49D903 /* xlink.h */,
-				7FD601EA375CFA1454FA4F3F49B0E412 /* xmlautomata.h */,
-				25DA28F890DA48F48265CFE203CCB854 /* xmlerror.h */,
-				6287D1536A80BAFA24E79EDEBA0E262E /* xmlexports.h */,
-				1868EE32249A47DE87FE1C2CED4FDDB6 /* xmlIO.h */,
-				86224A458E67FF95DFAAE6419EB8D701 /* xmlmemory.h */,
-				5F132FF121FE7B785D6543721578F623 /* xmlmodule.h */,
-				010E8278E68DFEA7DAA6AC8D792D2B1D /* xmlreader.h */,
-				046CD952F8071BD63A087A3C01207955 /* xmlregexp.h */,
-				806D66843636115F6825E467C12C28B9 /* xmlsave.h */,
-				554DF2A51ECA28A9E5D2798F063D8266 /* xmlschemas.h */,
-				E0C382FF40542AE340CC071F99BDA5FB /* xmlschemastypes.h */,
-				7E03FF6889F8BCBDA8B8267AA0590895 /* xmlstring.h */,
-				34A639EDD3389D1E53BA6544E4F28220 /* xmlunicode.h */,
-				F881B536B78EE852349F3D59270D5397 /* xmlversion.h */,
-				929DB0B763EB28442168433939F0BB1D /* xmlwriter.h */,
-				47EBD0AD872991A6A91B0F4CCCA77C60 /* xpath.h */,
-				8472197169B2F7917C370660A16483C9 /* xpathInternals.h */,
-				D85D27CAD15D7B6CDB6853B8C5910FD1 /* xpointer.h */,
-			);
-			name = "Ji-libxml";
-			sourceTree = "<group>";
-		};
-		FC129F873C8046937630858D131339D1 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				8A1A2B93B4823172875B13036DA2F376 /* Info.plist */,
-				6A2C48780EEC0B82AF0B6A31CF8870FA /* Ji.modulemap */,
-				8330212B33FC1EB3515D7AE5CC17B39F /* Ji.xcconfig */,
-				6E035FF1C78EF0C5F26B54BE683E122A /* Ji-dummy.m */,
-				F34F039218BBB93B1894BAFECB5A7409 /* Ji-prefix.pch */,
-				7189F6F7E01F93D2B6857CD0D0861953 /* Ji-umbrella.h */,
+				D0B033839729A8DAE1E2D1E81F64E384 /* DGElasticPullToRefresh.modulemap */,
+				705979631511EB1C44DCA0457BF6C7A2 /* DGElasticPullToRefresh.xcconfig */,
+				B082451611106EA285306B2C549DF65A /* DGElasticPullToRefresh-dummy.m */,
+				99525455D5B0D28F1877F483C3A15BA4 /* DGElasticPullToRefresh-prefix.pch */,
+				604D36F6B23B797AA6D642DDFB6102C4 /* DGElasticPullToRefresh-umbrella.h */,
+				55959DF8B033912E338E3E5C0EEF6C98 /* Info.plist */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/Ji";
+			path = "../Target Support Files/DGElasticPullToRefresh";
+			sourceTree = "<group>";
+		};
+		DD6AF8DC96AAC88E1F71BA780C619CA1 /* DGElasticPullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				29C24A3599A9F0F634F0FADC636C1B91 /* DGElasticPullToRefreshConstants.swift */,
+				AD23100849066AB94E614251E1AE9072 /* DGElasticPullToRefreshExtensions.swift */,
+				2472676692634BE39A145FB0CC35426D /* DGElasticPullToRefreshLoadingView.swift */,
+				1CAF5E6C5304D357884CA740C4122BDD /* DGElasticPullToRefreshLoadingViewCircle.swift */,
+				CF4C6AD8F6044D97F0ABCAD936772D90 /* DGElasticPullToRefreshView.swift */,
+				C85F80B85BAA025289419B390C053A24 /* Support Files */,
+			);
+			name = DGElasticPullToRefresh;
+			path = DGElasticPullToRefresh;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		0F5EF4C7609EA1657E73ABCCE908AB5B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83170CE3B0A6BECFD8F522D903DA7D98 /* Pods-TaiChungWeather-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1CB9ED997E4F5BA5D15CFD7D305CE5AA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -381,11 +458,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E45C3D5942290CFDFC1B5057D201F57C /* Headers */ = {
+		C41DD70ED1E86FB8DA51EF3E973C63A9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0996C9B91BF280F8EBBA870ABA1F717 /* Pods-TaiChungWeather-umbrella.h in Headers */,
+				0B7820EEC22CE6A6EB76285119EC1622 /* DGElasticPullToRefresh-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,25 +483,43 @@
 			);
 			name = Ji;
 			productName = Ji;
-			productReference = 6846835AC859E6D2ABF34E31A266B55A /* Ji.framework */;
+			productReference = 76A6AA4534F1AA4904E2699A25BEADF6 /* Ji.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E060A55EF06994EE447F7EE2344562E5 /* Pods-TaiChungWeather */ = {
+		47D07B436D82BB983C8429FF84F919A3 /* DGElasticPullToRefresh */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 85040ECCD89B4B8EA2FF20AFE65FB5D5 /* Build configuration list for PBXNativeTarget "Pods-TaiChungWeather" */;
+			buildConfigurationList = FABD48557642D733C1DEC003DC4E71D1 /* Build configuration list for PBXNativeTarget "DGElasticPullToRefresh" */;
 			buildPhases = (
-				630412FB98230E819800D3418AEE0A44 /* Sources */,
-				A3BA43EA90DE12C65AAE517F014D1E86 /* Frameworks */,
-				E45C3D5942290CFDFC1B5057D201F57C /* Headers */,
+				C6FA28007D62F3AD844A873ECC11DBE8 /* Sources */,
+				ACC58F40726B75D6008E25A6126B233A /* Frameworks */,
+				C41DD70ED1E86FB8DA51EF3E973C63A9 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6489A7E846312FC2A9AE89F8AF382D88 /* PBXTargetDependency */,
+			);
+			name = DGElasticPullToRefresh;
+			productName = DGElasticPullToRefresh;
+			productReference = 0BC12E6F6127771832BF8461F529CCAD /* DGElasticPullToRefresh.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B2B1F32DD5520779EAE556459BB0B7B2 /* Pods-TaiChungWeather */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C787F9EAE187A404C49C2683F8F10D64 /* Build configuration list for PBXNativeTarget "Pods-TaiChungWeather" */;
+			buildPhases = (
+				6E44183C8610BDD6AFB1309CF565964C /* Sources */,
+				8849B2960B6BCACE8B48255B97993A51 /* Frameworks */,
+				0F5EF4C7609EA1657E73ABCCE908AB5B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21A36395A9E105B10B40303919A26331 /* PBXTargetDependency */,
+				E3F7B3CAF8DA3C579C58A6DEF654CBFF /* PBXTargetDependency */,
 			);
 			name = "Pods-TaiChungWeather";
 			productName = "Pods-TaiChungWeather";
-			productReference = 273898631B7F940FC8083DE659F48EE2 /* Pods_TaiChungWeather.framework */;
+			productReference = 526FDF8087F9A31B7B0D5809A3451667 /* Pods_TaiChungWeather.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -444,22 +539,23 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = BD1D5A4FB33DD611F7B4957C923C5969 /* Products */;
+			productRefGroup = 97F679B8B6417A4239A86DCA4A24EA13 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				47D07B436D82BB983C8429FF84F919A3 /* DGElasticPullToRefresh */,
 				42E68C024F0E41495C505F917CAB4426 /* Ji */,
-				E060A55EF06994EE447F7EE2344562E5 /* Pods-TaiChungWeather */,
+				B2B1F32DD5520779EAE556459BB0B7B2 /* Pods-TaiChungWeather */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		630412FB98230E819800D3418AEE0A44 /* Sources */ = {
+		6E44183C8610BDD6AFB1309CF565964C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4615252BEB2196C7632DC182EFA82260 /* Pods-TaiChungWeather-dummy.m in Sources */,
+				B021350AE4291B22A9796CFFAB4D4720 /* Pods-TaiChungWeather-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,21 +570,74 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C6FA28007D62F3AD844A873ECC11DBE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A27226839B74309EEEA9E486C4CBCA07 /* DGElasticPullToRefresh-dummy.m in Sources */,
+				9F074D42C938325AFF55A4C9FF8D4CFB /* DGElasticPullToRefreshConstants.swift in Sources */,
+				B4B6FFE7B4349A5BD1001E8287A21E6C /* DGElasticPullToRefreshExtensions.swift in Sources */,
+				D89DB12AB63FC0F659719705976A32DD /* DGElasticPullToRefreshLoadingView.swift in Sources */,
+				52D2DD7EE891B3719A475CE30E81CABD /* DGElasticPullToRefreshLoadingViewCircle.swift in Sources */,
+				5044C16E89474AA88B99FFFD23049451 /* DGElasticPullToRefreshView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6489A7E846312FC2A9AE89F8AF382D88 /* PBXTargetDependency */ = {
+		21A36395A9E105B10B40303919A26331 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DGElasticPullToRefresh;
+			target = 47D07B436D82BB983C8429FF84F919A3 /* DGElasticPullToRefresh */;
+			targetProxy = 609E8C6DE30CE60224FBB8B515EE9F29 /* PBXContainerItemProxy */;
+		};
+		E3F7B3CAF8DA3C579C58A6DEF654CBFF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Ji;
 			target = 42E68C024F0E41495C505F917CAB4426 /* Ji */;
-			targetProxy = 6259B160F3B6A0E4CB4139D244D2AD84 /* PBXContainerItemProxy */;
+			targetProxy = 9E560C51DA71AA966ED9953F514BA562 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0249F7A0EAE3720376E4EF0277C7C779 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74A3DA59604F877E49F1E0151D540FBC /* Pods-TaiChungWeather.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TaiChungWeather/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TaiChungWeather/Pods-TaiChungWeather.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TaiChungWeather;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		3A438C2866D520A027761D9D6CA99C5C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8330212B33FC1EB3515D7AE5CC17B39F /* Ji.xcconfig */;
+			baseConfigurationReference = DC6ACDDE0377BEC2A5B12365F50D8CED /* Ji.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -516,40 +665,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		6F53E560A96152EFB5FE456A65637D3A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 483F80D0A2A8AC21DC309D5D69874DBC /* Pods-TaiChungWeather.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-TaiChungWeather/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TaiChungWeather/Pods-TaiChungWeather.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TaiChungWeather;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		7C07ED8089F70A31B83996A8910D7F18 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -613,7 +728,7 @@
 		};
 		90CF21B361B876FB2E27DDA6C6215A4B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8330212B33FC1EB3515D7AE5CC17B39F /* Ji.xcconfig */;
+			baseConfigurationReference = DC6ACDDE0377BEC2A5B12365F50D8CED /* Ji.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -698,9 +813,9 @@
 			};
 			name = Release;
 		};
-		F3C90D2441635EEF0360CF3860D13A3C /* Debug */ = {
+		CE528B17F3D0603523B2256D061353BF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 74A3DA59604F877E49F1E0151D540FBC /* Pods-TaiChungWeather.debug.xcconfig */;
+			baseConfigurationReference = 483F80D0A2A8AC21DC309D5D69874DBC /* Pods-TaiChungWeather.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -724,13 +839,76 @@
 				PRODUCT_NAME = Pods_TaiChungWeather;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E3D938D64C7C037C7D5B30D6991E18DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 705979631511EB1C44DCA0457BF6C7A2 /* DGElasticPullToRefresh.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DGElasticPullToRefresh/DGElasticPullToRefresh-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DGElasticPullToRefresh/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DGElasticPullToRefresh/DGElasticPullToRefresh.modulemap";
+				PRODUCT_NAME = DGElasticPullToRefresh;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		E49E5AF253DBD4696A68542D7E351361 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 705979631511EB1C44DCA0457BF6C7A2 /* DGElasticPullToRefresh.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DGElasticPullToRefresh/DGElasticPullToRefresh-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DGElasticPullToRefresh/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DGElasticPullToRefresh/DGElasticPullToRefresh.modulemap";
+				PRODUCT_NAME = DGElasticPullToRefresh;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -753,11 +931,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		85040ECCD89B4B8EA2FF20AFE65FB5D5 /* Build configuration list for PBXNativeTarget "Pods-TaiChungWeather" */ = {
+		C787F9EAE187A404C49C2683F8F10D64 /* Build configuration list for PBXNativeTarget "Pods-TaiChungWeather" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F3C90D2441635EEF0360CF3860D13A3C /* Debug */,
-				6F53E560A96152EFB5FE456A65637D3A /* Release */,
+				0249F7A0EAE3720376E4EF0277C7C779 /* Debug */,
+				CE528B17F3D0603523B2256D061353BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FABD48557642D733C1DEC003DC4E71D1 /* Build configuration list for PBXNativeTarget "DGElasticPullToRefresh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3D938D64C7C037C7D5B30D6991E18DB /* Debug */,
+				E49E5AF253DBD4696A68542D7E351361 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
