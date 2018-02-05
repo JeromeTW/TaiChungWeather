@@ -19,6 +19,14 @@ enum WeatherTime {
       self = .night
     }
   }
+  
+  func getString() -> String {
+    if self == .day {
+      return LocStr(.day)
+    } else {
+      return LocStr(.night)
+    }
+  }
 }
 
 enum WeatherDescription: String {
