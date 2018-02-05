@@ -1,15 +1,15 @@
 # TaiChungWeather
 
-#台中天氣APP說明:
+台中天氣APP說明:
 
 Swift3.2,僅支援iPhone直式，iOS 10.0+。以支援多國語的架構進行開發。
 
-#新的挑戰:
+新的挑戰:
 1.MVC-n架構。
 2.用CoreData作為資料庫。
 3.用iOS APP來爬RSS的XML以及HTML。
 
-#開發日誌:
+開發日誌:
 2018/02/02:
 1.研究并嘗試實作MVC-n架構，最後還是沒有成功。最後將n改為丑丑的Singleton。
 2018/02/03:
@@ -27,11 +27,12 @@ Swift3.2,僅支援iPhone直式，iOS 10.0+。以支援多國語的架構進行�
 1.實作主頁面UI。
 2.檢查網路狀態。
 
-#備註:
+備註:
 1.一開啟APP進入主頁面後，會先呈現資料庫中的資料（如果有的話），然後等取回每日一句和氣象預報後，會寫入資料庫，并更新主頁面。
 2.主頁面的TableView下拉可以重新下載每日一句和氣象預報（如果沒有正在取得上述任一資料的話）。
+3.可以在AppDelegate.swift將clearAllRecord設為true, 如果是在Debug Mode下的話，會清空Core Data的所有資料，模擬第一次開啟APP的狀態。
 
-#參考資料:
+參考資料:
 Apple Sample Code:
 1.https://developer.apple.com/library/content/samplecode/TopSongs/Introduction/Intro.html
 2.https://developer.apple.com/library/content/samplecode/Earthquakes/Introduction/Intro.html
