@@ -69,8 +69,7 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
   
   // MARK: - Navigation Bar
   private func setupNavigationBar() {
-    // Add Date
-    let dateString = Date().localTimeString(format: "MM/dd")
+    let dateString = Date().weekDay.getString()
     title = LocStr(.today) + " \(dateString)"
 //    navigationController?.navigationBar.titleTextAttributes =
 //      [.foregroundColor: Color.grayishBrown,
@@ -153,7 +152,7 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
     default:
       let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.weatherTableViewCell, for: indexPath) as! WeatherTableViewCell
       let weather = weatherResults[row]
-      cell.dateLabel.text = weather.date.localTimeString(format: "MM/dd") + " \(weather.weatherTime.getString())"
+      cell.dateLabel.text = weather.date.weekDay.getString() + " \(weather.weatherTime.getString())"
       cell.highestTemperatureLabel.text = String(weather.highestTemperature)
       cell.lowestTemperatureLabel.text = String(weather.lowestTemperature)
       cell.weatherLabel.text = weather.description.rawValue

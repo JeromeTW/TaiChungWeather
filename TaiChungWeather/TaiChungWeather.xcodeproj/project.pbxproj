@@ -13,6 +13,7 @@
 		0222920A2027DE9C0034FE6A /* WeekWeather+Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022292092027DE9C0034FE6A /* WeekWeather+Weather.swift */; };
 		0222920C2027ECBC0034FE6A /* DailyQuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0222920B2027ECBC0034FE6A /* DailyQuoteTableViewCell.swift */; };
 		02229212202839330034FE6A /* UIColor+Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02229211202839330034FE6A /* UIColor+Initialization.swift */; };
+		0222921420284A0C0034FE6A /* Date+WeekDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0222921320284A0C0034FE6A /* Date+WeekDay.swift */; };
 		023729772023365C009D4187 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023729762023365C009D4187 /* AppDelegate.swift */; };
 		0237297C2023365C009D4187 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0237297A2023365C009D4187 /* Main.storyboard */; };
 		0237297E2023365C009D4187 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0237297D2023365C009D4187 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		022292092027DE9C0034FE6A /* WeekWeather+Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeekWeather+Weather.swift"; sourceTree = "<group>"; };
 		0222920B2027ECBC0034FE6A /* DailyQuoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuoteTableViewCell.swift; sourceTree = "<group>"; };
 		02229211202839330034FE6A /* UIColor+Initialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Initialization.swift"; sourceTree = "<group>"; };
+		0222921320284A0C0034FE6A /* Date+WeekDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+WeekDay.swift"; sourceTree = "<group>"; };
 		023729732023365C009D4187 /* TaiChungWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaiChungWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		023729762023365C009D4187 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0237297B2023365C009D4187 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				02C5673020258F0C00A5DAB8 /* Date+String.swift */,
 				02DA0536202702E600954ABE /* Date+LocalTime.swift */,
 				02229211202839330034FE6A /* UIColor+Initialization.swift */,
+				0222921320284A0C0034FE6A /* Date+WeekDay.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				02C5672D2025604100A5DAB8 /* CoreDataConnect.swift in Sources */,
 				02C5672F2025814100A5DAB8 /* Date+ISO8601.swift in Sources */,
 				022292032027DCED0034FE6A /* WeatherListViewController.swift in Sources */,
+				0222921420284A0C0034FE6A /* Date+WeekDay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
