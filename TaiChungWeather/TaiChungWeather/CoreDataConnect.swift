@@ -36,15 +36,8 @@ class CoreDataConnect {
     return false
   }
   
-  public func retrieveWeekWeatherResults(predicate:NSPredicate?, sort:[[String:Bool]]?, limit:Int?) -> [WeekWeather]? {
-    guard let results = retrieve(Constant.weatherEntityName, predicate: predicate, sort: sort, limit: limit) as? [WeekWeather] else {
-      return nil
-    }
-    return results
-  }
-  
   // retrieve
-  private func retrieve(_ myEntityName:String, predicate:NSPredicate?, sort:[[String:Bool]]?, limit:Int?) -> [NSManagedObject]? {
+  func retrieve(_ myEntityName:String, predicate:NSPredicate?, sort:[[String:Bool]]?, limit:Int?) -> [NSManagedObject]? {
     
     let request = NSFetchRequest<NSFetchRequestResult>(entityName: myEntityName)
     

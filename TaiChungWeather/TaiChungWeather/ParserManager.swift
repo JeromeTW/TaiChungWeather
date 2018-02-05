@@ -100,7 +100,7 @@ class ParserManager {
     let coreDataConnect = CoreDataConnect(context: myContext)
     let dateFormatString = "yyyyMMdd"
     // NOTE: It will covert to local timezone automatically. dateString is +08 timezone date.
-    guard let date = Date.dateFromISO8601String(dateTimeString: dateString, with: dateFormatString) else {
+    guard let date = Date.dateFromISO8601String(dateTimeString: dateString, format: dateFormatString) else {
       assertionFailure()
       return false
     }

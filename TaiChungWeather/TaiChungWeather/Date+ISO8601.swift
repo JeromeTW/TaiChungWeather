@@ -20,7 +20,7 @@
 import Foundation
 
 extension Date {
-  static func dateFromISO8601String(dateTimeString:String, with format: String = "yyyy-MM-dd'T'HH:mm:ss.SSSZ") -> Date? {
+  static func dateFromISO8601String(dateTimeString:String, format: String = "yyyy-MM-dd'T'HH:mm:ss.SSSZ") -> Date? {
         // Example of dateTimeString: 2016-06-14T09:27:51.177Z
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format //iso 8601
