@@ -13,7 +13,7 @@ enum Constant {
   static let perisistentContainerName = "WeekWeather" // .xcdatamodeld file name.
   
   static let weatherEntityName = "WeekWeather"
-  static let dailyQuoteEntityName = "DailyQuote"  // TODO: modeld
+  static let dailyQuoteEntityName = "DailyQuote"
   
   // Entity Key
   static let timeKey = "time"

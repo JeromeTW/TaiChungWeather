@@ -13,6 +13,7 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
   @IBOutlet weak var tableView: UITableView!
   private var weatherResults = [Weather]()
   private var dailyQuote: DailyQuote!
+  private let networkController = NetworkController.shared
   
   enum CellIdentifier {
     static let weatherTableViewCell = "WeatherTableViewCell"
@@ -21,14 +22,43 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    networkController.didQueryWeatherHandler = {
+      [weak self] error in
+      self?.didFetchNewData()
+    }
+    
+    networkController.didQueryDailyQuoteHandler = {
+      [weak self] error in
+      self?.didFetchNewData()
+    }
+    fetchData()
+    if dailyQuote != nil {
+      setupTableView()
+    }
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+  }
+
+  private func didFetchNewData() {
+    if networkController.isQueryDailyQuoteFinished && networkController.isQueryWeatherFinished {
+      // TODO: stop HUD.
+      fetchData()
+      setupTableView()
+      tableView.reloadData()
+    }
+  }
+  
+  private func fetchData() {
     let myContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let coreDataConnect = CoreDataConnect(context: myContext)
     
     // Fetch the lastest weather forecast.
     if let results = coreDataConnect.retrieveWeekWeatherResults(predicate: nil, sort: [[Constant.timeKey: false]], limit: 1) {
       guard results.count == 1 else {
-        assertionFailure()
+        // First time launch the app without history record.
         return
       }
       guard let tempWeatherResults = results[0].covertToWeatherResults() else {
@@ -40,19 +70,14 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
     
     if let results = coreDataConnect.retrieveDailyQuoteResults(predicate: nil, sort: [[Constant.timeKey: false]], limit: 1) {
       guard results.count == 1 else {
-        assertionFailure()
+        // First time launch the app without history record.
+        // TODO: HUD.
         return
       }
       dailyQuote = results[0]
     }
   }
   
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    setupTableView()
-    tableView.reloadData()
-  }
-
   // MARK: - TableView
   private func setupTableView() {
     guard let backgroundImage = GetImage(name: .background) else {

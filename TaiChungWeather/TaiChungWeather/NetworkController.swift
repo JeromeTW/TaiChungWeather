@@ -24,7 +24,9 @@ public enum NetworkError: Error {
 class NetworkController: NSObject, WKNavigationDelegate {
   static let shared = NetworkController()  // Singleton
   public var didQueryWeatherHandler: DoneHandler?
+  private(set) var isQueryWeatherFinished = false
   public var didQueryDailyQuoteHandler: DoneHandler?
+  private(set) var isQueryDailyQuoteFinished = false
   private let parserManager = ParserManager.shared
   
   private let feedWeatherURLString = "http://www.cwb.gov.tw/rss/forecast/36_08.xml"
@@ -61,7 +63,9 @@ class NetworkController: NSObject, WKNavigationDelegate {
       assertionFailure()
       return
     }
+    isQueryWeatherFinished = false
     request(url: url) { data, error in
+      self.isQueryWeatherFinished = true
       guard error == nil else {
         self.didQueryWeatherHandler?(error)
         return
@@ -88,7 +92,7 @@ class NetworkController: NSObject, WKNavigationDelegate {
       assertionFailure()
       return
     }
-    
+    isQueryDailyQuoteFinished = false
     let webConfiguration = WKWebViewConfiguration()
     webView = WKWebView(frame: .zero, configuration: webConfiguration)
     webView.navigationDelegate = self
@@ -106,10 +110,17 @@ class NetworkController: NSObject, WKNavigationDelegate {
                                completionHandler: { [weak self] (html: Any?, error: Error?) in
                                 // Charge html content is redirection content or real content.
                                 let maxLength = 100
-                                if let string = html as? String, string.characters.count > maxLength {
+                                if let string = html as? String, string.lengthOfBytes(using: .utf8) > maxLength {
                                   self?.webView = nil
-                                  DLog("Real Content")
-                                  self?.parserManager.parseDailyQuoteHTML(htmlString: string)
+                                  self?.isQueryDailyQuoteFinished = true
+                                  guard let success = self?.parserManager.parseDailyQuoteHTML(htmlString: string) else {
+                                    return
+                                  }
+                                  if success {
+                                    self?.didQueryDailyQuoteHandler?(nil)
+                                  } else {
+                                    self?.didQueryDailyQuoteHandler?(NetworkError.invalidParse)
+                                  }
                                 }
     })
   }
