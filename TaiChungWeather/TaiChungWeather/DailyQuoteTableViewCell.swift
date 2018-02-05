@@ -1,5 +1,5 @@
 //
-//  DailyQuetoTableViewCell.swift
+//  DailyQuoteTableViewCell.swift
 //  TaiChungWeather
 //
 //  Created by JEROME on 2018/2/5.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class DailyQuetoTableViewCell: UITableViewCell {
+class DailyQuoteTableViewCell: UITableViewCell {
   
-  @IBOutlet weak var dailyQuetoLabel: UILabel!
+  @IBOutlet weak var dailyQuoteLabel: UILabel!
   @IBOutlet weak var articleLabel: UILabel!
   @IBOutlet weak var authorLabel: UILabel!
 }

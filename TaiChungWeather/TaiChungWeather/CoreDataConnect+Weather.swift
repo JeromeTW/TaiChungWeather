@@ -16,7 +16,7 @@ extension CoreDataConnect {
     return results
   }
   
-  public func retrieveDailyQuetoResults(predicate:NSPredicate?, sort:[[String:Bool]]?, limit:Int?) -> [DailyQuote]? {
+  public func retrieveDailyQuoteResults(predicate:NSPredicate?, sort:[[String:Bool]]?, limit:Int?) -> [DailyQuote]? {
     guard let results = retrieve(Constant.dailyQuoteEntityName, predicate: predicate, sort: sort, limit: limit) as? [DailyQuote] else {
       return nil
     }

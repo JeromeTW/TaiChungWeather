@@ -12,11 +12,11 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
   
   @IBOutlet weak var tableView: UITableView!
   private var weatherResults = [Weather]()
-  private var dailyQueto: DailyQuetoStruct!
+  private var dailyQuote: DailyQuote!
   
   enum CellIdentifier {
     static let weatherTableViewCell = "WeatherTableViewCell"
-    static let dailyQuetoTableViewCell = "DailyQuetoTableViewCell"
+    static let dailyQuoteTableViewCell = "DailyQuoteTableViewCell"
   }
   
   override func viewDidLoad() {
@@ -36,6 +36,14 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
         return
       }
       weatherResults = tempWeatherResults
+    }
+    
+    if let results = coreDataConnect.retrieveDailyQuoteResults(predicate: nil, sort: [[Constant.timeKey: false]], limit: 1) {
+      guard results.count == 1 else {
+        assertionFailure()
+        return
+      }
+      dailyQuote = results[0]
     }
   }
   
@@ -62,15 +70,13 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let row = indexPath.row
     switch row {
-    case 0: // Daily queto cell.
-      let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.dailyQuetoTableViewCell, for: indexPath) as! DailyQuetoTableViewCell
-      return cell
-      guard let quote = dailyQueto else {
+    case 0: // Daily quote cell.
+      let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.dailyQuoteTableViewCell, for: indexPath) as! DailyQuoteTableViewCell
+      guard let quote = dailyQuote else {
         assertionFailure()
         return cell
       }
-      // TODO:
-      cell.dailyQuetoLabel.text = "每日一句："
+      cell.dailyQuoteLabel.text = LocStr(.dailyQuote)
       cell.articleLabel.text = quote.article
       cell.authorLabel.text = quote.author
       return cell

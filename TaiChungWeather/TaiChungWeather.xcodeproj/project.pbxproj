@@ -11,8 +11,7 @@
 		022292032027DCED0034FE6A /* WeatherListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022292022027DCED0034FE6A /* WeatherListViewController.swift */; };
 		022292052027DD670034FE6A /* CoreDataConnect+Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022292042027DD670034FE6A /* CoreDataConnect+Weather.swift */; };
 		0222920A2027DE9C0034FE6A /* WeekWeather+Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022292092027DE9C0034FE6A /* WeekWeather+Weather.swift */; };
-		0222920C2027ECBC0034FE6A /* DailyQuetoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0222920B2027ECBC0034FE6A /* DailyQuetoTableViewCell.swift */; };
-		0222920E2027EE030034FE6A /* DailyQueto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0222920D2027EE030034FE6A /* DailyQueto.swift */; };
+		0222920C2027ECBC0034FE6A /* DailyQuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0222920B2027ECBC0034FE6A /* DailyQuoteTableViewCell.swift */; };
 		023729772023365C009D4187 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023729762023365C009D4187 /* AppDelegate.swift */; };
 		0237297C2023365C009D4187 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0237297A2023365C009D4187 /* Main.storyboard */; };
 		0237297E2023365C009D4187 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0237297D2023365C009D4187 /* Assets.xcassets */; };
@@ -39,8 +38,7 @@
 		022292022027DCED0034FE6A /* WeatherListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherListViewController.swift; sourceTree = "<group>"; };
 		022292042027DD670034FE6A /* CoreDataConnect+Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataConnect+Weather.swift"; sourceTree = "<group>"; };
 		022292092027DE9C0034FE6A /* WeekWeather+Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeekWeather+Weather.swift"; sourceTree = "<group>"; };
-		0222920B2027ECBC0034FE6A /* DailyQuetoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuetoTableViewCell.swift; sourceTree = "<group>"; };
-		0222920D2027EE030034FE6A /* DailyQueto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQueto.swift; sourceTree = "<group>"; };
+		0222920B2027ECBC0034FE6A /* DailyQuoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuoteTableViewCell.swift; sourceTree = "<group>"; };
 		023729732023365C009D4187 /* TaiChungWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaiChungWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		023729762023365C009D4187 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0237297B2023365C009D4187 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -81,7 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				022291FF20273AE00034FE6A /* WeatherTableViewCell.swift */,
-				0222920B2027ECBC0034FE6A /* DailyQuetoTableViewCell.swift */,
+				0222920B2027ECBC0034FE6A /* DailyQuoteTableViewCell.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -108,7 +106,6 @@
 			children = (
 				02C5671F2024416300A5DAB8 /* Weather.swift */,
 				022292092027DE9C0034FE6A /* WeekWeather+Weather.swift */,
-				0222920D2027EE030034FE6A /* DailyQueto.swift */,
 			);
 			name = Structs;
 			sourceTree = "<group>";
@@ -327,13 +324,12 @@
 				02C567202024416300A5DAB8 /* Weather.swift in Sources */,
 				0222920020273AE00034FE6A /* WeatherTableViewCell.swift in Sources */,
 				02C5671E2024408600A5DAB8 /* WeekWeather.xcdatamodeld in Sources */,
-				0222920C2027ECBC0034FE6A /* DailyQuetoTableViewCell.swift in Sources */,
+				0222920C2027ECBC0034FE6A /* DailyQuoteTableViewCell.swift in Sources */,
 				02C567282024635400A5DAB8 /* String+Path.swift in Sources */,
 				023729772023365C009D4187 /* AppDelegate.swift in Sources */,
 				02C5672B202556B900A5DAB8 /* ParserManager.swift in Sources */,
 				02C567242024632B00A5DAB8 /* Utils.swift in Sources */,
 				02DA0537202702E600954ABE /* Date+LocalTime.swift in Sources */,
-				0222920E2027EE030034FE6A /* DailyQueto.swift in Sources */,
 				02C5673120258F0C00A5DAB8 /* Date+String.swift in Sources */,
 				02C567262024633E00A5DAB8 /* Define.swift in Sources */,
 				0222920A2027DE9C0034FE6A /* WeekWeather+Weather.swift in Sources */,

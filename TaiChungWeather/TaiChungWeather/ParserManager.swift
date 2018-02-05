@@ -73,7 +73,7 @@ class ParserManager {
     }
   }
   
-  /// Parse daily queto HTML string.
+  /// Parse daily quote HTML string.
   ///
   /// - Parameter htmlString: HTML string.
   /// - Returns: Return true means success.
@@ -88,7 +88,7 @@ class ParserManager {
       return false
     }
     
-    guard let dailyQuetoString = targetNode.xPath("p").first?.content, var authorAndDateString = targetNode.xPath("h1").first?.content, let dateString = targetNode.xPath("h1/time").first?.content else {
+    guard let dailyQuoteString = targetNode.xPath("p").first?.content, var authorAndDateString = targetNode.xPath("h1").first?.content, let dateString = targetNode.xPath("h1/time").first?.content else {
       return false
     }
     // Remove the last date string in "誠致教育基金會創辦人 方新舟20180204".
@@ -115,7 +115,7 @@ class ParserManager {
     let insertResult = coreDataConnect.insert(
       Constant.dailyQuoteEntityName, attributeInfo: [
         Constant.timeKey : date as Any,
-        Constant.articleKey : dailyQuetoString as Any,
+        Constant.articleKey : dailyQuoteString as Any,
         Constant.authorKey : authorAndDateString as Any
       ])
     if insertResult {

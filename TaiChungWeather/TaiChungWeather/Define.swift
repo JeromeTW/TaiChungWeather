@@ -25,7 +25,7 @@ enum Constant {
 }
 
 enum Localization: String {
-  case ok
+  case dailyQuote
 }
 
 enum ImageName: String {
