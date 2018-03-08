@@ -8,8 +8,9 @@
 
 import UIKit
 import DGElasticPullToRefresh
-import KRProgressHUD
 import CoreData
+import KRProgressHUD
+
 
 class WeatherListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NetworkControllerDelegate, NSFetchedResultsControllerDelegate {
   
@@ -25,14 +26,10 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    networkController.didQueryWeatherHandler = {
-      [weak self] error in
-      self?.didFetchNewData()
-    }
-    
     networkController.didQueryDailyQuoteHandler = {
       [weak self] error in
-      self?.didFetchNewData()
+        self?.fetchDataDailyQuote()
+        self?.tableView.reloadData()
     }
     NetworkController.shared.addDelegate(self)
     let myContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -40,12 +37,8 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
     weatherFRC = coreDataConnect.getFRC(Constant.weatherEntityName, predicate: nil, sort: [[Constant.timeKey: false]], limit: 1)
     weatherFRC.delegate = self
     setupNavigationBar()
-    fetchData()
+    fetchDataDailyQuote()
     setupTableView()
-    setupTableViewDataSource()
-    if dailyQuote != nil {
-      setupTableViewDataSource()
-    }
   }
 
   deinit {
@@ -53,19 +46,6 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
       tableView.dg_removePullToRefresh()
     }
     NetworkController.shared.removeDelegate(self)
-  }
-  
-  private func didFetchNewData() {
-    if networkController.isQueryDailyQuoteFinished && networkController.isQueryWeatherFinished {
-      DispatchQueue.main.async {
-        [weak self] in
-        self?.tableView.dg_stopLoading()
-        self?.fetchData()
-        self?.setupTableViewDataSource()
-        self?.tableView.reloadData()
-        KRProgressHUD.dismiss()
-      }
-    }
   }
   
   private func queryNewDataFromInternet() {
@@ -89,28 +69,16 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
     navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: Color.darkBlue]
   }
   
-  private func fetchData() {
+  private func fetchDataDailyQuote() {
     let myContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let coreDataConnect = CoreDataConnect(context: myContext)
-    
-    // Fetch the lastest weather forecast.
-    if let results = coreDataConnect.retrieveWeekWeatherResults(predicate: nil, sort: [[Constant.timeKey: false]], limit: 1) {
-      guard results.count == 1 else {
-        // First time launch the app without history record.
-        KRProgressHUD.appearance().style = .black
-        KRProgressHUD.showInfo(withMessage: LocStr(.loading))
-        return
-      }
-      guard let tempWeatherResults = results[0].covertToWeatherResults() else {
-        assertionFailure()
-        return
-      }
-      weatherResults = tempWeatherResults
-    }
     
     if let results = coreDataConnect.retrieveDailyQuoteResults(predicate: nil, sort: [[Constant.timeKey: false]], limit: 1) {
       guard results.count == 1 else {
         // First time launch the app without history record.
+        KRProgressHUD.appearance().style = .black
+        KRProgressHUD.set(deadlineTime: 999999.9)
+        KRProgressHUD.showInfo(withMessage: LocStr(.loading))
         return
       }
       dailyQuote = results[0]
@@ -138,18 +106,19 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
       }, loadingView: loadingView)
     tableView.dg_setPullToRefreshFillColor(Color.orange)
     tableView.dg_setPullToRefreshBackgroundColor(Color.lightTiffanyBlue)
-  }
-  
-  private func setupTableViewDataSource() {
     tableView.dataSource = self
   }
 
   // MARK: - UITableViewDataSource
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    guard dailyQuote != nil else {
+        return 0
+    }
     // Add 1 for daily quote.
-    guard weatherFRC.sections?.count != 0 else {
+    guard weatherFRC.sections?.first?.objects?.count != 0 else {
         return 1
     }
+    KRProgressHUD.dismiss()
     let newIndexPath = IndexPath(row: 0, section: 0)
     // only get one result.
     let weathers = ((weatherFRC.object(at: newIndexPath) as! WeekWeather).covertToWeatherResults())!
