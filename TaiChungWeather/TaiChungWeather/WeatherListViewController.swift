@@ -172,28 +172,25 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
         NetworkController.shared.removeDelegate(self)
         if requestClassName == "WeatherNetworkRequest" {
             if error != nil {
-                // TODO: Show Error.
+                // TODO: Show Network Error.
                 return
             }
-            // TODO: Success
             // Write Data in coredata.
             guard let data = response else {
                 assertionFailure()  // Should not be here.
                 return
             }
             guard let string = String(data: data, encoding: .utf8) else {
-//                self.didQueryWeatherHandler?(NetworkError.invalidDecoding)
+                // TODO: Show invalidDecoding Error.
                 return
             }
             DispatchQueue.main.async {
                 let parserManager = ParserManager.shared
                 let success = parserManager.parseWeatherXML(xmlString: string)
                 DLog("success:\(success)")
-//                if success {
-//                    self.didQueryWeatherHandler?(nil)
-//                } else {
-//                    self.didQueryWeatherHandler?(NetworkError.invalidParse)
-//                }
+                if !success {
+                    // TODO: Show parse Error.
+                }
             }
         }
     }

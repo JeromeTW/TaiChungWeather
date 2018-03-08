@@ -33,7 +33,6 @@ class NetworkController: NSObject, WKNavigationDelegate {
   private(set) var isQueryDailyQuoteFinished = false
   private let parserManager = ParserManager.shared
   
-  private let feedWeatherURLString = "http://www.cwb.gov.tw/rss/forecast/36_08.xml"
   private let dailyQuoteURLString = "https://tw.appledaily.com/index/dailyquote/"
   
   private var webView: WKWebView! // Use WKWebView to fetch daily quote. Use desktop version to view website.
@@ -44,7 +43,7 @@ class NetworkController: NSObject, WKNavigationDelegate {
     guard currentReachabilityStatus != .notReachable else {
       return
     }
-    requestWeatherData2()
+    requestWeatherData()
     requestDailyQuoteData()
   }
   
@@ -66,8 +65,6 @@ class NetworkController: NSObject, WKNavigationDelegate {
         delegates = delegates.filter {$0 !== delegate}
     }
     
-    
-    
   private func request(url: URL, completionHandler: DataHandler?) {
     let urlRequest = URLRequest(url: url)
     let config = URLSessionConfiguration.default
@@ -85,7 +82,7 @@ class NetworkController: NSObject, WKNavigationDelegate {
     })
     task.resume()
   }
-    public func requestWeatherData2() {
+    public func requestWeatherData() {
         let operation = WeatherNetworkRequest()
         operation.addObserver(self, forKeyPath: "isFinished", options: .new, context: nil)
         queue.addOperation(operation)
@@ -105,37 +102,6 @@ class NetworkController: NSObject, WKNavigationDelegate {
         DLog("queue.operationCount \(queue.operationCount)")
     }
     
-  public func requestWeatherData() {
-    guard let url = URL(string: feedWeatherURLString) else {
-      assertionFailure()
-      return
-    }
-    isQueryWeatherFinished = false
-    request(url: url) { data, error in
-      self.isQueryWeatherFinished = true
-      guard error == nil else {
-        self.didQueryWeatherHandler?(error)
-        return
-      }
-      guard let data = data else {
-        assertionFailure()  // Should not be here.
-        return
-      }
-      guard let string = String(data: data, encoding: .utf8) else {
-        self.didQueryWeatherHandler?(NetworkError.invalidDecoding)
-        return
-      }
-      DispatchQueue.main.async {
-        let success = self.parserManager.parseWeatherXML(xmlString: string)
-        if success {
-          self.didQueryWeatherHandler?(nil)
-        } else {
-          self.didQueryWeatherHandler?(NetworkError.invalidParse)
-        }
-      }
-    }
-  }
-  
   public func requestDailyQuoteData() {
     guard let url = URL(string: dailyQuoteURLString) else {
       assertionFailure()
