@@ -122,5 +122,40 @@ class CoreDataConnect {
     return false
   }
   
+    public func getFRC(_ myEntityName:String, predicate:NSPredicate?, sort:[[String:Bool]]?, limit:Int?) -> NSFetchedResultsController<NSFetchRequestResult> {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: myEntityName)
+        
+        // predicate
+        request.predicate = predicate
+        
+        // sort
+        if let mySort = sort {
+            var sortArr :[NSSortDescriptor] = []
+            for sortCond in mySort {
+                for (k, v) in sortCond {
+                    sortArr.append(NSSortDescriptor(key: k, ascending: v))
+                }
+            }
+            
+            request.sortDescriptors = sortArr
+        }
+        
+        // limit
+        if let limitNumber = limit {
+            request.fetchLimit = limitNumber
+        }
+        let fetchedResultsController =  NSFetchedResultsController(fetchRequest: request,
+                                                              managedObjectContext: myContext,
+                                                              sectionNameKeyPath: nil,
+                                                              cacheName: nil)
+        do {
+            try fetchedResultsController.performFetch()
+        } catch {
+            let fetchError = error as NSError
+            DLog("\(fetchError), \(fetchError.userInfo)")
+        }
+        
+        return fetchedResultsController
+    }
 }
 

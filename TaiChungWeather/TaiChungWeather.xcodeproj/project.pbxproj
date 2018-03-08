@@ -22,6 +22,9 @@
 		023729812023365C009D4187 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0237297F2023365C009D4187 /* LaunchScreen.storyboard */; };
 		0241D10D20241EF1005D9F91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0241D10F20241EF1005D9F91 /* InfoPlist.strings */; };
 		0241D11020241EF7005D9F91 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0241D11220241EF7005D9F91 /* Localizable.strings */; };
+		02A9CDC92050EAFC003FD268 /* AsynchronousOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A9CDC82050EAFB003FD268 /* AsynchronousOperation.swift */; };
+		02A9CDCB2050FDC3003FD268 /* NetworkRequestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A9CDCA2050FDC3003FD268 /* NetworkRequestOperation.swift */; };
+		02A9CDCD2051116E003FD268 /* WeatherNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A9CDCC2051116E003FD268 /* WeatherNetworkRequest.swift */; };
 		02C5671E2024408600A5DAB8 /* WeekWeather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 02C5671C2024408600A5DAB8 /* WeekWeather.xcdatamodeld */; };
 		02C567202024416300A5DAB8 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5671F2024416300A5DAB8 /* Weather.swift */; };
 		02C567222024451500A5DAB8 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C567212024451500A5DAB8 /* NetworkController.swift */; };
@@ -55,6 +58,9 @@
 		023729822023365C009D4187 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0241D10E20241EF1005D9F91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0241D11120241EF7005D9F91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		02A9CDC82050EAFB003FD268 /* AsynchronousOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsynchronousOperation.swift; sourceTree = "<group>"; };
+		02A9CDCA2050FDC3003FD268 /* NetworkRequestOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequestOperation.swift; sourceTree = "<group>"; };
+		02A9CDCC2051116E003FD268 /* WeatherNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherNetworkRequest.swift; sourceTree = "<group>"; };
 		02C5671D2024408600A5DAB8 /* WeekWeather.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WeekWeather.xcdatamodel; sourceTree = "<group>"; };
 		02C5671F2024416300A5DAB8 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		02C567212024451500A5DAB8 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
@@ -139,13 +145,13 @@
 		023729752023365C009D4187 /* TaiChungWeather */ = {
 			isa = PBXGroup;
 			children = (
+				02A9CDC52050E5E1003FD268 /* Network */,
 				023729762023365C009D4187 /* AppDelegate.swift */,
 				022292062027DE250034FE6A /* View Controllers */,
 				02C567292024636D00A5DAB8 /* Utils */,
 				022292072027DE380034FE6A /* Storyboards */,
 				02372988202336F8009D4187 /* Support */,
 				022292082027DE820034FE6A /* Structs */,
-				02C567212024451500A5DAB8 /* NetworkController.swift */,
 				02C5672A202556B900A5DAB8 /* ParserManager.swift */,
 				02C5672C2025604100A5DAB8 /* CoreDataConnect.swift */,
 				022292042027DD670034FE6A /* CoreDataConnect+Weather.swift */,
@@ -164,6 +170,17 @@
 				02C5671C2024408600A5DAB8 /* WeekWeather.xcdatamodeld */,
 			);
 			name = Support;
+			sourceTree = "<group>";
+		};
+		02A9CDC52050E5E1003FD268 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				02C567212024451500A5DAB8 /* NetworkController.swift */,
+				02A9CDC82050EAFB003FD268 /* AsynchronousOperation.swift */,
+				02A9CDCA2050FDC3003FD268 /* NetworkRequestOperation.swift */,
+				02A9CDCC2051116E003FD268 /* WeatherNetworkRequest.swift */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 		02C567292024636D00A5DAB8 /* Utils */ = {
@@ -235,7 +252,7 @@
 				TargetAttributes = {
 					023729722023365C009D4187 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 47FGBWZVJ9;
+						DevelopmentTeam = FDD97732MB;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -347,15 +364,18 @@
 				02C567282024635400A5DAB8 /* String+Path.swift in Sources */,
 				023729772023365C009D4187 /* AppDelegate.swift in Sources */,
 				02C5672B202556B900A5DAB8 /* ParserManager.swift in Sources */,
+				02A9CDCD2051116E003FD268 /* WeatherNetworkRequest.swift in Sources */,
 				02C567242024632B00A5DAB8 /* Utils.swift in Sources */,
 				02DA0537202702E600954ABE /* Date+LocalTime.swift in Sources */,
 				02C5673120258F0C00A5DAB8 /* Date+String.swift in Sources */,
 				02229212202839330034FE6A /* UIColor+Initialization.swift in Sources */,
 				02C567262024633E00A5DAB8 /* Define.swift in Sources */,
 				0222920A2027DE9C0034FE6A /* WeekWeather+Weather.swift in Sources */,
+				02A9CDC92050EAFC003FD268 /* AsynchronousOperation.swift in Sources */,
 				022292052027DD670034FE6A /* CoreDataConnect+Weather.swift in Sources */,
 				02C5672D2025604100A5DAB8 /* CoreDataConnect.swift in Sources */,
 				02C5672F2025814100A5DAB8 /* Date+ISO8601.swift in Sources */,
+				02A9CDCB2050FDC3003FD268 /* NetworkRequestOperation.swift in Sources */,
 				022292032027DCED0034FE6A /* WeatherListViewController.swift in Sources */,
 				02229218202852010034FE6A /* UIViewController+Alerts.swift in Sources */,
 				0222921420284A0C0034FE6A /* Date+WeekDay.swift in Sources */,
@@ -501,7 +521,7 @@
 			baseConfigurationReference = 8E5B44ED3D4125319371DE3A /* Pods-TaiChungWeather.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 47FGBWZVJ9;
+				DEVELOPMENT_TEAM = FDD97732MB;
 				INFOPLIST_FILE = TaiChungWeather/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -517,7 +537,7 @@
 			baseConfigurationReference = 4F570888C24A82027359EF28 /* Pods-TaiChungWeather.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 47FGBWZVJ9;
+				DEVELOPMENT_TEAM = FDD97732MB;
 				INFOPLIST_FILE = TaiChungWeather/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

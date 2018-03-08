@@ -9,14 +9,15 @@
 import UIKit
 import DGElasticPullToRefresh
 import KRProgressHUD
+import CoreData
 
-class WeatherListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class WeatherListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NetworkControllerDelegate, NSFetchedResultsControllerDelegate {
   
   @IBOutlet weak var tableView: UITableView!
   private var weatherResults = [Weather]()
   private var dailyQuote: DailyQuote!
   private let networkController = NetworkController.shared
-  
+    private var weatherFRC: NSFetchedResultsController<NSFetchRequestResult>!
   enum CellIdentifier {
     static let weatherTableViewCell = "WeatherTableViewCell"
     static let dailyQuoteTableViewCell = "DailyQuoteTableViewCell"
@@ -33,9 +34,15 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
       [weak self] error in
       self?.didFetchNewData()
     }
+    NetworkController.shared.addDelegate(self)
+    let myContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let coreDataConnect = CoreDataConnect(context: myContext)
+    weatherFRC = coreDataConnect.getFRC(Constant.weatherEntityName, predicate: nil, sort: [[Constant.timeKey: false]], limit: 1)
+    weatherFRC.delegate = self
     setupNavigationBar()
     fetchData()
     setupTableView()
+    setupTableViewDataSource()
     if dailyQuote != nil {
       setupTableViewDataSource()
     }
@@ -45,6 +52,7 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
     if let _ = tableView {
       tableView.dg_removePullToRefresh()
     }
+    NetworkController.shared.removeDelegate(self)
   }
   
   private func didFetchNewData() {
@@ -138,12 +146,35 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
 
   // MARK: - UITableViewDataSource
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    guard weatherFRC.sections?.count != 0 else {
+        return 0
+    }
+    let newIndexPath = IndexPath(row: 0, section: 0)
+    // only get one result.
+    let weathers = ((weatherFRC.object(at: newIndexPath) as! WeekWeather).covertToWeatherResults())!
     // Add 1
-    return weatherResults.count
+    return weathers.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let row = indexPath.row
+    let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.weatherTableViewCell, for: indexPath) as! WeatherTableViewCell
+    //      let weather = weatherResults[row]
+    let newIndexPath = IndexPath(row: 0, section: 0)
+    // only get one result.
+    let weathers = ((weatherFRC.object(at: newIndexPath) as! WeekWeather).covertToWeatherResults())!
+    let weather = weathers[row]
+    cell.dateLabel.text = weather.date.weekDay.getString() + " \(weather.weatherTime.getString())"
+    cell.highestTemperatureLabel.text = String(weather.highestTemperature)
+    cell.lowestTemperatureLabel.text = String(weather.lowestTemperature)
+    cell.weatherLabel.text = weather.description.rawValue
+    
+    cell.dateLabel.textColor = Color.darkBlue
+    cell.highestTemperatureLabel.textColor = Color.darkBlue
+    cell.lowestTemperatureLabel.textColor = Color.darkBlue
+    cell.weatherLabel.textColor = Color.darkBlue
+    return cell
+    /*
     switch row {
     case 0: // Daily quote cell.
       let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.dailyQuoteTableViewCell, for: indexPath) as! DailyQuoteTableViewCell
@@ -162,7 +193,10 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
       return cell
     default:
       let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.weatherTableViewCell, for: indexPath) as! WeatherTableViewCell
-      let weather = weatherResults[row]
+//      let weather = weatherResults[row]
+      let newIndexPath = IndexPath(row: row, section: 0)
+      let weather = weatherFRC.object(at: newIndexPath) as! Weather
+      
       cell.dateLabel.text = weather.date.weekDay.getString() + " \(weather.weatherTime.getString())"
       cell.highestTemperatureLabel.text = String(weather.highestTemperature)
       cell.lowestTemperatureLabel.text = String(weather.lowestTemperature)
@@ -173,12 +207,50 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
       cell.lowestTemperatureLabel.textColor = Color.darkBlue
       cell.weatherLabel.textColor = Color.darkBlue
       return cell
-    }
+    }*/
   }
   
   // MARK: - UITableViewDelegate
   func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
     cell.backgroundColor = UIColor.clear
   }
+    
+  // MARK: - NetworkControllerDelegate
+    func completedNetworkRequest(_ requestClassName: String, response: Data?, error: NSError?) {
+        NetworkController.shared.removeDelegate(self)
+        if requestClassName == "WeatherNetworkRequest" {
+            if error != nil {
+                // TODO: Show Error.
+                return
+            }
+            // TODO: Success
+            // Write Data in coredata.
+            guard let data = response else {
+                assertionFailure()  // Should not be here.
+                return
+            }
+            guard let string = String(data: data, encoding: .utf8) else {
+//                self.didQueryWeatherHandler?(NetworkError.invalidDecoding)
+                return
+            }
+            DispatchQueue.main.async {
+                let parserManager = ParserManager.shared
+                let success = parserManager.parseWeatherXML(xmlString: string)
+                DLog("success:\(success)")
+//                if success {
+//                    self.didQueryWeatherHandler?(nil)
+//                } else {
+//                    self.didQueryWeatherHandler?(NetworkError.invalidParse)
+//                }
+            }
+        }
+    }
+    
+    // Mark: NSFetchedResultsControllerDelegate
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        if controller == weatherFRC {
+            tableView.reloadData()
+        }
+    }
 }
 

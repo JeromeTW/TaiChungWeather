@@ -21,6 +21,10 @@ public enum NetworkError: Error {
   case invalidParse
 }
 
+protocol NetworkControllerDelegate: class {
+    func completedNetworkRequest(_ requestClassName: String, response: Data?, error: NSError?)
+}
+
 class NetworkController: NSObject, WKNavigationDelegate {
   static let shared = NetworkController()  // Singleton
   public var didQueryWeatherHandler: DoneHandler?
@@ -34,15 +38,36 @@ class NetworkController: NSObject, WKNavigationDelegate {
   
   private var webView: WKWebView! // Use WKWebView to fetch daily quote. Use desktop version to view website.
   
+    private var delegates: [NetworkControllerDelegate] = []
   private override init() {
     super.init()
     guard currentReachabilityStatus != .notReachable else {
       return
     }
-    requestWeatherData()
-    requestDailyQuoteData()
+    requestWeatherData2()
+//    requestDailyQuoteData()
   }
   
+    // New Code
+    /// Serial NSOperationQueue for downloads
+    let queue: OperationQueue = {
+        let _queue = OperationQueue()
+        _queue.name = "netqueue"
+        _queue.maxConcurrentOperationCount = 4
+        
+        return _queue
+    }()
+    
+    func addDelegate(_ delegate: NetworkControllerDelegate) {
+        delegates.append(delegate)
+    }
+    
+    func removeDelegate(_ delegate: NetworkControllerDelegate) {
+        delegates = delegates.filter {$0 !== delegate}
+    }
+    
+    
+    
   private func request(url: URL, completionHandler: DataHandler?) {
     let urlRequest = URLRequest(url: url)
     let config = URLSessionConfiguration.default
@@ -60,7 +85,26 @@ class NetworkController: NSObject, WKNavigationDelegate {
     })
     task.resume()
   }
-  
+    public func requestWeatherData2() {
+        let operation = WeatherNetworkRequest()
+        operation.addObserver(self, forKeyPath: "isFinished", options: .new, context: nil)
+        queue.addOperation(operation)
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        let operation = (object as? NetworkRequestOperation)!
+        let className = String(describing: type(of: operation))
+        
+        for delegate in self.delegates {
+            DLog(delegate)
+            delegate.completedNetworkRequest(className,
+                                             response: operation.data as Data?,
+                                             error: operation.error)
+        }
+        
+        DLog("queue.operationCount \(queue.operationCount)")
+    }
+    
   public func requestWeatherData() {
     guard let url = URL(string: feedWeatherURLString) else {
       assertionFailure()
