@@ -45,7 +45,7 @@ class NetworkController: NSObject, WKNavigationDelegate {
       return
     }
     requestWeatherData2()
-//    requestDailyQuoteData()
+    requestDailyQuoteData()
   }
   
     // New Code

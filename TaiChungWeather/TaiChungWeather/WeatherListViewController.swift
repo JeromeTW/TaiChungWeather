@@ -146,35 +146,18 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
 
   // MARK: - UITableViewDataSource
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    // Add 1 for daily quote.
     guard weatherFRC.sections?.count != 0 else {
-        return 0
+        return 1
     }
     let newIndexPath = IndexPath(row: 0, section: 0)
     // only get one result.
     let weathers = ((weatherFRC.object(at: newIndexPath) as! WeekWeather).covertToWeatherResults())!
-    // Add 1
-    return weathers.count
+    return weathers.count + 1
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let row = indexPath.row
-    let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.weatherTableViewCell, for: indexPath) as! WeatherTableViewCell
-    //      let weather = weatherResults[row]
-    let newIndexPath = IndexPath(row: 0, section: 0)
-    // only get one result.
-    let weathers = ((weatherFRC.object(at: newIndexPath) as! WeekWeather).covertToWeatherResults())!
-    let weather = weathers[row]
-    cell.dateLabel.text = weather.date.weekDay.getString() + " \(weather.weatherTime.getString())"
-    cell.highestTemperatureLabel.text = String(weather.highestTemperature)
-    cell.lowestTemperatureLabel.text = String(weather.lowestTemperature)
-    cell.weatherLabel.text = weather.description.rawValue
-    
-    cell.dateLabel.textColor = Color.darkBlue
-    cell.highestTemperatureLabel.textColor = Color.darkBlue
-    cell.lowestTemperatureLabel.textColor = Color.darkBlue
-    cell.weatherLabel.textColor = Color.darkBlue
-    return cell
-    /*
     switch row {
     case 0: // Daily quote cell.
       let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.dailyQuoteTableViewCell, for: indexPath) as! DailyQuoteTableViewCell
@@ -192,22 +175,22 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
   
       return cell
     default:
-      let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.weatherTableViewCell, for: indexPath) as! WeatherTableViewCell
-//      let weather = weatherResults[row]
-      let newIndexPath = IndexPath(row: row, section: 0)
-      let weather = weatherFRC.object(at: newIndexPath) as! Weather
-      
-      cell.dateLabel.text = weather.date.weekDay.getString() + " \(weather.weatherTime.getString())"
-      cell.highestTemperatureLabel.text = String(weather.highestTemperature)
-      cell.lowestTemperatureLabel.text = String(weather.lowestTemperature)
-      cell.weatherLabel.text = weather.description.rawValue
-      
-      cell.dateLabel.textColor = Color.darkBlue
-      cell.highestTemperatureLabel.textColor = Color.darkBlue
-      cell.lowestTemperatureLabel.textColor = Color.darkBlue
-      cell.weatherLabel.textColor = Color.darkBlue
-      return cell
-    }*/
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.weatherTableViewCell, for: indexPath) as! WeatherTableViewCell
+        let newIndexPath = IndexPath(row: 0, section: 0)
+        // only get one result.
+        let weathers = ((weatherFRC.object(at: newIndexPath) as! WeekWeather).covertToWeatherResults())!
+        let weather = weathers[row - 1] // minus 1 for daily quote.
+        cell.dateLabel.text = weather.date.weekDay.getString() + " \(weather.weatherTime.getString())"
+        cell.highestTemperatureLabel.text = String(weather.highestTemperature)
+        cell.lowestTemperatureLabel.text = String(weather.lowestTemperature)
+        cell.weatherLabel.text = weather.description.rawValue
+        
+        cell.dateLabel.textColor = Color.darkBlue
+        cell.highestTemperatureLabel.textColor = Color.darkBlue
+        cell.lowestTemperatureLabel.textColor = Color.darkBlue
+        cell.weatherLabel.textColor = Color.darkBlue
+        return cell
+    }
   }
   
   // MARK: - UITableViewDelegate
