@@ -59,6 +59,7 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
       return
     }
     networkController.requestDailyQuoteData()
+    NetworkController.shared.addDelegate(self)
     networkController.requestWeatherData()
   }
   
@@ -119,6 +120,7 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
         return 1
     }
     KRProgressHUD.dismiss()
+    tableView.dg_stopLoading()
     let newIndexPath = IndexPath(row: 0, section: 0)
     // only get one result.
     let weathers = ((weatherFRC.object(at: newIndexPath) as! WeekWeather).covertToWeatherResults())!
