@@ -11,7 +11,7 @@ import MobileCoreServices
 
 /// Asynchronous Operation base class
 ///
-/// This class performs all of the necessary KVN of `isFinished` and
+/// This class performs all of the necessary KVO of `isFinished` and
 /// `isExecuting` for a concurrent `NSOperation` subclass. So, to developer
 /// a concurrent NSOperation subclass, you instead subclass this class which:
 ///
@@ -26,33 +26,31 @@ import MobileCoreServices
 
 class AsynchronousOperation : Operation {
 
-    override var isAsynchronous: Bool { return true }
-
     // _executing用來暫存isExecuting的值，用來在get中使用。如果return self.isExecuting的話會無限遞歸。自己呼叫自己。
-    fileprivate var _executing: Bool = false
+    private var innerExecuting: Bool = false
     override var isExecuting: Bool {
         get {
-            return _executing
+            return innerExecuting
         }
         set {
-            if _executing != newValue {
-                // 用KVN技巧，修改父類別中本來是只讀的屬性
+            if innerExecuting != newValue {
+                // 用KVO技巧，修改父類別中本來是只讀的屬性
                 self.willChangeValue(forKey: "isExecuting")
-                _executing = newValue
+                innerExecuting = newValue
                 self.didChangeValue(forKey: "isExecuting")
             }
         }
     }
 
-    fileprivate var _finished: Bool = false
+    private var innerFinished: Bool = false
     override var isFinished: Bool {
         get {
-            return _finished
+            return innerFinished
         }
         set {
-            if _finished != newValue {
+            if innerFinished != newValue {
                 self.willChangeValue(forKey: "isFinished")
-                _finished = newValue
+                innerFinished = newValue
                 self.didChangeValue(forKey: "isFinished")
             }
         }
@@ -60,7 +58,7 @@ class AsynchronousOperation : Operation {
 
     /// Complete the operation
     ///
-    /// This will result in the appropriate KVN of isFinished and isExecuting
+    /// This will result in the appropriate KVO of isFinished and isExecuting
 
     func completeOperation() {
         if isExecuting {
