@@ -229,7 +229,6 @@
 				023729702023365C009D4187 /* Frameworks */,
 				023729712023365C009D4187 /* Resources */,
 				D6D07CD8204BDD2C45B769E6 /* [CP] Embed Pods Frameworks */,
-				01449A68F12E39CE2A91F0CE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,7 +251,7 @@
 				TargetAttributes = {
 					023729722023365C009D4187 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = FDD97732MB;
+						DevelopmentTeam = 47FGBWZVJ9;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -262,6 +261,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -291,21 +291,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		01449A68F12E39CE2A91F0CE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaiChungWeather/Pods-TaiChungWeather-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4DCE0FBBAB2C3073167B4C74 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -330,7 +315,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TaiChungWeather/Pods-TaiChungWeather-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-TaiChungWeather/Pods-TaiChungWeather-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DGElasticPullToRefresh/DGElasticPullToRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Ji/Ji.framework",
 				"${BUILT_PRODUCTS_DIR}/KRActivityIndicatorView/KRActivityIndicatorView.framework",
@@ -345,7 +330,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaiChungWeather/Pods-TaiChungWeather-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TaiChungWeather/Pods-TaiChungWeather-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -468,6 +453,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -511,6 +497,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -521,13 +508,13 @@
 			baseConfigurationReference = 8E5B44ED3D4125319371DE3A /* Pods-TaiChungWeather.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FDD97732MB;
+				DEVELOPMENT_TEAM = 47FGBWZVJ9;
 				INFOPLIST_FILE = TaiChungWeather/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.jerome.TaiChungWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -537,13 +524,13 @@
 			baseConfigurationReference = 4F570888C24A82027359EF28 /* Pods-TaiChungWeather.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FDD97732MB;
+				DEVELOPMENT_TEAM = 47FGBWZVJ9;
 				INFOPLIST_FILE = TaiChungWeather/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.jerome.TaiChungWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

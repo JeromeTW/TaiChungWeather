@@ -13,7 +13,7 @@
 
 You can add KRActivityIndicatorView from IB and code.
 
-<img src="./Resources/demo.gif" height=400>
+<img src="https://github.com/krimpedance/Resources/blob/master/KRActivityIndicatorView/demo.gif" height=400>
 
 On HUD => https://github.com/krimpedance/KRProgressHUD
 
@@ -22,9 +22,9 @@ On HUD => https://github.com/krimpedance/KRProgressHUD
 - Indicator color can be customized
 
 ## Requirements
-- iOS 10.0+
-- Xcode 9.0+
-- Swift 4.0+
+- iOS 8.0+
+- Xcode 10.2+
+- Swift 5.0+
 
 ## DEMO
 To run the example project, clone the repo, and open `KRActivityIndicatorViewDemo.xcodeproj` from the DEMO directory.
@@ -62,13 +62,13 @@ view.addSubview(activityIndicator)
 With single color.
 
 ```swift
-KRActivityIndicatorView(style: .color(.green))
+KRActivityIndicatorView(colors: [.green])
 ```
 
 With gradation color.
 
 ```swift
-KRActivityIndicatorView(style: .gradationColor(head: .red, tail: .orange))
+KRActivityIndicatorView(colors: [.red, .orange, .white])
 ```
 
 #### Start and stop animation.
@@ -80,25 +80,29 @@ activityIndicator.stopAnimating()
 
 ## Customization
 
-#### KRActivityIndicatorViewStyle
-
-* `color(color)` - The fill color of activity indicator is set to `color`.
-* `color(head: UIColor, tail: UIColor)` - The fill color of activity indicator is gradated from `head` color to `tail` color.
-
 #### Current available params on IB:
 * `headColor` - gradient head color.
 * `tailColor` - gradient tail color.
-* `isLarge` - Size of KRActivityIndicatorView. Default(off) size is 20x20, Large size is 50x50.
+* `numberOfDots` - number of indicator dots.
+* `duration` - Duration for one rotation.
 * `animating` - Animation of activity indicator when it's shown
 * `hidesWhenStopped` - calls `setHidden` when call `stopAnimating()`
 
-## Contributing to this project
-I'm seeking bug reports and feature requests.
 
 ## Release Note
-- 2.1.1 : Supported from iOS 8.0.
-- 2.1.0 : Available at CocoaPods and Carthage with Xcode9 and Swift4.
-- 2.0.2 : Fixed bag which don't change `headColor` and 'tailColor'.
++ 3.0.2 :
+  - Compatible with Swift 5.0
+
++ 3.0.1 :
+  - Fixed bug that indicator doesn't start animation.
+  - Fixed bug when number of colors is less than 2.
+
++ 3.0.0 :
+  - Indicator view size changable
+  - Multiple gradiate colors settable
+
++ 2.2.0 :
+  - Compatible with Swift 4.2
 
 ## License
 KRActivityIndicatorView is available under the MIT license. See the LICENSE file for more info.

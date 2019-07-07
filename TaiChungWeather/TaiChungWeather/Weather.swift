@@ -54,7 +54,7 @@ enum WeatherDescription: String {
       self = .cloudy
     } else if string == "多雲時陰短暫雨" || string == "多雲短暫雨" {
       self = .sunnyCloudyRainy
-    } else if string == "陰時有雨" || string == "陰時多雲短暫雨" || string == "陰短暫雨" {
+    } else if string == "陰時有雨" || string == "陰時多雲短暫雨" || string == "陰短暫雨"   {
       self = .rainy
     } else if string.contains("暴雨") {
       self = .stormy

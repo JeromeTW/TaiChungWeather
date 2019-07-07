@@ -67,7 +67,7 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
   private func setupNavigationBar() {
     let dateString = Date().weekDay.getString()
     title = LocStr(.today) + " \(dateString)"
-    navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: Color.darkBlue]
+    navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: Color.darkBlue]
   }
   
   private func fetchDataDailyQuote() {
@@ -78,7 +78,7 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
       guard results.count == 1 else {
         // First time launch the app without history record.
         KRProgressHUD.appearance().style = .black
-        KRProgressHUD.set(deadlineTime: 999999.9)
+        KRProgressHUD.set(deadline: 999999.9)
         KRProgressHUD.showInfo(withMessage: LocStr(.loading))
         return
       }
@@ -96,7 +96,7 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
     let tempImageView = UIImageView(image: backgroundImage)
     tempImageView.frame = tableView.frame
     tableView.backgroundView = tempImageView
-    tableView.rowHeight = UITableViewAutomaticDimension
+    tableView.rowHeight = UITableView.automaticDimension
     self.tableView.estimatedRowHeight = view.frame.width * 60 / 375
     tableView.delegate = self
     

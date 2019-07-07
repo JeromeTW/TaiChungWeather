@@ -3,8 +3,8 @@ platform :ios, '10.0'
 target 'TaiChungWeather' do
   use_frameworks!
 
-  pod 'Ji', '~> 2.1.0'
-  pod 'DGElasticPullToRefresh'
+  pod 'Ji', '~> 5.0.0'
+  pod 'DGElasticPullToRefresh', :git => 'https://github.com/KennethTsang/DGElasticPullToRefresh.git'
   pod 'KRProgressHUD'
   
 end
