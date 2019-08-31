@@ -22,9 +22,11 @@
 		023729812023365C009D4187 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0237297F2023365C009D4187 /* LaunchScreen.storyboard */; };
 		0241D10D20241EF1005D9F91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0241D10F20241EF1005D9F91 /* InfoPlist.strings */; };
 		0241D11020241EF7005D9F91 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0241D11220241EF7005D9F91 /* Localizable.strings */; };
+		028835F0231A152600669E27 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028835EF231A152600669E27 /* R.generated.swift */; };
 		02A9CDC92050EAFC003FD268 /* AsynchronousOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A9CDC82050EAFB003FD268 /* AsynchronousOperation.swift */; };
 		02A9CDCB2050FDC3003FD268 /* NetworkRequestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A9CDCA2050FDC3003FD268 /* NetworkRequestOperation.swift */; };
 		02A9CDCD2051116E003FD268 /* WeatherNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A9CDCC2051116E003FD268 /* WeatherNetworkRequest.swift */; };
+		02B5344E22D1A6F500121B7B /* NewNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B5344D22D1A6F500121B7B /* NewNetworkController.swift */; };
 		02C5671E2024408600A5DAB8 /* WeekWeather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 02C5671C2024408600A5DAB8 /* WeekWeather.xcdatamodeld */; };
 		02C567202024416300A5DAB8 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5671F2024416300A5DAB8 /* Weather.swift */; };
 		02C567222024451500A5DAB8 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C567212024451500A5DAB8 /* NetworkController.swift */; };
@@ -58,9 +60,11 @@
 		023729822023365C009D4187 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0241D10E20241EF1005D9F91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0241D11120241EF7005D9F91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		028835EF231A152600669E27 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		02A9CDC82050EAFB003FD268 /* AsynchronousOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsynchronousOperation.swift; sourceTree = "<group>"; };
 		02A9CDCA2050FDC3003FD268 /* NetworkRequestOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequestOperation.swift; sourceTree = "<group>"; };
 		02A9CDCC2051116E003FD268 /* WeatherNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherNetworkRequest.swift; sourceTree = "<group>"; };
+		02B5344D22D1A6F500121B7B /* NewNetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNetworkController.swift; sourceTree = "<group>"; };
 		02C5671D2024408600A5DAB8 /* WeekWeather.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WeekWeather.xcdatamodel; sourceTree = "<group>"; };
 		02C5671F2024416300A5DAB8 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		02C567212024451500A5DAB8 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 		02372988202336F8009D4187 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				028835EF231A152600669E27 /* R.generated.swift */,
 				0241D10F20241EF1005D9F91 /* InfoPlist.strings */,
 				0241D11220241EF7005D9F91 /* Localizable.strings */,
 				0237297D2023365C009D4187 /* Assets.xcassets */,
@@ -176,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				02C567212024451500A5DAB8 /* NetworkController.swift */,
+				02B5344D22D1A6F500121B7B /* NewNetworkController.swift */,
 				02A9CDC82050EAFB003FD268 /* AsynchronousOperation.swift */,
 				02A9CDCA2050FDC3003FD268 /* NetworkRequestOperation.swift */,
 				02A9CDCC2051116E003FD268 /* WeatherNetworkRequest.swift */,
@@ -225,6 +231,7 @@
 			buildConfigurationList = 023729852023365C009D4187 /* Build configuration list for PBXNativeTarget "TaiChungWeather" */;
 			buildPhases = (
 				4DCE0FBBAB2C3073167B4C74 /* [CP] Check Pods Manifest.lock */,
+				028835EE231A149400669E27 /* R .swift Run Script */,
 				0237296F2023365C009D4187 /* Sources */,
 				023729702023365C009D4187 /* Frameworks */,
 				023729712023365C009D4187 /* Resources */,
@@ -291,6 +298,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		028835EE231A149400669E27 /* R .swift Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = "R .swift Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		4DCE0FBBAB2C3073167B4C74 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -320,6 +347,7 @@
 				"${BUILT_PRODUCTS_DIR}/Ji/Ji.framework",
 				"${BUILT_PRODUCTS_DIR}/KRActivityIndicatorView/KRActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/KRProgressHUD/KRProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -327,6 +355,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Ji.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -341,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02229216202851640034FE6A /* NSObject+ReachabilityStatus.swift in Sources */,
+				02B5344E22D1A6F500121B7B /* NewNetworkController.swift in Sources */,
 				02C567222024451500A5DAB8 /* NetworkController.swift in Sources */,
 				02C567202024416300A5DAB8 /* Weather.swift in Sources */,
 				0222920020273AE00034FE6A /* WeatherTableViewCell.swift in Sources */,
@@ -358,6 +388,7 @@
 				0222920A2027DE9C0034FE6A /* WeekWeather+Weather.swift in Sources */,
 				02A9CDC92050EAFC003FD268 /* AsynchronousOperation.swift in Sources */,
 				022292052027DD670034FE6A /* CoreDataConnect+Weather.swift in Sources */,
+				028835F0231A152600669E27 /* R.generated.swift in Sources */,
 				02C5672D2025604100A5DAB8 /* CoreDataConnect.swift in Sources */,
 				02C5672F2025814100A5DAB8 /* Date+ISO8601.swift in Sources */,
 				02A9CDCB2050FDC3003FD268 /* NetworkRequestOperation.swift in Sources */,

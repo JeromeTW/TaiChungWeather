@@ -14,48 +14,35 @@ class NetworkRequestOperation: AsynchronousOperation, URLSessionDelegate, URLSes
     var error: NSError?
     
     var startDate: Date!
-    fileprivate var task: URLSessionTask!
-    fileprivate var incomingData = NSMutableData()
-    fileprivate var session: Foundation.URLSession?
-    fileprivate var timeoutIntervalForRequest: Double = 60
-    fileprivate var timeoutIntervalForResource: Double = 7 * 24 * 60 * 60
+    private var task: URLSessionTask!
+    private var incomingData = NSMutableData()
+    private var session: Foundation.URLSession?
+    private var timeoutIntervalForRequest: Double = 60  // default 60 sec
+    private var timeoutIntervalForResource: Double = 7 * 24 * 60 * 60   // default 7 day (7 * 24 * 60 * 60)
 
-    func initSession(_ url: URL, method: String, headerFields: [String : String]) {
-        self.initSession(url, method: method, additionalHeaders: nil, headerFields: headerFields, body: nil)
-    }
-
-    func initSession(_ url: URL, method: String, additionalHeaders: [AnyHashable: Any]) {
-        self.initSession(url, method: method, additionalHeaders: additionalHeaders, headerFields: nil, body: nil)
-    }
-
-    func initSession(_ url: URL, method: String, headerFields: [String : String], body: Data?, timeoutIntervalForRequest: Double = 60, timeoutIntervalForResource: Double = 7 * 24 * 60 * 60) {
-        self.timeoutIntervalForRequest = timeoutIntervalForRequest
-        self.timeoutIntervalForResource = timeoutIntervalForResource
-        self.initSession(url, method: method, additionalHeaders: nil, headerFields: headerFields, body: body)
-    }
-
-    func initSession(_ url: URL, method: String, additionalHeaders: [AnyHashable: Any]?, headerFields: [String : String]?, body: Data?) {
-
+    init (_ url: URL, method: String, additionalHeaders: [AnyHashable: Any]? = nil, headerFields: [String : String]? = nil, body: Data? = nil) {
+        super.init()
+      
         let request = NSMutableURLRequest(url: url)
         request.httpMethod = method
         let urlconfig = URLSessionConfiguration.default
         // 新增 timeout, 並realod & Ignoring 本地的cacheData(取得最新的cacheData)
-        urlconfig.timeoutIntervalForRequest = timeoutIntervalForRequest // default 60 sec
-        urlconfig.timeoutIntervalForResource = timeoutIntervalForResource // default 7 day (7 * 24 * 60 * 60)
+        urlconfig.timeoutIntervalForRequest = timeoutIntervalForRequest
+        urlconfig.timeoutIntervalForResource = timeoutIntervalForResource
         urlconfig.requestCachePolicy = NSURLRequest.CachePolicy.reloadIgnoringLocalCacheData
 
-        if headerFields != nil {
-            for (key, value) in headerFields! {
-                request.setValue(value, forHTTPHeaderField: key)
-            }
+        if let headerFields = headerFields {
+          for (key, value) in headerFields {
+            request.setValue(value, forHTTPHeaderField: key)
+          }
         }
 
-        if additionalHeaders != nil {
+        if let additionalHeaders = additionalHeaders {
             urlconfig.httpAdditionalHeaders = additionalHeaders
         }
 
-        if body != nil {
-            request.httpBody = body!
+        if let body = body {
+            request.httpBody = body
         }
 
         session = Foundation.URLSession(
@@ -166,4 +153,27 @@ class NetworkRequestOperation: AsynchronousOperation, URLSessionDelegate, URLSes
         self.data = data
         // TODO: Handler error
     }
+}
+
+struct NetworkNotification {
+  var networkRequestOperationClass = ""
+  var isSuccess: Bool
+  var errorMessage = ""
+  var networkInfo: [String: Any]?
+}
+
+// MARK: - Static
+extension NetworkRequestOperation {
+  static let notificationCenter = NotificationCenter.init()
+  /* 外面的使用方式
+   customNotificationCenter.addObserver(self, selector: #selector(HiJerome),
+   name: NSNotification.Name(rawValue: "HiJerome"), object: nil)
+   
+   customNotificationCenter.post(name: NSNotification.Name(rawValue: "HiJerome"), object: nil, userInfo: nil)
+   NOTE: 可能需要自己做 RemoveObserver
+   */
+  
+  func post(networkNotification: NetworkNotification) {
+    NetworkRequestOperation.notificationCenter.post(name: NSNotification.Name(rawValue: networkNotification.networkRequestOperationClass), object: networkNotification)
+  }
 }

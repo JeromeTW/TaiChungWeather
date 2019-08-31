@@ -13,13 +13,9 @@ import MobileCoreServices
 
 class WeatherNetworkRequest: NetworkRequestOperation {
     private let feedWeatherURLString = "http://www.cwb.gov.tw/rss/forecast/36_08.xml"
-    override init() {
-        super.init()
-        guard let url = URL(string: feedWeatherURLString) else {
-            assertionFailure()
-            return
-        }
-        initSession(url, method: "GET", headerFields: [:])
+    init() {
+      let url = URL(string: feedWeatherURLString)!
+      super.init(url, method: "GET")
     }
     
     override func success(_ data: Data) {
