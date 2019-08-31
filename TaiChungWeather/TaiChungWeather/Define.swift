@@ -24,21 +24,6 @@ enum Constant {
   
 }
 
-enum Localization: String {
-  case dailyQuote
-  case day
-  case night
-  case today
-  case monday, tuesday, wednesday, thursday, friday, saturday, sunday
-  case ok
-  case internetNotReachable
-  case loading
-}
-
-enum ImageName: String {
-  case background
-}
-
 enum Color {
   static let tiffanyBlue = UIColor(redInt: 165, greenInt: 218, blueInt: 219)
   static let lightTiffanyBlue = UIColor(redInt: 242, greenInt: 251, blueInt: 251)

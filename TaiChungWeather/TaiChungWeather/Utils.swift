@@ -8,10 +8,6 @@
 
 import UIKit
 
-func LocStr(_ id: Localization) -> String {
-	return NSLocalizedString(id.rawValue, comment: "")
-}
-
 /// Debug Log.
 ///
 /// - Parameters:
@@ -26,8 +22,4 @@ public func DLog<T>(_ message: T,
 	#if DEBUG
 		NSLog("\(file.lastPathComponent)[\(line)], \(method): \(message)")
 	#endif
-}
-
-func GetImage(name: ImageName) -> UIImage? {
-  return UIImage(named: name.rawValue) 
 }

@@ -52,7 +52,7 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
     guard currentReachabilityStatus != .notReachable else {
       tableView.dg_stopLoading()
       // Show alert.
-      showOKAlert(LocStr(.internetNotReachable), message: nil, okTitle: LocStr(.ok))
+      showOKAlert(R.string.localizable.internetNotReachable(), message: nil, okTitle: R.string.localizable.ok())
       return
     }
     guard networkController.isQueryDailyQuoteFinished && networkController.isQueryWeatherFinished else {
@@ -66,7 +66,7 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
   // MARK: - Navigation Bar
   private func setupNavigationBar() {
     let dateString = Date().weekDay.getString()
-    title = LocStr(.today) + " \(dateString)"
+    title = R.string.localizable.today() + " \(dateString)"
     navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: Color.darkBlue]
   }
   
@@ -79,7 +79,7 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
         // First time launch the app without history record.
         KRProgressHUD.appearance().style = .black
         KRProgressHUD.set(deadline: 999999.9)
-        KRProgressHUD.showInfo(withMessage: LocStr(.loading))
+        KRProgressHUD.showInfo(withMessage: R.string.localizable.loading())
         return
       }
       dailyQuote = results[0]
@@ -88,7 +88,7 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
   
   // MARK: - TableView
   private func setupTableView() {
-    guard let backgroundImage = GetImage(name: .background) else {
+    guard let backgroundImage = R.image.background() else {
       assertionFailure()
       return
     }
@@ -136,7 +136,7 @@ class WeatherListViewController: UIViewController, UITableViewDataSource, UITabl
         assertionFailure()
         return cell
       }
-      cell.dailyQuoteLabel.text = LocStr(.dailyQuote)
+      cell.dailyQuoteLabel.text = R.string.localizable.dailyQuote()
       cell.articleLabel.text = quote.article
       cell.authorLabel.text = quote.author
       

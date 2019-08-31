@@ -22,9 +22,9 @@ enum WeatherTime {
   
   func getString() -> String {
     if self == .day {
-      return LocStr(.day)
+      return R.string.localizable.day()
     } else {
-      return LocStr(.night)
+      return R.string.localizable.night()
     }
   }
 }

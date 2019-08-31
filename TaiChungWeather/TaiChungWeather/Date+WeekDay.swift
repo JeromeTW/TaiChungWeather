@@ -14,19 +14,19 @@ enum WeekDay: Int {
   func getString() -> String {
     switch self {
     case .monday:
-      return LocStr(.monday)
+      return R.string.localizable.monday()
     case .tuesday:
-      return LocStr(.tuesday)
+      return R.string.localizable.tuesday()
     case .wednesday:
-      return LocStr(.wednesday)
+      return R.string.localizable.wednesday()
     case .thursday:
-      return LocStr(.thursday)
+      return R.string.localizable.thursday()
     case .friday:
-      return LocStr(.friday)
+      return R.string.localizable.friday()
     case .saturday:
-      return LocStr(.saturday)
+      return R.string.localizable.saturday()
     case .sunday:
-      return LocStr(.sunday)
+      return R.string.localizable.sunday()
     }
   }
   
