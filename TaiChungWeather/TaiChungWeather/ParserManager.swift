@@ -11,7 +11,7 @@ import Ji
 
 class ParserManager {
   static let shared = ParserManager()  // Singleton
-  public var didQueryWeatherHandler: DoneHandler?
+//  public var didQueryWeatherHandler: DoneHandler?
   
   private let feedWeatherURLString = "http://www.cwb.gov.tw/rss/forecast/36_08.xml"
   
