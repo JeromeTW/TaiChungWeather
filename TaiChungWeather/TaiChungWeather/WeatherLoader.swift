@@ -36,9 +36,6 @@ extension NetworkLoader {
 }
 
 struct WeatherLoader: CoreDataLoader, NetworkLoader {
-//  var didQueryDailyQuoteHandler: (() -> Void)!
-//  let myContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-//  private lazy var coreDataConnect = CoreDataConnect(context: myContext)
   lazy var weatherFRC: NSFetchedResultsController<NSFetchRequestResult>! = coreDataConnect.getFRC(Constant.weatherEntityName, predicate: nil, sort: [[Constant.timeKey: false]], limit: 1)
   
   func fetchWeatherFromInternet(completion: @escaping (Result<Data, Error>) -> Void) {

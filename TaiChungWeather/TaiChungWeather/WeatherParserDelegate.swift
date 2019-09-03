@@ -20,7 +20,7 @@ class WeatherParserDelegate: NSObject, XMLParserDelegate {
   //当前元素名
   var currentElement = ""
   
-  //当前用户
+  //当前 WeatherItem
   var weatherItem: WeatherItem!
   
   func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
