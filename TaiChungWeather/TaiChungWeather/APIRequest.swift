@@ -1,5 +1,5 @@
 //
-//  APIClient.swift
+//  APIRequest.swift
 //  DDTDemo
 //
 //  Created by Allen Lai on 2019/7/29.
@@ -25,22 +25,20 @@ enum URLPath: String {
 struct APIRequest {
     var url: URL
     let method: HTTPMethod
-    let path: String?
     var queryItems: [URLQueryItem]?
     var headers: [HTTPHeader]?
     var body: Data?
-    
-    init(url: URL, method: HTTPMethod = .get, path: URLPath? = nil) {
+  
+  init(url: URL, method: HTTPMethod = .get, bodyData: Data? = nil) {
         self.url = url
         self.method = method
-        self.path = path?.rawValue
+        self.body = bodyData
     }
     
-    init<Body: Encodable>(url: URL, method: HTTPMethod, path: URLPath, body: Body) throws {
+    init<JSONObject: Encodable>(url: URL, method: HTTPMethod, path: URLPath, jsonObject: JSONObject) throws {
         self.url = url
         self.method = method
-        self.path = path.rawValue
-        self.body = try JSONEncoder().encode(body)
+        self.body = try JSONEncoder().encode(jsonObject)
     }
 }
 
@@ -49,6 +47,7 @@ struct APIResponse<Body> {
     let body: Body
 }
 
+// MARK: - For JSON Object
 extension APIResponse where Body == Data? {
     func decode<BodyType: Decodable>(to type: BodyType.Type) throws -> APIResponse<BodyType> {
         guard let data = body else {
