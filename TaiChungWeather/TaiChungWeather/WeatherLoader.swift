@@ -52,6 +52,14 @@ class WeatherLoader: CoreDataLoader, NetworkLoader {
     self.completionHandler = completionHandler
   }
   
+  func isWeatherDataEmpty() -> Bool {
+    if coreDataConnect.getCount(Constant.weatherEntityName, predicate: nil) == 0 {
+      return true
+    } else {
+      return false
+    }
+  }
+  
   func fetchWeatherFromInternet(completion: @escaping (Result<Data, Error>) -> Void) {
     let url = URL(string: "http://www.cwb.gov.tw/rss/forecast/36_08.xml")!
     let request = APIRequest(url: url)

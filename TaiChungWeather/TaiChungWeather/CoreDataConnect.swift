@@ -122,6 +122,24 @@ class CoreDataConnect {
     return false
   }
   
+  func getCount(_ myEntityName:String, predicate:NSPredicate?) -> Int {
+    var count = 0
+    let request = NSFetchRequest<NSNumber>(entityName: myEntityName)
+    
+    // predicate
+    request.predicate = predicate
+    request.resultType = .countResultType
+    
+    do {
+      let countResult = try myContext.fetch(request)
+      // 获取数量
+      count = countResult.first!.intValue
+    } catch let error as NSError {
+      assertionFailure("Could not fetch \(error), \(error.userInfo)")
+    }
+    return count
+  }
+  
     public func getFRC(_ myEntityName:String, predicate:NSPredicate?, sort:[[String:Bool]]?, limit:Int?) -> NSFetchedResultsController<NSFetchRequestResult> {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: myEntityName)
         

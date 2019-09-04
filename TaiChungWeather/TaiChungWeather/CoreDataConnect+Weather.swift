@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 extension CoreDataConnect {
   public func retrieveWeekWeatherResults(predicate:NSPredicate?, sort:[[String:Bool]]?, limit:Int?) -> [WeekWeather]? {

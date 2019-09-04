@@ -45,6 +45,9 @@ class WeatherListTableView: UITableView {
 // MARK: - UITableViewDataSource
 extension WeatherListTableView: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    guard weatherLoader.isWeatherDataEmpty() == false else {
+      return 0
+    }
     let newIndexPath = IndexPath(row: 0, section: 0)
     // only get one result.
     let weathers = ((weatherLoader.weatherFRC.object(at: newIndexPath) as! WeekWeather).covertToWeatherResults())!
