@@ -31,16 +31,34 @@ class WeatherParserDelegate: NSObject, XMLParserDelegate {
   }
   
   func parser(_ parser: XMLParser, foundCharacters string: String) {
-    if currentElement == "description" {
-      weatherItem.description = string
-    } else if currentElement == "pubdate" {
+    guard weatherItem != nil else {
+      return
+    }
+    if currentElement == "pubdate" {
       weatherItem.pubDate = Date.dateFromString(dateTimeString: string)!
     }
   }
   
   func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+    currentElement = ""
+    guard weatherItem != nil else {
+      return
+    }
     if elementName == "item" {
       weatherItems.append(weatherItem)
+      weatherItem = nil
+    }
+  }
+  
+  func parser(_ parser: XMLParser, foundCDATA CDATABlock: Data) {
+    guard weatherItem != nil else {
+      return
+    }
+    guard let string = String(data: CDATABlock, encoding: .utf8) else {
+      return
+    }
+    if currentElement == "description" {
+      weatherItem.description = string
     }
   }
 }

@@ -64,14 +64,50 @@ class WeatherLoader: CoreDataLoader, NetworkLoader {
     let url = URL(string: "http://www.cwb.gov.tw/rss/forecast/36_08.xml")!
     let request = APIRequest(url: url)
     let operation = NetworkRequestOperation(anAPIRequest: request) { [weak self] result in
-      DispatchQueue.main.async {
-        switch result {
-        case .success(let response):
-          print("success")
-          self?.completionHandler()
-        case .failure:
-          print("failed")
+      switch result {
+      case .success(let response):
+        print("success")
+        if let data = response.body {
+          let parser = XMLParser(data: data)
+          let delegate = WeatherParserDelegate()
+          parser.delegate = delegate
+          DispatchQueue.main.async {
+            if parser.parse() {
+              print("parse success")
+              let myContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+              let coreDataConnect = CoreDataConnect(context: myContext)
+              let item = delegate.weatherItems[1]
+              let temp = NSPredicate(format: "time = %@", item.pubDate as CVarArg)
+              guard let results = coreDataConnect.retrieveWeekWeatherResults(predicate: temp, sort: nil, limit: 1), results.isEmpty else {
+                DLog("The record is already existed.")
+                return
+              }
+              // insert
+              let insertResult = coreDataConnect.insert(
+                Constant.weatherEntityName, attributeInfo: [
+                  Constant.timeKey : item.pubDate as Any,
+                  Constant.contentKey : item.description as Any
+                ])
+              if insertResult {
+                DLog("Insert successfully.")
+              } else {
+                DLog("Insert failed.")
+              }
+            } else {
+              print("parse failed")
+            }
+            self?.completionHandler()
+          }
         }
+        
+      case .failure:
+        print("failed")
+        DispatchQueue.main.async {
+          self?.completionHandler()
+        }
+      }
+      DispatchQueue.main.async {
+        
       }
     }
 //    let operation = NetworkRequestOperation().willSend(WeatherRequest()) { (response) in
