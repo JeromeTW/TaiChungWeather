@@ -26,41 +26,69 @@ extension CoreDataLoader {
 }
 
 protocol NetworkLoader {
-  var networkController: NetworkController { get }
+//  var networkController: NetworkController { get }
 }
 
 extension NetworkLoader {
-  var networkController: NetworkController {
-    return NetworkController.shared
-  }
+//  var networkController: NetworkController {
+//    return NetworkController.shared
+//  }
 }
 
-struct WeatherLoader: CoreDataLoader, NetworkLoader {
+class WeatherLoader: CoreDataLoader, NetworkLoader {
   lazy var weatherFRC: NSFetchedResultsController<NSFetchRequestResult>! = coreDataConnect.getFRC(Constant.weatherEntityName, predicate: nil, sort: [[Constant.timeKey: false]], limit: 1)
+    lazy var downloadsInProgress = [URL : Operation]()
+    lazy var downloadQueue: OperationQueue = {
+      
+      var queue = OperationQueue()
+      queue.name = "Download Weather queue"
+      queue.maxConcurrentOperationCount = 1
+      return queue
+      
+    }()
+  
+  var completionHandler: (() -> Void)!
+  init(completionHandler: @escaping () -> Void) {
+    self.completionHandler = completionHandler
+  }
   
   func fetchWeatherFromInternet(completion: @escaping (Result<Data, Error>) -> Void) {
-    let operation = NetworkRequestOperation().willSend(WeatherRequest()) { (response) in
-      if let e = response.result.error {
-        completion(Result.failed(e))
-        return
-      }
-      
-      if let value = response.result.value {
-        guard let string = String(data: value, encoding: .utf8) else {
-          // TODO: Show invalidDecoding Error.
-          return
+    let url = URL(string: "http://www.cwb.gov.tw/rss/forecast/36_08.xml")!
+    let request = APIRequest(url: url)
+    let operation = NetworkRequestOperation(anAPIRequest: request) { [weak self] result in
+      DispatchQueue.main.async {
+        switch result {
+        case .success(let response):
+          print("success")
+          self?.completionHandler()
+        case .failure:
+          print("failed")
         }
-        let parserManager = ParserManager.shared
-        let success = parserManager.parseWeatherXML(xmlString: string)
-        DLog("success:\(success)")
-        if !success {
-          // TODO: Show parse Error.
-        }
-        completion(Result.success(value))
-        return
       }
     }
-    networkController.add(operation: operation)
+//    let operation = NetworkRequestOperation().willSend(WeatherRequest()) { (response) in
+//      if let e = response.result.error {
+//        completion(Result.failed(e))
+//        return
+//      }
+//
+//      if let value = response.result.value {
+//        guard let string = String(data: value, encoding: .utf8) else {
+//          // TODO: Show invalidDecoding Error.
+//          return
+//        }
+//        let parserManager = ParserManager.shared
+//        let success = parserManager.parseWeatherXML(xmlString: string)
+//        DLog("success:\(success)")
+//        if !success {
+//          // TODO: Show parse Error.
+//        }
+//        completion(Result.success(value))
+//        return
+//      }
+//    }
+    downloadsInProgress[url] = operation
+    downloadQueue.addOperation(operation)
   }
 }
 

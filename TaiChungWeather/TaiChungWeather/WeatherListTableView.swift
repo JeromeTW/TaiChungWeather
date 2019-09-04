@@ -9,7 +9,7 @@
 import UIKit
 
 class WeatherListTableView: UITableView {
-  private var weatherLoader = WeatherLoader()
+  private var weatherLoader: WeatherLoader!
   private let dailyQuoteLoader = DailyQuoteLoader()
   private var weatherResults = [Weather]()
   private var dailyQuote: DailyQuote!
@@ -29,6 +29,10 @@ class WeatherListTableView: UITableView {
     dataSource = self
     delegate = self
     print("awakeFromNib()")
+    weatherLoader = WeatherLoader(completionHandler: {
+      [weak self] in
+      self?.reloadData()
+    })
   }
   
   public func fetchWeatherFromInternet() {
