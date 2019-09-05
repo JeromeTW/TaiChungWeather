@@ -28,6 +28,7 @@
 		02883608231A792B00669E27 /* NetworkRequestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028835FE231A792B00669E27 /* NetworkRequestOperation.swift */; };
 		02883613231A79AF00669E27 /* WeatherLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02883612231A79AF00669E27 /* WeatherLoader.swift */; };
 		02B3836D2321339300DDA2AA /* AsynchronousOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B3836C2321339300DDA2AA /* AsynchronousOperation.swift */; };
+		02B3836F2321429D00DDA2AA /* DailyQuoteLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B3836E2321429D00DDA2AA /* DailyQuoteLoader.swift */; };
 		02BFBF65231B610900CE35EA /* WeatherListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BFBF64231B610900CE35EA /* WeatherListTableView.swift */; };
 		02BFBF67231BEF4E00CE35EA /* WeatherParserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BFBF66231BEF4E00CE35EA /* WeatherParserDelegate.swift */; };
 		02C5671E2024408600A5DAB8 /* WeekWeather.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 02C5671C2024408600A5DAB8 /* WeekWeather.xcdatamodeld */; };
@@ -68,6 +69,7 @@
 		028835FE231A792B00669E27 /* NetworkRequestOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkRequestOperation.swift; path = ../../../../PaulOpenDataDemo/APIClient/NetworkRequestOperation.swift; sourceTree = "<group>"; };
 		02883612231A79AF00669E27 /* WeatherLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherLoader.swift; sourceTree = "<group>"; };
 		02B3836C2321339300DDA2AA /* AsynchronousOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsynchronousOperation.swift; sourceTree = "<group>"; };
+		02B3836E2321429D00DDA2AA /* DailyQuoteLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuoteLoader.swift; sourceTree = "<group>"; };
 		02BFBF64231B610900CE35EA /* WeatherListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListTableView.swift; sourceTree = "<group>"; };
 		02BFBF66231BEF4E00CE35EA /* WeatherParserDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherParserDelegate.swift; sourceTree = "<group>"; };
 		02C5671D2024408600A5DAB8 /* WeekWeather.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WeekWeather.xcdatamodel; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				02067620231FE4A80024BC99 /* NSPersistentContainerExtension.swift */,
+				02B3836E2321429D00DDA2AA /* DailyQuoteLoader.swift */,
 				02883612231A79AF00669E27 /* WeatherLoader.swift */,
 				02BFBF66231BEF4E00CE35EA /* WeatherParserDelegate.swift */,
 				028835FD231A78F800669E27 /* NewNetwork */,
@@ -403,6 +406,7 @@
 				02229218202852010034FE6A /* UIViewController+Alerts.swift in Sources */,
 				0222921420284A0C0034FE6A /* Date+WeekDay.swift in Sources */,
 				027607B4231E1BE100EEBD70 /* APIRequest.swift in Sources */,
+				02B3836F2321429D00DDA2AA /* DailyQuoteLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,18 +17,7 @@ class WeatherListViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-//    networkController.didQueryDailyQuoteHandler = {
-//      [weak self] error in
-//        self?.fetchDataDailyQuote()
-//        self?.weatherListTableView.reloadData()
-//    }
-    
-    
-//    weatherFRC = coreDataConnect.getFRC(Constant.weatherEntityName, predicate: nil, sort: [[Constant.timeKey: false]], limit: 1)
-//    weatherFRC.delegate = self
     setupNavigationBar()
-//    fetchDataDailyQuote()
     setupTableView()
   }
 
@@ -37,21 +26,6 @@ class WeatherListViewController: UIViewController {
 //      weatherListTableView.dg_removePullToRefresh()
 //    }
   }
-  
-//  private func queryNewDataFromInternet() {
-//    guard currentReachabilityStatus != .notReachable else {
-////      weatherListTableView.dg_stopLoading()
-//      // Show alert.
-//      showOKAlert(R.string.localizable.internetNotReachable(), message: nil, okTitle: R.string.localizable.ok())
-//      return
-//    }
-//    guard networkController.isQueryDailyQuoteFinished && networkController.isQueryWeatherFinished else {
-//      return
-//    }
-//    networkController.requestDailyQuoteData()
-//    NetworkController.shared.addDelegate(self)
-//    networkController.requestWeatherData()
-//  }
   
   // MARK: - Navigation Bar
   private func setupNavigationBar() {
@@ -89,7 +63,6 @@ class WeatherListViewController: UIViewController {
     weatherListTableView.rowHeight = UITableView.automaticDimension
     self.weatherListTableView.estimatedRowHeight = view.frame.width * 60 / 375
     
-    weatherListTableView.fetchWeatherFromInternet()
 //    weatherListTableView.delegate = self
     
 //    let loadingView = DGElasticPullToRefreshLoadingViewCircle()

@@ -44,9 +44,11 @@ class WeatherLoader: CoreDataLoader, NetworkLoader {
     
   }()
   
-  var completionHandler: (() -> Void)!
-  init(completionHandler: @escaping () -> Void) {
-    self.completionHandler = completionHandler
+  var dataFromInternetSuccessHandler: (() -> Void)!
+  var dataFromInternetFailedHandler: (() -> Void)!
+  init(dataFromInternetSuccessHandler: @escaping () -> Void, dataFromInternetFailedHandler: @escaping () -> Void) {
+    self.dataFromInternetSuccessHandler = dataFromInternetSuccessHandler
+    self.dataFromInternetFailedHandler = dataFromInternetFailedHandler
   }
   
   func isWeatherDataEmpty() -> Bool {
@@ -57,7 +59,7 @@ class WeatherLoader: CoreDataLoader, NetworkLoader {
     }
   }
   
-  func fetchWeatherFromInternet(completion: @escaping (Result<Data, Error>) -> Void) {
+  func fetchWeatherFromInternet() {
     let url = URL(string: "http://www.cwb.gov.tw/rss/forecast/36_08.xml")!
     let request = APIRequest(url: url)
     let operation = NetworkRequestOperation(anAPIRequest: request) { [weak self] result in
@@ -102,7 +104,7 @@ class WeatherLoader: CoreDataLoader, NetworkLoader {
             } else {
               DLog("parse failed")
             }
-            self.completionHandler()
+            self.dataFromInternetSuccessHandler()
             self.requestOperationDictionary.removeValue(forKey: url)
           }
         }
@@ -110,7 +112,7 @@ class WeatherLoader: CoreDataLoader, NetworkLoader {
       case .failure:
         print("failed")
         DispatchQueue.main.async {
-          self.completionHandler()
+          self.dataFromInternetFailedHandler()
           self.requestOperationDictionary.removeValue(forKey: url)
         }
       }
@@ -118,8 +120,4 @@ class WeatherLoader: CoreDataLoader, NetworkLoader {
     requestOperationDictionary[url] = operation
     queue.addOperation(operation)
   }
-}
-
-struct DailyQuoteLoader: CoreDataLoader {
-  
 }

@@ -10,9 +10,7 @@ import UIKit
 
 class WeatherListTableView: UITableView {
   private var weatherLoader: WeatherLoader!
-  private let dailyQuoteLoader = DailyQuoteLoader()
-  private var weatherResults = [Weather]()
-  private var dailyQuote: DailyQuote!
+  private var dailyQuoteLoader: DailyQuoteLoader!
   
   enum CellIdentifier {
     static let weatherTableViewCell = "WeatherTableViewCell"
@@ -29,35 +27,48 @@ class WeatherListTableView: UITableView {
     dataSource = self
     delegate = self
     print("awakeFromNib()")
-    weatherLoader = WeatherLoader(completionHandler: {
+    weatherLoader = WeatherLoader(dataFromInternetSuccessHandler: {
       [weak self] in
       self?.reloadData()
-    })
-  }
-  
-  public func fetchWeatherFromInternet() {
-    weatherLoader.fetchWeatherFromInternet { [weak self] (_) in
+    }) {  // dataFromInternetFailedHandler
+      [weak self] in
       self?.reloadData()
     }
+    weatherLoader.fetchWeatherFromInternet()
+    dailyQuoteLoader = DailyQuoteLoader(dataFromInternetSuccessHandler: {
+      [weak self] in
+      self?.reloadData()
+    }) {  // dataFromInternetFailedHandler
+      [weak self] in
+      self?.reloadData()
+    }
+    dailyQuoteLoader.fetchFromInternet()
   }
 }
 
 // MARK: - UITableViewDataSource
 extension WeatherListTableView: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    guard weatherLoader.isWeatherDataEmpty() == false else {
-      return 0
+    var count = 0
+    if dailyQuoteLoader.isDailyQuoteDataEmpty() == false {
+      count += 1
     }
-    let newIndexPath = IndexPath(row: 0, section: 0)
-    // only get one result.
-    let weathers = ((weatherLoader.weatherFRC.object(at: newIndexPath) as! WeekWeather).covertToWeatherResults())!
-    return weathers.count
+    if weatherLoader.isWeatherDataEmpty() == false {
+      let weathers = (weatherLoader.weatherFRC.fetchedObjects!.first! as! WeekWeather).covertToWeatherResults()!
+      count += weathers.count
+    }
+    return count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = dequeueReusableCell(withIdentifier: CellIdentifier.weatherTableViewCell, for: indexPath) as! WeatherTableViewCell
-    return cell
-//    let row = indexPath.row
+    let row = indexPath.row
+    if dailyQuoteLoader.isDailyQuoteDataEmpty() == false && row == 0 {
+      let cell = dequeueReusableCell(withIdentifier: CellIdentifier.dailyQuoteTableViewCell, for: indexPath) as! DailyQuoteTableViewCell
+      return cell
+    } else {
+      let cell = dequeueReusableCell(withIdentifier: CellIdentifier.weatherTableViewCell, for: indexPath) as! WeatherTableViewCell
+      return cell
+    }
 //    switch row {
 //    case 0: // Daily quote cell.
 //      let cell = dequeueReusableCell(withIdentifier: CellIdentifier.dailyQuoteTableViewCell, for: indexPath) as! DailyQuoteTableViewCell
@@ -75,7 +86,7 @@ extension WeatherListTableView: UITableViewDelegate {
     cell.backgroundColor = UIColor.clear
     let row = indexPath.row
     if let dailyQuoteTableViewCell = cell as? DailyQuoteTableViewCell {
-      guard let quote = dailyQuote else {
+      guard let quote = dailyQuoteLoader.dailyQuote else {
         assertionFailure()
         return
       }
@@ -87,10 +98,13 @@ extension WeatherListTableView: UITableViewDelegate {
       dailyQuoteTableViewCell.articleLabel.textColor = Color.darkOrange
       dailyQuoteTableViewCell.authorLabel.textColor = Color.darkBlue
     } else if let weatherTableViewCell = cell as? WeatherTableViewCell {
-      let newIndexPath = IndexPath(row: 0, section: 0)
-      // only get one result.
-      let weathers = ((weatherLoader.weatherFRC.object(at: newIndexPath) as! WeekWeather).covertToWeatherResults())!
-      let weather = weathers[row] // minus 1 for daily quote.
+      let weathers = (weatherLoader.weatherFRC.fetchedObjects!.first! as! WeekWeather).covertToWeatherResults()!
+      var weather: Weather!
+      if dailyQuoteLoader.isDailyQuoteDataEmpty() == false {
+        weather = weathers[row - 1] // minus 1 for daily quote.
+      } else {
+        weather = weathers[row]
+      }
       weatherTableViewCell.dateLabel.text = weather.date.weekDay.getString() + " \(weather.weatherTime.getString())"
       weatherTableViewCell.highestTemperatureLabel.text = String(weather.highestTemperature)
       weatherTableViewCell.lowestTemperatureLabel.text = String(weather.lowestTemperature)
