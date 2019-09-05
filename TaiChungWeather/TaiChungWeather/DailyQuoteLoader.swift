@@ -12,6 +12,17 @@ import WebKit
 
 class DailyQuoteLoader: NSObject, CoreDataLoader {
   lazy var loaderFRC: NSFetchedResultsController<NSFetchRequestResult>! = coreDataConnect.getFRC(Constant.dailyQuoteEntityName, predicate: nil, sort: [[Constant.timeKey: false]], limit: 1)
+  // 不能用 loaderFRC.fetchedObjects 因為
+  // The value of the property is nil if performFetch() hasn’t been called.
+  lazy var coredataRequest: NSFetchRequest<DailyQuote>? = {
+    let request: NSFetchRequest<DailyQuote> = DailyQuote.fetchRequest()
+    request.sortDescriptors = [NSSortDescriptor(key: #keyPath(DailyQuote.time), ascending: false)]
+    request.fetchLimit = 1
+    guard let result = try? context.fetch(request) else {
+      return nil
+    }
+    return request
+  }()
   
   private var webView: WKWebView! // Use WKWebView to fetch daily quote. Use desktop version to view website.
   var dataFromInternetSuccessHandler: (() -> Void)!
@@ -82,22 +93,29 @@ extension DailyQuoteLoader: WKNavigationDelegate {
     DLog("didFinish")
     webView.evaluateJavaScript("document.documentElement.outerHTML.toString()",
                                completionHandler: { [weak self] (html: Any?, error: Error?) in
-                                guard let self = self else {
+                                guard let strongSelf = self else {
                                   assertionFailure()
                                   return
                                 }
                                 // Charge html content is redirection content or real content.
                                 let maxLength = 100
                                 if let string = html as? String, string.lengthOfBytes(using: .utf8) > maxLength {
-                                  self.webView = nil
+                                  strongSelf.webView = nil
                                   let success = ParserManager.shared.parseDailyQuoteHTML(htmlString: string)
                                   if success {
-                                    self.dataFromInternetSuccessHandler()
+                                    
+                                    guard let request = strongSelf.coredataRequest, let result = try? strongSelf.context.fetch(request), let tempDailyQuote = result.first else {
+                                      assertionFailure()
+                                      return
+                                    }
+                                    strongSelf.dailyQuote = tempDailyQuote
+
+                                    strongSelf.dataFromInternetSuccessHandler()
                                   } else {
-                                    self.dataFromInternetFailedHandler()
+                                    strongSelf.dataFromInternetFailedHandler()
                                   }
                                 } else {
-                                  self.dataFromInternetFailedHandler()
+                                  strongSelf.dataFromInternetFailedHandler()
                                 }
     })
   }
