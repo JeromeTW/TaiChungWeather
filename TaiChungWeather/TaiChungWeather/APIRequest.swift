@@ -18,10 +18,6 @@ struct HTTPHeader {
     let value: String
 }
 
-enum URLPath: String {
-    case apiAccess = "apiAccess"
-}
-
 struct APIRequest {
     var url: URL
     let method: HTTPMethod
@@ -35,7 +31,7 @@ struct APIRequest {
         self.body = bodyData
     }
     
-    init<JSONObject: Encodable>(url: URL, method: HTTPMethod, path: URLPath, jsonObject: JSONObject) throws {
+    init<JSONObject: Encodable>(url: URL, method: HTTPMethod = .get, jsonObject: JSONObject) throws {
         self.url = url
         self.method = method
         self.body = try JSONEncoder().encode(jsonObject)

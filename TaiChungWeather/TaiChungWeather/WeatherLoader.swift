@@ -33,6 +33,8 @@ protocol NetworkLoader {
 class WeatherLoader: CoreDataLoader, NetworkLoader {
   lazy var weatherFRC: NSFetchedResultsController<NSFetchRequestResult>! = coreDataConnect.getFRC(Constant.weatherEntityName, predicate: nil, sort: [[Constant.timeKey: false]], limit: 1)
   lazy var requestOperationDictionary = [URL : Operation]()
+  // OperationQueue 搭配 AsynchronousOperation.swift， 既可以使用 Queue 的一些好功能如 maxConcurrentOperationCount，又可以自行控制 Operation 的結束時機。這邊就可以定義當 Response 資料回來後才算是 Operation 的結束。
+  // 如果直接沒有繼承 AsynchronousOperation, 直接將 Operation 加到 Queue 中，那麼發送完 Request 後就會是 Operation 的結束時機。
   lazy var queue: OperationQueue = {
     
     var queue = OperationQueue()
@@ -59,16 +61,25 @@ class WeatherLoader: CoreDataLoader, NetworkLoader {
     let url = URL(string: "http://www.cwb.gov.tw/rss/forecast/36_08.xml")!
     let request = APIRequest(url: url)
     let operation = NetworkRequestOperation(anAPIRequest: request) { [weak self] result in
+      guard let self = self else {
+        assertionFailure()
+        return
+      }
       switch result {
       case .success(let response):
-        print("success")
         if let data = response.body {
           let parser = XMLParser(data: data)
           let delegate = WeatherParserDelegate()
           parser.delegate = delegate
           DispatchQueue.main.async {
             if parser.parse() {
-              print("parse success")
+              guard let operation = self.requestOperationDictionary[url] else {
+                return
+              }
+              // parse
+              guard operation.isCancelled == false else {
+                return
+              }
               let myContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
               let coreDataConnect = CoreDataConnect(context: myContext)
               let item = delegate.weatherItems[1]
@@ -89,22 +100,19 @@ class WeatherLoader: CoreDataLoader, NetworkLoader {
                 DLog("Insert failed.")
               }
             } else {
-              print("parse failed")
+              DLog("parse failed")
             }
-            self?.completionHandler()
-            self?.requestOperationDictionary.removeValue(forKey: url)
+            self.completionHandler()
+            self.requestOperationDictionary.removeValue(forKey: url)
           }
         }
         
       case .failure:
         print("failed")
         DispatchQueue.main.async {
-          self?.completionHandler()
-          self?.requestOperationDictionary.removeValue(forKey: url)
+          self.completionHandler()
+          self.requestOperationDictionary.removeValue(forKey: url)
         }
-      }
-      DispatchQueue.main.async {
-        
       }
     }
     requestOperationDictionary[url] = operation
