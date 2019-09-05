@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DGElasticPullToRefresh
 
 class WeatherListTableView: UITableView {
   private var weatherLoader: WeatherLoader!
@@ -20,6 +21,11 @@ class WeatherListTableView: UITableView {
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     print("init?(coder aDecoder: NSCoder)")
+  }
+  
+  deinit {
+    dg_removePullToRefresh()
+    DLog("✅ \(String(describing: type(of: self))) deinit")
   }
   
   override func awakeFromNib() {
@@ -43,6 +49,18 @@ class WeatherListTableView: UITableView {
       self?.reloadData()
     }
     dailyQuoteLoader.fetchFromInternet()
+    setUpDGElasticPullToRefresh()
+  }
+  
+  private func setUpDGElasticPullToRefresh() {
+    let loadingView = DGElasticPullToRefreshLoadingViewCircle()
+    loadingView.tintColor = UIColor.white
+    dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
+      self?.weatherLoader.fetchWeatherFromInternet()
+      self?.dailyQuoteLoader.fetchFromInternet()
+      }, loadingView: loadingView)
+    dg_setPullToRefreshFillColor(Color.orange)
+    dg_setPullToRefreshBackgroundColor(Color.lightTiffanyBlue)
   }
 }
 
@@ -56,6 +74,9 @@ extension WeatherListTableView: UITableViewDataSource {
     if weatherLoader.isWeatherDataEmpty() == false {
       let weathers = (weatherLoader.weatherFRC.fetchedObjects!.first! as! WeekWeather).covertToWeatherResults()!
       count += weathers.count
+    }
+    if dailyQuoteLoader.isDailyQuoteDataEmpty() == false && weatherLoader.isWeatherDataEmpty() == false {
+      dg_stopLoading()
     }
     return count
   }
