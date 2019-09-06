@@ -25,12 +25,12 @@ extension CoreDataLoader {
   
 }
 
-protocol NetworkLoader {
+protocol HasNetworkOperationsLoader {
   var requestOperationDictionary: [URL : Operation] { get set }
   var queue: OperationQueue { get }
 }
 
-class WeatherLoader: CoreDataLoader, NetworkLoader {
+class WeatherLoader: CoreDataLoader, HasNetworkOperationsLoader {
   lazy var weatherFRC: NSFetchedResultsController<NSFetchRequestResult>! = coreDataConnect.getFRC(Constant.weatherEntityName, predicate: nil, sort: [[Constant.timeKey: false]], limit: 1)
   lazy var requestOperationDictionary = [URL : Operation]()
   // OperationQueue 搭配 AsynchronousOperation.swift， 既可以使用 Queue 的一些好功能如 maxConcurrentOperationCount，又可以自行控制 Operation 的結束時機。這邊就可以定義當 Response 資料回來後才算是 Operation 的結束。
