@@ -11,10 +11,9 @@ import CoreData
 import WebKit
 
 class DailyQuoteLoader: NSObject, CoreDataLoader {
-  lazy var loaderFRC: NSFetchedResultsController<NSFetchRequestResult>! = coreDataConnect.getFRC(Constant.dailyQuoteEntityName, predicate: nil, sort: [[Constant.timeKey: false]], limit: 1)
   // 不能用 loaderFRC.fetchedObjects 因為
   // The value of the property is nil if performFetch() hasn’t been called.
-  lazy var coredataRequest: NSFetchRequest<DailyQuote>? = {
+  private lazy var coredataRequest: NSFetchRequest<DailyQuote>? = {
     let request: NSFetchRequest<DailyQuote> = DailyQuote.fetchRequest()
     request.sortDescriptors = [NSSortDescriptor(key: #keyPath(DailyQuote.time), ascending: false)]
     request.fetchLimit = 1
@@ -24,17 +23,24 @@ class DailyQuoteLoader: NSObject, CoreDataLoader {
     return request
   }()
   
+  public var dailyQuote: DailyQuote? {
+    guard let request = coredataRequest else {
+      return nil
+    }
+    guard let result = try? context.fetch(request), let tempDailyQuote = result.first else {
+      return nil
+    }
+    return tempDailyQuote
+  }
+  
   private var webView: WKWebView! // Use WKWebView to fetch daily quote. Use desktop version to view website.
   var dataFromInternetSuccessHandler: (() -> Void)!
   var dataFromInternetFailedHandler: (() -> Void)!
-  
-  public var dailyQuote: DailyQuote?
   
   init(dataFromInternetSuccessHandler: @escaping () -> Void, dataFromInternetFailedHandler: @escaping () -> Void) {
     super.init()
     self.dataFromInternetSuccessHandler = dataFromInternetSuccessHandler
     self.dataFromInternetFailedHandler = dataFromInternetFailedHandler
-    dailyQuote = loaderFRC.fetchedObjects?.first as? DailyQuote
   }
   
   func isDailyQuoteDataEmpty() -> Bool {
@@ -78,8 +84,6 @@ extension DailyQuoteLoader: WKNavigationDelegate {
                                       assertionFailure()
                                       return
                                     }
-                                    strongSelf.dailyQuote = tempDailyQuote
-
                                     strongSelf.dataFromInternetSuccessHandler()
                                   } else {
                                     strongSelf.dataFromInternetFailedHandler()
