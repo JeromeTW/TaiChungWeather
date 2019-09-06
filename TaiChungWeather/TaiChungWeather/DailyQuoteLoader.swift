@@ -36,21 +36,7 @@ class DailyQuoteLoader: NSObject, CoreDataLoader {
     self.dataFromInternetFailedHandler = dataFromInternetFailedHandler
     dailyQuote = loaderFRC.fetchedObjects?.first as? DailyQuote
   }
-  //  private func fetchDataDailyQuote() {
-  //    let myContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-  //    let coreDataConnect = CoreDataConnect(context: myContext)
-  //
-  //    if let results = coreDataConnect.retrieveDailyQuoteResults(predicate: nil, sort: [[Constant.timeKey: false]], limit: 1) {
-  //      guard results.count == 1 else {
-  //        // First time launch the app without history record.
-  //        KRProgressHUD.appearance().style = .black
-  //        KRProgressHUD.set(deadline: 999999.9)
-  //        KRProgressHUD.showInfo(withMessage: R.string.localizable.loading())
-  //        return
-  //      }
-  //      dailyQuote = results[0]
-  //    }
-  //  }
+  
   func isDailyQuoteDataEmpty() -> Bool {
     if coreDataConnect.getCount(Constant.dailyQuoteEntityName, predicate: nil) == 0 {
       return true
@@ -59,22 +45,6 @@ class DailyQuoteLoader: NSObject, CoreDataLoader {
     }
   }
   
-  
-  
-  //  private func queryNewDataFromInternet() {
-  //    guard currentReachabilityStatus != .notReachable else {
-  ////      weatherListTableView.dg_stopLoading()
-  //      // Show alert.
-  //      showOKAlert(R.string.localizable.internetNotReachable(), message: nil, okTitle: R.string.localizable.ok())
-  //      return
-  //    }
-  //    guard networkController.isQueryDailyQuoteFinished && networkController.isQueryWeatherFinished else {
-  //      return
-  //    }
-  //    networkController.requestDailyQuoteData()
-  //    NetworkController.shared.addDelegate(self)
-  //    networkController.requestWeatherData()
-  //  }
   func fetchFromInternet() {
     let url = URL(string: "https://tw.appledaily.com/index/dailyquote/")!
     let webConfiguration = WKWebViewConfiguration()

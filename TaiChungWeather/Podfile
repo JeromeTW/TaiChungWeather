@@ -5,7 +5,6 @@ target 'TaiChungWeather' do
 
   pod 'Ji', '~> 5.0.0'
   pod 'DGElasticPullToRefresh', :git => 'https://github.com/KennethTsang/DGElasticPullToRefresh.git'
-  pod 'KRProgressHUD'
   pod 'R.swift'
   
 end
