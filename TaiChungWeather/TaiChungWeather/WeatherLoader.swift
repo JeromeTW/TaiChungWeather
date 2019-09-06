@@ -86,7 +86,7 @@ class WeatherLoader: CoreDataLoader, HasNetworkOperationsLoader {
               let item = delegate.weatherItems[1]
               let temp = NSPredicate(format: "time = %@", item.pubDate as CVarArg)
               guard let results = coreDataConnect.retrieveWeekWeatherResults(predicate: temp, sort: nil, limit: 1), results.isEmpty else {
-                DLog("The record is already existed.")
+                printLog("The record is already existed.")
                 return
               }
               // insert
@@ -96,12 +96,12 @@ class WeatherLoader: CoreDataLoader, HasNetworkOperationsLoader {
                   Constant.contentKey : item.description as Any
                 ])
               if insertResult {
-                DLog("Insert successfully.")
+                printLog("Insert successfully.")
               } else {
-                DLog("Insert failed.")
+                printLog("Insert failed.", level: .error)
               }
             } else {
-              DLog("parse failed")
+              printLog("parse failed", level: .error)
             }
             self.dataFromInternetSuccessHandler()
             self.requestOperationDictionary.removeValue(forKey: url)
@@ -109,7 +109,7 @@ class WeatherLoader: CoreDataLoader, HasNetworkOperationsLoader {
         }
         
       case .failure:
-        print("failed")
+        printLog("failed", level: .debug)
         DispatchQueue.main.async {
           self.dataFromInternetFailedHandler()
           self.requestOperationDictionary.removeValue(forKey: url)

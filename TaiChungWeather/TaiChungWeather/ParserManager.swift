@@ -49,7 +49,7 @@ class ParserManager {
     
     let temp = NSPredicate(format: "time = %@", date as CVarArg)
     guard let results = coreDataConnect.retrieveDailyQuoteResults(predicate: temp, sort: nil, limit: 1), results.isEmpty else {
-      DLog("The record is already existed.")
+      printLog("The record is already existed.")
       return true
     }
     
@@ -61,10 +61,10 @@ class ParserManager {
         Constant.authorKey : authorAndDateString as Any
       ])
     if insertResult {
-      DLog("Insert successfully.")
+      printLog("Insert successfully.")
       return true
     } else {
-      DLog("Insert failed.")
+      printLog("Insert failed.", level: .error)
       return false
     }
   }

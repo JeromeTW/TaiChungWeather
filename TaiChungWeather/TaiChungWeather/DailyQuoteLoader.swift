@@ -66,7 +66,6 @@ class DailyQuoteLoader: NSObject, CoreDataLoader {
 
 extension DailyQuoteLoader: WKNavigationDelegate {
   func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-    DLog("didFinish")
     webView.evaluateJavaScript("document.documentElement.outerHTML.toString()",
                                completionHandler: { [weak self] (html: Any?, error: Error?) in
                                 guard let strongSelf = self else {

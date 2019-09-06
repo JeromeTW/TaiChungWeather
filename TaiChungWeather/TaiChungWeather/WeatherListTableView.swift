@@ -25,7 +25,7 @@ class WeatherListTableView: UITableView {
   
   deinit {
     dg_removePullToRefresh()
-    DLog("✅ \(String(describing: type(of: self))) deinit")
+    printLog("✅ \(self.className) deinit", level: .info)
   }
   
   override func awakeFromNib() {

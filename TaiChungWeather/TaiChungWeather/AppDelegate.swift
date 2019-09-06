@@ -13,7 +13,12 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
-  private let clearAllRecord = false  // For developing.
+  private let clearAllRecord = true  // For developing.
+  lazy var logTextView: LogTextView = {
+    let logTextView = LogTextView(frame: .zero)
+    logTextView.layer.zPosition = .greatestFiniteMagnitude
+    return logTextView
+  }()
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     #if DEBUG // Develop
@@ -33,13 +38,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           try persistentContainer.viewContext.execute(weatherBatchDeleteRequest)
           try persistentContainer.viewContext.execute(dailyQuoteBatchDeleteRequest)
         } catch {
-          DLog(error)
+          printLog(error.localizedDescription, level: .error)
         }
       }
     #endif
-    // Start to fetch data.
+    setupLogConfigure()
+    setupLogTextView()
     return true
   }
+  
+  private func setupLogConfigure() {
+    LogLevelConfigurator.shared.configure([.error, .warning, .debug, .info], shouldShow: true, shouldCache: true)
+  }
+  
+  private func setupLogTextView() {
+    #if DEBUG
+    guard let window = window else { return }
+    
+    if #available(iOS 11.0, *) {
+      window.addSubview(logTextView, constraints: [
+        UIView.anchorConstraintEqual(from: \UIView.topAnchor, to: \UIView.safeAreaLayoutGuide.topAnchor, constant: .defaultMargin),
+        UIView.anchorConstraintEqual(from: \UIView.leadingAnchor, to: \UIView.safeAreaLayoutGuide.leadingAnchor, constant: .defaultMargin),
+        UIView.anchorConstraintEqual(from: \UIView.bottomAnchor, to: \UIView.safeAreaLayoutGuide.bottomAnchor, constant: CGFloat.defaultMargin.negativeValue),
+        UIView.anchorConstraintEqual(from: \UIView.trailingAnchor, to: \UIView.safeAreaLayoutGuide.trailingAnchor, constant: CGFloat.defaultMargin.negativeValue)
+        ])
+    } else {
+      window.addSubview(logTextView, constraints: [
+        UIView.anchorConstraintEqual(with: \UIView.topAnchor, constant: .defaultMargin),
+        UIView.anchorConstraintEqual(with: \UIView.leadingAnchor, constant: .defaultMargin),
+        UIView.anchorConstraintEqual(with: \UIView.bottomAnchor, constant: CGFloat.defaultMargin.negativeValue),
+        UIView.anchorConstraintEqual(with: \UIView.trailingAnchor, constant: CGFloat.defaultMargin.negativeValue)
+        ])
+    }
+    #endif
+  }
+  
   func applicationWillTerminate(_ application: UIApplication) {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
