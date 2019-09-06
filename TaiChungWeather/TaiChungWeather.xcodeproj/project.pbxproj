@@ -156,10 +156,8 @@
 		023729752023365C009D4187 /* TaiChungWeather */ = {
 			isa = PBXGroup;
 			children = (
-				02067620231FE4A80024BC99 /* NSPersistentContainerExtension.swift */,
-				02B3836E2321429D00DDA2AA /* DailyQuoteLoader.swift */,
-				02883612231A79AF00669E27 /* WeatherLoader.swift */,
-				02BFBF66231BEF4E00CE35EA /* WeatherParserDelegate.swift */,
+				02FE83DF2321F1640079BF20 /* Core Data */,
+				02FE83DE2321F1390079BF20 /* Loader */,
 				028835FD231A78F800669E27 /* NewNetwork */,
 				023729762023365C009D4187 /* AppDelegate.swift */,
 				022292062027DE250034FE6A /* View Controllers */,
@@ -167,9 +165,6 @@
 				022292072027DE380034FE6A /* Storyboards */,
 				02372988202336F8009D4187 /* Support */,
 				022292082027DE820034FE6A /* Structs */,
-				02C5672A202556B900A5DAB8 /* ParserManager.swift */,
-				02C5672C2025604100A5DAB8 /* CoreDataConnect.swift */,
-				022292042027DD670034FE6A /* CoreDataConnect+Weather.swift */,
 				0222920120273B890034FE6A /* Cell */,
 			);
 			path = TaiChungWeather;
@@ -213,6 +208,27 @@
 				02229217202852010034FE6A /* UIViewController+Alerts.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		02FE83DE2321F1390079BF20 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				02B3836E2321429D00DDA2AA /* DailyQuoteLoader.swift */,
+				02883612231A79AF00669E27 /* WeatherLoader.swift */,
+				02BFBF66231BEF4E00CE35EA /* WeatherParserDelegate.swift */,
+				02C5672A202556B900A5DAB8 /* ParserManager.swift */,
+			);
+			name = Loader;
+			sourceTree = "<group>";
+		};
+		02FE83DF2321F1640079BF20 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				02C5672C2025604100A5DAB8 /* CoreDataConnect.swift */,
+				022292042027DD670034FE6A /* CoreDataConnect+Weather.swift */,
+				02067620231FE4A80024BC99 /* NSPersistentContainerExtension.swift */,
+			);
+			name = "Core Data";
 			sourceTree = "<group>";
 		};
 		226EEFBA9121BA95C554302B /* Frameworks */ = {
