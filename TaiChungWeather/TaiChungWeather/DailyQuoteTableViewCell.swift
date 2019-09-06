@@ -9,8 +9,7 @@
 import UIKit
 
 class DailyQuoteTableViewCell: UITableViewCell {
-  
-  @IBOutlet weak var dailyQuoteLabel: UILabel!
-  @IBOutlet weak var articleLabel: UILabel!
-  @IBOutlet weak var authorLabel: UILabel!
+  @IBOutlet var dailyQuoteLabel: UILabel!
+  @IBOutlet var articleLabel: UILabel!
+  @IBOutlet var authorLabel: UILabel!
 }

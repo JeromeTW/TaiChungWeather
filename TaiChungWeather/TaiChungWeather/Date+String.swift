@@ -9,10 +9,9 @@
 import Foundation
 
 extension Date {
-  
   enum Month: String {
     case Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec
-    
+
     func getInt() -> Int {
       switch self {
       case .Jan:
@@ -42,7 +41,7 @@ extension Date {
       }
     }
   }
-  
+
   // dateTimeString example: "Fri, 02 Feb 2018 03:18:25 GMT"
   static func dateFromString(dateTimeString: String) -> Date? {
     let array = dateTimeString.components(separatedBy: " ")
@@ -54,7 +53,7 @@ extension Date {
     guard timeArray.count == 3 else {
       return nil
     }
-    
+
     var dateComponents = DateComponents()
     dateComponents.year = Int(array[3])
     if let month = Month(rawValue: array[2]) {
@@ -65,7 +64,7 @@ extension Date {
     dateComponents.hour = Int(timeArray[0])
     dateComponents.minute = Int(timeArray[1])
     dateComponents.second = Int(timeArray[2])
-    
+
     // Create date from components
     let userCalendar = Calendar.current // user calendar
     return userCalendar.date(from: dateComponents)
@@ -83,35 +82,35 @@ extension Date {
   static func date(from dateString: String, dateFormat: DateFormat) -> Date? {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = dateFormat.rawValue
-    
+
     guard let date = dateFormatter.date(from: dateString) else { return nil }
-    
+
     return date
   }
-  
+
   static func dateString(from date: Date, dateFormat: DateFormat) -> String {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = dateFormat.rawValue
-    
+
     return dateFormatter.string(from: date)
   }
-  
+
   static func currentDateString(dateFormat: DateFormat = .yyyyMMddHHmmss) -> String {
     return Date.dateString(from: Date(), dateFormat: dateFormat)
   }
-  
+
   static func currentDateTimeIntervalSince1970() -> TimeInterval {
     return Date().timeIntervalSince1970
   }
-  
+
   static func transformDateString(_ dateString: String, from oldDateFormat: DateFormat, to newDateFormat: DateFormat) -> String? {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = oldDateFormat.rawValue
-    
+
     guard let date = dateFormatter.date(from: dateString) else { return nil }
-    
+
     dateFormatter.dateFormat = newDateFormat.rawValue
-    
+
     return dateFormatter.string(from: date)
   }
 }

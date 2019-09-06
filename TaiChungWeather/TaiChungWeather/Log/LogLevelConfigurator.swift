@@ -21,20 +21,24 @@ enum LogLevel: Int, CustomStringConvertible {
       return "📗 Info"
     }
   }
+
   case error, warning, debug, info
 }
 
 class LogLevelConfigurator {
   // MARK: - Properties
+
   static let shared = LogLevelConfigurator()
   private(set) var logLevels = [LogLevel]()
   private(set) var shouldShow = false
   private(set) var shouldCache = false
-  
+
   // MARK: - Initializer
-  private init() {  }
-  
+
+  private init() {}
+
   // MARK: - Public method
+
   func configure(_ logLevels: [LogLevel], shouldShow: Bool = false, shouldCache: Bool = false) {
     self.logLevels = logLevels
     self.shouldShow = shouldShow

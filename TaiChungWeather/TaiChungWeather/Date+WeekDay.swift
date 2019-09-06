@@ -10,7 +10,7 @@ import Foundation
 
 enum WeekDay: Int {
   case monday = 1, tuesday, wednesday, thursday, friday, saturday, sunday
-  
+
   func getString() -> String {
     switch self {
     case .monday:
@@ -29,7 +29,7 @@ enum WeekDay: Int {
       return R.string.localizable.sunday()
     }
   }
-  
+
   init(string: String) {
     switch string {
     case "Monday":
@@ -58,4 +58,3 @@ extension Date {
     return WeekDay(string: array[0])
   }
 }
-

@@ -1,10 +1,10 @@
 /*
  UIViewController+Alerts.swift
- 
+
  Copyright © 2017 SoftArts Inc. All rights reserved.
- 
+
  * Description: Show alert in UIViewController.
- 
+
  * Creation Date: 2017/7/13
  * Author: Jerome Hsieh
  * Language: Swift 3/4
@@ -12,7 +12,7 @@
  * Source: n/a
  * Reference: n/a
  * Note: n/a
- 
+
  */
 
 import UIKit
@@ -21,13 +21,12 @@ extension UIViewController {
   typealias AlterSimpleHandler = () -> Void
   typealias TextFieldHandler = ([UITextField]) -> Void
   typealias ActionHandler = ((UIAlertAction) -> Void)?
-  
+
   struct TextFieldData {
     var text: String?
     var placeholder: String?
   }
-  
-  
+
   /* Usage example:
    let actions = [
    UIAlertAction(title: "titleString", style: .destructive, handler: { _ in
@@ -48,11 +47,11 @@ extension UIViewController {
       let alert = UIAlertController(title: title,
                                     message: message,
                                     preferredStyle: .alert)
-      
+
       for action in actions {
         alert.addAction(action)
       }
-      
+
       if let textColor = textColor {
         alert.view.tintColor = textColor
         self.present(alert, animated: true) {
@@ -63,11 +62,11 @@ extension UIViewController {
       }
     }
   }
-  
-  func showOKAlert(_ title: String?, message: String?, okTitle: String, textColor: UIColor? = nil) {
+
+  func showOKAlert(_ title: String?, message: String?, okTitle: String, textColor _: UIColor? = nil) {
     showAlertWithActions(title, message: message, actions: [UIAlertAction(title: okTitle, style: .default)])
   }
-  
+
   /* Usage example:
    let inputTextFieldsData = [TextFieldData(text: nil, placeholder: nil, isSecureTextEntry: true)]
    showAlertVCWithTextFields("titleString", message: "message", textFieldsData: inputTextFieldsData, okTitle: "common_backup", cancelTitle: "common_cancel", cancelHandler: nil) { textFields in
@@ -92,7 +91,7 @@ extension UIViewController {
       let alert = UIAlertController(title: title,
                                     message: message,
                                     preferredStyle: .alert)
-      
+
       var textfields = [UITextField]()
       for textFieldData in textFieldsData {
         alert.addTextField { (textField) -> Void in
@@ -102,18 +101,18 @@ extension UIViewController {
           textfields.append(textField)
         }
       }
-      
+
       let ok = UIAlertAction(title: okTitle, style: .default) { _ in
         okHandler?(textfields)
       }
-      
+
       let cancel = UIAlertAction(title: cancelTitle, style: .default) { _ in
         cancelHandler?()
       }
-      
+
       alert.addAction(ok)
       alert.addAction(cancel)
-      
+
       if let textColor = textColor {
         alert.view.tintColor = textColor
         self.present(alert, animated: true) {
@@ -125,4 +124,3 @@ extension UIViewController {
     }
   }
 }
-

@@ -14,23 +14,23 @@ struct WeatherItem {
 }
 
 class WeatherParserDelegate: NSObject, XMLParserDelegate {
-  //保存最终解析的结果
+  // 保存最终解析的结果
   var weatherItems: [WeatherItem] = []
-  
-  //当前元素名
+
+  // 当前元素名
   var currentElement = ""
-  
-  //当前 WeatherItem
+
+  // 当前 WeatherItem
   var weatherItem: WeatherItem!
-  
-  func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
+
+  func parser(_: XMLParser, didStartElement elementName: String, namespaceURI _: String?, qualifiedName _: String?, attributes _: [String: String] = [:]) {
     currentElement = elementName
     if elementName == "item" {
       weatherItem = WeatherItem(description: "", pubDate: Date())
     }
   }
-  
-  func parser(_ parser: XMLParser, foundCharacters string: String) {
+
+  func parser(_: XMLParser, foundCharacters string: String) {
     guard weatherItem != nil else {
       return
     }
@@ -38,8 +38,8 @@ class WeatherParserDelegate: NSObject, XMLParserDelegate {
       weatherItem.pubDate = Date.dateFromString(dateTimeString: string)!
     }
   }
-  
-  func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+
+  func parser(_: XMLParser, didEndElement elementName: String, namespaceURI _: String?, qualifiedName _: String?) {
     currentElement = ""
     guard weatherItem != nil else {
       return
@@ -49,8 +49,8 @@ class WeatherParserDelegate: NSObject, XMLParserDelegate {
       weatherItem = nil
     }
   }
-  
-  func parser(_ parser: XMLParser, foundCDATA CDATABlock: Data) {
+
+  func parser(_: XMLParser, foundCDATA CDATABlock: Data) {
     guard weatherItem != nil else {
       return
     }

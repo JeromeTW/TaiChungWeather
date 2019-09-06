@@ -62,6 +62,5 @@ extension WeekWeather {
       results.append(newWeather)
     }
     return results
-    
   }
 }

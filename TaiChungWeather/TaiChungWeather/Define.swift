@@ -11,17 +11,15 @@ import UIKit
 enum Constant {
   // NSPersistentContainer
   static let perisistentContainerName = "WeekWeather" // .xcdatamodeld file name.
-  
+
   static let weatherEntityName = "WeekWeather"
   static let dailyQuoteEntityName = "DailyQuote"
-  
+
   // Entity Key
   static let timeKey = "time"
   static let contentKey = "content"
   static let authorKey = "author"
   static let articleKey = "article"
-  
-  
 }
 
 enum Color {

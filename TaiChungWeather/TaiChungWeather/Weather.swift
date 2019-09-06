@@ -11,7 +11,7 @@ import CoreData
 
 enum WeatherTime {
   case day, night
-  
+
   init(string: String) {
     if string == "白天" {
       self = .day
@@ -19,7 +19,7 @@ enum WeatherTime {
       self = .night
     }
   }
-  
+
   func getString() -> String {
     if self == .day {
       return R.string.localizable.day()
@@ -31,16 +31,16 @@ enum WeatherTime {
 
 enum WeatherDescription: String {
   case sunny = "☀️" // 晴
-  case sunnyWithcloud = "🌤"  // 晴時多雲
-  case partlySunny = "⛅️"     // 多雲時晴
-  case partlyCloudy = "🌥"    // 多雲、多雲時陰
-  case cloudy = "☁️"          // 陰天、陰時多雲
-  case sunnyCloudyRainy = "🌦"  // 多雲時陰短暫雨、多雲短暫雨
-  case rainy = "🌧"           // 陰時有雨、陰時多雲短暫雨
-  case stormy = "⛈"          // 有“暴雨”字
-  case snowy = "❄️"           // 有“雪”字
+  case sunnyWithcloud = "🌤" // 晴時多雲
+  case partlySunny = "⛅️" // 多雲時晴
+  case partlyCloudy = "🌥" // 多雲、多雲時陰
+  case cloudy = "☁️" // 陰天、陰時多雲
+  case sunnyCloudyRainy = "🌦" // 多雲時陰短暫雨、多雲短暫雨
+  case rainy = "🌧" // 陰時有雨、陰時多雲短暫雨
+  case stormy = "⛈" // 有“暴雨”字
+  case snowy = "❄️" // 有“雪”字
   case unknown = "❓"
-  
+
   init(string: String) {
     if string == "晴" {
       self = .sunny
@@ -54,7 +54,7 @@ enum WeatherDescription: String {
       self = .cloudy
     } else if string == "多雲時陰短暫雨" || string == "多雲短暫雨" {
       self = .sunnyCloudyRainy
-    } else if string == "陰時有雨" || string == "陰時多雲短暫雨" || string == "陰短暫雨"   {
+    } else if string == "陰時有雨" || string == "陰時多雲短暫雨" || string == "陰短暫雨" {
       self = .rainy
     } else if string.contains("暴雨") {
       self = .stormy
@@ -73,4 +73,3 @@ struct Weather {
   var lowestTemperature: Int
   var description: WeatherDescription
 }
-

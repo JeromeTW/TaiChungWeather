@@ -26,7 +26,7 @@ import Foundation
 // 可以自己定義何時為 Operation 的完成。
 class AsynchronousOperation: Operation {
   override var isAsynchronous: Bool { return true }
-  
+
   private var _executing: Bool = false
   override var isExecuting: Bool {
     get {
@@ -42,7 +42,7 @@ class AsynchronousOperation: Operation {
       }
     }
   }
-  
+
   private var _finished: Bool = false
   override var isFinished: Bool {
     get {
@@ -56,7 +56,7 @@ class AsynchronousOperation: Operation {
       }
     }
   }
-  
+
   /// Complete the operation
   ///
   /// This will result in the appropriate KVN of isFinished and isExecuting
@@ -66,15 +66,15 @@ class AsynchronousOperation: Operation {
       isFinished = true
     }
   }
-  
+
   override func start() {
     if isCancelled {
       isFinished = true
       return
     }
-    
+
     isExecuting = true
-    
+
     main()
   }
 }

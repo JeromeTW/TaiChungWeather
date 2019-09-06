@@ -6,8 +6,8 @@
 //  Copyright © 2019 jerome. All rights reserved.
 //
 
-import Foundation
 import CoreData
+import Foundation
 import WebKit
 
 class DailyQuoteLoader: NSObject, CoreDataLoader {
@@ -22,7 +22,7 @@ class DailyQuoteLoader: NSObject, CoreDataLoader {
     }
     return request
   }()
-  
+
   public var dailyQuote: DailyQuote? {
     guard let request = coredataRequest else {
       return nil
@@ -32,17 +32,17 @@ class DailyQuoteLoader: NSObject, CoreDataLoader {
     }
     return tempDailyQuote
   }
-  
+
   private var webView: WKWebView! // Use WKWebView to fetch daily quote. Use desktop version to view website.
   var dataFromInternetSuccessHandler: (() -> Void)!
   var dataFromInternetFailedHandler: (() -> Void)!
-  
+
   init(dataFromInternetSuccessHandler: @escaping () -> Void, dataFromInternetFailedHandler: @escaping () -> Void) {
     super.init()
     self.dataFromInternetSuccessHandler = dataFromInternetSuccessHandler
     self.dataFromInternetFailedHandler = dataFromInternetFailedHandler
   }
-  
+
   func isDailyQuoteDataEmpty() -> Bool {
     if coreDataConnect.getCount(Constant.dailyQuoteEntityName, predicate: nil) == 0 {
       return true
@@ -50,7 +50,7 @@ class DailyQuoteLoader: NSObject, CoreDataLoader {
       return false
     }
   }
-  
+
   func fetchFromInternet() {
     let url = URL(string: "https://tw.appledaily.com/index/dailyquote/")!
     let webConfiguration = WKWebViewConfiguration()
@@ -58,38 +58,37 @@ class DailyQuoteLoader: NSObject, CoreDataLoader {
     webView.navigationDelegate = self
     // Use desktop version.
     webView.customUserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36"
-    
+
     let myRequest = URLRequest(url: url)
     webView.load(myRequest)
   }
 }
 
 extension DailyQuoteLoader: WKNavigationDelegate {
-  func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+  func webView(_ webView: WKWebView, didFinish _: WKNavigation!) {
     webView.evaluateJavaScript("document.documentElement.outerHTML.toString()",
-                               completionHandler: { [weak self] (html: Any?, error: Error?) in
-                                guard let strongSelf = self else {
-                                  assertionFailure()
-                                  return
-                                }
-                                // Charge html content is redirection content or real content.
-                                let maxLength = 100
-                                if let string = html as? String, string.lengthOfBytes(using: .utf8) > maxLength {
-                                  strongSelf.webView = nil
-                                  let success = ParserManager.shared.parseDailyQuoteHTML(htmlString: string)
-                                  if success {
-                                    
-                                    guard let request = strongSelf.coredataRequest, let result = try? strongSelf.context.fetch(request), let tempDailyQuote = result.first else {
-                                      assertionFailure()
-                                      return
-                                    }
-                                    strongSelf.dataFromInternetSuccessHandler()
-                                  } else {
-                                    strongSelf.dataFromInternetFailedHandler()
-                                  }
-                                } else {
-                                  strongSelf.dataFromInternetFailedHandler()
-                                }
+                               completionHandler: { [weak self] (html: Any?, _: Error?) in
+                                 guard let strongSelf = self else {
+                                   assertionFailure()
+                                   return
+                                 }
+                                 // Charge html content is redirection content or real content.
+                                 let maxLength = 100
+                                 if let string = html as? String, string.lengthOfBytes(using: .utf8) > maxLength {
+                                   strongSelf.webView = nil
+                                   let success = ParserManager.shared.parseDailyQuoteHTML(htmlString: string)
+                                   if success {
+                                     guard let request = strongSelf.coredataRequest, let result = try? strongSelf.context.fetch(request), let tempDailyQuote = result.first else {
+                                       assertionFailure()
+                                       return
+                                     }
+                                     strongSelf.dataFromInternetSuccessHandler()
+                                   } else {
+                                     strongSelf.dataFromInternetFailedHandler()
+                                   }
+                                 } else {
+                                   strongSelf.dataFromInternetFailedHandler()
+                                 }
     })
   }
 }

@@ -6,28 +6,28 @@
 //  Copyright © 2019 jerome. All rights reserved.
 //
 
-import UIKit
 import DGElasticPullToRefresh
+import UIKit
 
 class WeatherListTableView: UITableView {
   private var weatherLoader: WeatherLoader!
   private var dailyQuoteLoader: DailyQuoteLoader!
-  
+
   enum CellIdentifier {
     static let weatherTableViewCell = "WeatherTableViewCell"
     static let dailyQuoteTableViewCell = "DailyQuoteTableViewCell"
   }
-  
+
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     print("init?(coder aDecoder: NSCoder)")
   }
-  
+
   deinit {
     dg_removePullToRefresh()
     printLog("✅ \(self.className) deinit", level: .info)
   }
-  
+
   override func awakeFromNib() {
     super.awakeFromNib()
     dataSource = self
@@ -36,7 +36,7 @@ class WeatherListTableView: UITableView {
     weatherLoader = WeatherLoader(dataFromInternetSuccessHandler: {
       [weak self] in
       self?.reloadData()
-    }) {  // dataFromInternetFailedHandler
+    }) { // dataFromInternetFailedHandler
       [weak self] in
       self?.reloadData()
     }
@@ -44,29 +44,30 @@ class WeatherListTableView: UITableView {
     dailyQuoteLoader = DailyQuoteLoader(dataFromInternetSuccessHandler: {
       [weak self] in
       self?.reloadData()
-    }) {  // dataFromInternetFailedHandler
+    }) { // dataFromInternetFailedHandler
       [weak self] in
       self?.reloadData()
     }
     dailyQuoteLoader.fetchFromInternet()
     setUpDGElasticPullToRefresh()
   }
-  
+
   private func setUpDGElasticPullToRefresh() {
     let loadingView = DGElasticPullToRefreshLoadingViewCircle()
     loadingView.tintColor = UIColor.white
     dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
       self?.weatherLoader.fetchWeatherFromInternet()
       self?.dailyQuoteLoader.fetchFromInternet()
-      }, loadingView: loadingView)
+    }, loadingView: loadingView)
     dg_setPullToRefreshFillColor(Color.orange)
     dg_setPullToRefreshBackgroundColor(Color.lightTiffanyBlue)
   }
 }
 
 // MARK: - UITableViewDataSource
+
 extension WeatherListTableView: UITableViewDataSource {
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
     var count = 0
     if dailyQuoteLoader.isDailyQuoteDataEmpty() == false {
       count += 1
@@ -75,15 +76,15 @@ extension WeatherListTableView: UITableViewDataSource {
       let weathers = (weatherLoader.weatherFRC.fetchedObjects!.first! as! WeekWeather).covertToWeatherResults()!
       count += weathers.count
     }
-    if dailyQuoteLoader.isDailyQuoteDataEmpty() == false && weatherLoader.isWeatherDataEmpty() == false {
+    if dailyQuoteLoader.isDailyQuoteDataEmpty() == false, weatherLoader.isWeatherDataEmpty() == false {
       dg_stopLoading()
     }
     return count
   }
-  
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+  func tableView(_: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let row = indexPath.row
-    if dailyQuoteLoader.isDailyQuoteDataEmpty() == false && row == 0 {
+    if dailyQuoteLoader.isDailyQuoteDataEmpty() == false, row == 0 {
       let cell = dequeueReusableCell(withIdentifier: CellIdentifier.dailyQuoteTableViewCell, for: indexPath) as! DailyQuoteTableViewCell
       return cell
     } else {
@@ -102,8 +103,9 @@ extension WeatherListTableView: UITableViewDataSource {
 }
 
 // MARK: - UITableViewDelegate
+
 extension WeatherListTableView: UITableViewDelegate {
-  func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+  func tableView(_: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
     cell.backgroundColor = UIColor.clear
     let row = indexPath.row
     if let dailyQuoteTableViewCell = cell as? DailyQuoteTableViewCell {
@@ -114,7 +116,7 @@ extension WeatherListTableView: UITableViewDelegate {
       dailyQuoteTableViewCell.dailyQuoteLabel.text = R.string.localizable.dailyQuote()
       dailyQuoteTableViewCell.articleLabel.text = quote.article
       dailyQuoteTableViewCell.authorLabel.text = quote.author
-      
+
       dailyQuoteTableViewCell.dailyQuoteLabel.textColor = Color.darkBlue
       dailyQuoteTableViewCell.articleLabel.textColor = Color.darkOrange
       dailyQuoteTableViewCell.authorLabel.textColor = Color.darkBlue
@@ -130,7 +132,7 @@ extension WeatherListTableView: UITableViewDelegate {
       weatherTableViewCell.highestTemperatureLabel.text = String(weather.highestTemperature)
       weatherTableViewCell.lowestTemperatureLabel.text = String(weather.lowestTemperature)
       weatherTableViewCell.weatherLabel.text = weather.description.rawValue
-      
+
       weatherTableViewCell.dateLabel.textColor = Color.darkBlue
       weatherTableViewCell.highestTemperatureLabel.textColor = Color.darkBlue
       weatherTableViewCell.lowestTemperatureLabel.textColor = Color.darkBlue
