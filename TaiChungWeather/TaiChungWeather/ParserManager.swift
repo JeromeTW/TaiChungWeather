@@ -38,7 +38,7 @@ class ParserManager {
     let range = authorAndDateString.index(authorAndDateString.endIndex, offsetBy: -numberOfCharactersToRemove)..<authorAndDateString.endIndex
     authorAndDateString.removeSubrange(range)
     
-    let myContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let myContext = (UIApplication.shared.delegate as! AppDelegate).viewContext
     let coreDataConnect = CoreDataConnect(context: myContext)
     let dateFormatString = "yyyyMMdd"
     // NOTE: It will covert to local timezone automatically. dateString is +08 timezone date.

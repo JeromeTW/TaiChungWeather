@@ -16,7 +16,7 @@ protocol CoreDataLoader {
 
 extension CoreDataLoader {
   var context: NSManagedObjectContext {
-    return (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    return (UIApplication.shared.delegate as! AppDelegate).viewContext
   }
   
   var coreDataConnect: CoreDataConnect {
@@ -82,8 +82,7 @@ class WeatherLoader: CoreDataLoader, HasNetworkOperationsLoader {
               guard operation.isCancelled == false else {
                 return
               }
-              let myContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-              let coreDataConnect = CoreDataConnect(context: myContext)
+              let coreDataConnect = CoreDataConnect(context: self.context)
               let item = delegate.weatherItems[1]
               let temp = NSPredicate(format: "time = %@", item.pubDate as CVarArg)
               guard let results = coreDataConnect.retrieveWeekWeatherResults(predicate: temp, sort: nil, limit: 1), results.isEmpty else {
