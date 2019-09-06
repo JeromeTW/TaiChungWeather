@@ -286,6 +286,7 @@
 			buildPhases = (
 				4DCE0FBBAB2C3073167B4C74 /* [CP] Check Pods Manifest.lock */,
 				028835EE231A149400669E27 /* R .swift Run Script */,
+				02E8E16E23227CFA00F4E191 /* Swift Lint Script */,
 				0237296F2023365C009D4187 /* Sources */,
 				023729702023365C009D4187 /* Frameworks */,
 				023729712023365C009D4187 /* Resources */,
@@ -371,6 +372,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		02E8E16E23227CFA00F4E191 /* Swift Lint Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 		4DCE0FBBAB2C3073167B4C74 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

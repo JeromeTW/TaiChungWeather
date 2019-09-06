@@ -78,10 +78,6 @@ extension DailyQuoteLoader: WKNavigationDelegate {
                                    strongSelf.webView = nil
                                    let success = ParserManager.shared.parseDailyQuoteHTML(htmlString: string)
                                    if success {
-                                     guard let request = strongSelf.coredataRequest, let result = try? strongSelf.context.fetch(request), let tempDailyQuote = result.first else {
-                                       assertionFailure()
-                                       return
-                                     }
                                      strongSelf.dataFromInternetSuccessHandler()
                                    } else {
                                      strongSelf.dataFromInternetFailedHandler()

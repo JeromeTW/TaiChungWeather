@@ -10,33 +10,44 @@ import Foundation
 
 extension Date {
   enum Month: String {
-    case Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec
+    case jan = "Jan"
+    case feb = "Feb"
+    case mar = "Mar"
+    case apr = "Apr"
+    case may = "May"
+    case jun = "Jun"
+    case jul = "Jul"
+    case aug = "Aug"
+    case sep = "Sep"
+    case oct = "Oct"
+    case nov = "Nov"
+    case dec = "Dec"
 
     func getInt() -> Int {
       switch self {
-      case .Jan:
+      case .jan:
         return 1
-      case .Feb:
+      case .feb:
         return 2
-      case .Mar:
+      case .mar:
         return 3
-      case .Apr:
+      case .apr:
         return 4
-      case .May:
+      case .may:
         return 5
-      case .Jun:
+      case .jun:
         return 6
-      case .Jul:
+      case .jul:
         return 7
-      case .Aug:
+      case .aug:
         return 8
-      case .Sep:
+      case .sep:
         return 9
-      case .Oct:
+      case .oct:
         return 10
-      case .Nov:
+      case .nov:
         return 11
-      case .Dec:
+      case .dec:
         return 12
       }
     }

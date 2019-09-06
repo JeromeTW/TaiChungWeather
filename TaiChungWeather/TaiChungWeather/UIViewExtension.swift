@@ -20,16 +20,15 @@ extension UIView {
 }
 
 // MARK: - Auto Layout method version 3
-
 extension UIView {
   typealias Constraint = (_ subview: UIView, _ superview: UIView) -> NSLayoutConstraint
-
+  
   func addSubview(_ subview: UIView, constraints: [Constraint]) {
     addSubview(subview)
     subview.translatesAutoresizingMaskIntoConstraints = false
     addConstraints(constraints.map { $0(subview, self) })
   }
-
+  
   /// ex: subview.topAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.topAnchor, constant: constant)
   /// - Parameter subviewKeyPath: subview's KeyPath
   /// - Parameter superviewKeyPath: superview's KeyPath
@@ -44,7 +43,7 @@ extension UIView {
                     constant: constant)
     }
   }
-
+  
   /// ex: subview.topAnchor.constraint(equalTo: superview.topAnchor, constant: constant)
   /// - Parameter viewKeyPath: subview's and superview's KeyPath
   /// - Parameter constant: anchors distance constant
@@ -55,7 +54,7 @@ extension UIView {
                                  to: viewKeyPath,
                                  constant: constant)
   }
-
+  
   static func dimensionConstraintEqual<LayoutAnchor>(
     withViewKeyPath1 subviewKeyPath: KeyPath<UIView, LayoutAnchor>,
     subviewAnotherKeyPath: KeyPath<UIView, LayoutAnchor>,
@@ -66,7 +65,7 @@ extension UIView {
                     multiplier: multiplier)
     }
   }
-
+  
   static func dimensionConstraintEqual<LayoutAnchor>(
     with viewKeyPath: KeyPath<UIView, LayoutAnchor>,
     constant: CGFloat) -> Constraint where LayoutAnchor: NSLayoutDimension {
@@ -77,7 +76,6 @@ extension UIView {
 }
 
 // MARK: - Auto Layout method version 2
-
 extension UIView {
   enum Anchor {
     case topAnchorConstraint(equalToTop: NSLayoutYAxisAnchor, constant: CGFloat)
@@ -89,10 +87,10 @@ extension UIView {
     case horizontalAnchorConstraint(equalToHorizontal: NSLayoutXAxisAnchor, constant: CGFloat)
     case verticalAnchorConstraint(equalToVertical: NSLayoutYAxisAnchor, constant: CGFloat)
   }
-
+  
   func anchor(_ anchors: [Anchor]) {
     translatesAutoresizingMaskIntoConstraints = false
-
+    
     anchors.forEach {
       switch $0 {
       case .topAnchorConstraint(let top, let constant):
@@ -107,9 +105,9 @@ extension UIView {
         widthAnchor.constraint(equalTo: width, multiplier: multiplier, constant: constant).isActive = true
       case .heightAnchorConstraint(let height, let multiplier, let constant):
         heightAnchor.constraint(equalTo: height, multiplier: multiplier, constant: constant).isActive = true
-      case .horizontalAnchorConstraint(let horizontal, let constant: constant):
+      case .horizontalAnchorConstraint(let horizontal, constant: let constant):
         centerXAnchor.constraint(equalTo: horizontal, constant: constant).isActive = true
-      case .verticalAnchorConstraint(let vertical, let constant: constrant):
+      case .verticalAnchorConstraint(let vertical, constant: let constrant):
         centerYAnchor.constraint(equalTo: vertical, constant: constrant).isActive = true
       }
     }
@@ -117,32 +115,31 @@ extension UIView {
 }
 
 // MARK: - Auto Layout method version 1
-
 extension UIView {
   struct AnchoredConstraints {
     var top, leading, bottom, trailing, width, height: NSLayoutConstraint?
   }
-
+  
   func centerInSuperview(size: CGSize = .zero) {
     translatesAutoresizingMaskIntoConstraints = false
-
+    
     if let horizontal = superview?.centerXAnchor {
       centerXAnchor.constraint(equalTo: horizontal).isActive = true
     }
-
+    
     if let vertical = superview?.centerYAnchor {
       centerYAnchor.constraint(equalTo: vertical).isActive = true
     }
-
+    
     if size.width != 0 {
       widthAnchor.constraint(equalToConstant: size.width).isActive = true
     }
-
+    
     if size.height != 0 {
       heightAnchor.constraint(equalToConstant: size.height).isActive = true
     }
   }
-
+  
   func fillSuperview(padding: UIEdgeInsets = .zero) {
     anchor(top: superview?.topAnchor,
            leading: superview?.leadingAnchor,
@@ -150,14 +147,14 @@ extension UIView {
            trailing: superview?.trailingAnchor,
            padding: padding)
   }
-
+  
   func anchorSize(to view: UIView) {
     translatesAutoresizingMaskIntoConstraints = false
-
+    
     widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
     heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
   }
-
+  
   @discardableResult
   func anchor(top: NSLayoutYAxisAnchor?,
               leading: NSLayoutXAxisAnchor?,
@@ -166,42 +163,40 @@ extension UIView {
               padding: UIEdgeInsets = .zero,
               size: CGSize = .zero) -> AnchoredConstraints {
     translatesAutoresizingMaskIntoConstraints = false
-
+    
     var anchoredConstraints = AnchoredConstraints()
-
+    
     if let top = top {
       anchoredConstraints.top = topAnchor.constraint(equalTo: top, constant: padding.top)
     }
-
+    
     if let leading = leading {
       anchoredConstraints.leading = leadingAnchor.constraint(equalTo: leading, constant: padding.left)
     }
-
+    
     if let bottom = bottom {
       anchoredConstraints.bottom = bottomAnchor.constraint(equalTo: bottom, constant: -padding.bottom)
     }
-
+    
     if let trailing = trailing {
       anchoredConstraints.trailing = trailingAnchor.constraint(equalTo: trailing, constant: -padding.right)
     }
-
+    
     if size.width != 0 {
       anchoredConstraints.width = widthAnchor.constraint(equalToConstant: size.width)
     }
-
+    
     if size.height != 0 {
       anchoredConstraints.height = heightAnchor.constraint(equalToConstant: size.height)
     }
-
-    [
-      anchoredConstraints.top,
-      anchoredConstraints.leading,
-      anchoredConstraints.bottom,
-      anchoredConstraints.trailing,
-      anchoredConstraints.width,
-      anchoredConstraints.height
-    ].forEach { $0?.isActive = true }
-
+    
+    [anchoredConstraints.top,
+     anchoredConstraints.leading,
+     anchoredConstraints.bottom,
+     anchoredConstraints.trailing,
+     anchoredConstraints.width,
+     anchoredConstraints.height].forEach { $0?.isActive = true }
+    
     return anchoredConstraints
   }
 }
