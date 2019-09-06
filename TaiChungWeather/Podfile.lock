@@ -1,9 +1,6 @@
 PODS:
   - DGElasticPullToRefresh (1.1)
   - Ji (5.0.0)
-  - KRActivityIndicatorView (3.0.2)
-  - KRProgressHUD (3.4.1):
-    - KRActivityIndicatorView (= 3.0.2)
   - R.swift (5.0.3):
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.1)
@@ -11,14 +8,11 @@ PODS:
 DEPENDENCIES:
   - DGElasticPullToRefresh (from `https://github.com/KennethTsang/DGElasticPullToRefresh.git`)
   - Ji (~> 5.0.0)
-  - KRProgressHUD
   - R.swift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Ji
-    - KRActivityIndicatorView
-    - KRProgressHUD
     - R.swift
     - R.swift.Library
 
@@ -34,11 +28,9 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   DGElasticPullToRefresh: 28f11a6026302a90f8ffebbc6e24748e584dddd3
   Ji: d795fed288fe78658b404c88946d753b17d8d7f4
-  KRActivityIndicatorView: a2022d5d3e366207d2690f6bcc550f83aa91241b
-  KRProgressHUD: 115363b48feb530ab1f36c4146ed22e779e0f5aa
   R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
 
-PODFILE CHECKSUM: 00dbcd4f3a3735f2a1b7e832236224cbd7e2f2ef
+PODFILE CHECKSUM: 504fe3bec86abb85954569ecdb3b9f9bcf943443
 
 COCOAPODS: 1.7.5
