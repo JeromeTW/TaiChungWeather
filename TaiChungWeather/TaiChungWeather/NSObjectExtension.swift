@@ -1,9 +1,9 @@
 //
 //  NSObjectExtension.swift
-//  DDTDemo
+//  TaiChungWeather
 //
-//  Created by Allen Lai on 2019/7/29.
-//  Copyright © 2019 Allen Lai. All rights reserved.
+//  Created by JEROME on 2019/7/29.
+//  Copyright © 2019 JEROME. All rights reserved.
 //
 
 import Foundation

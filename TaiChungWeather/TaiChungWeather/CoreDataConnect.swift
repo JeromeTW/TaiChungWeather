@@ -1,9 +1,8 @@
 //
 //  CoreDataConnect.swift
-//  ExCoreData
 //
-//  Created by joe feng on 2016/10/18.
-//  Copyright © 2016年 hsin. All rights reserved.
+//  Created by JEROME on 2016/10/18.
+//  Copyright © 2016年 JEROME. All rights reserved.
 //
 
 import Foundation
