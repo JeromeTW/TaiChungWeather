@@ -60,7 +60,7 @@ class WeatherLoader: CoreDataLoader, HasNetworkOperationsLoader {
   func fetchWeatherFromInternet() {
     let url = URL(string: "http://www.cwb.gov.tw/rss/forecast/36_08.xml")!
     let request = APIRequest(url: url)
-    let operation = NetworkRequestOperation(anAPIRequest: request) { [weak self] result in
+    let operation = NetworkRequestOperation(request: request) { [weak self] result in
       guard let self = self else {
         assertionFailure()
         return
