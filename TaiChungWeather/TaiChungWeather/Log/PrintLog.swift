@@ -42,3 +42,35 @@ func printLog(_ items: Any,
   }
   #endif
 }
+
+extension String {
+  func saveLog() throws {
+    guard let cachesDirectory = FileManager.cachesDirectory else { return }
+    let filePath = cachesDirectory.appendingPathComponent("\(Date.currentDateString(dateFormat: .yyyyMMdd)).log")
+    
+    let fileManager = FileManager.default
+    if fileManager.fileExists(atPath: filePath.path) { // adding content to file
+      let fileHandle = FileHandle(forWritingAtPath: filePath.path)
+      let content = "\(self)\n"
+      fileHandle?.seekToEndOfFile()
+      fileHandle?.write(content.data(using: .utf8) ?? Data())
+    } else { // create new file
+      do {
+        let infoDictionary = Bundle.main.infoDictionary!
+        let version = infoDictionary["CFBundleShortVersionString"] as? AnyObject
+        let buildNumber = infoDictionary["CFBundleVersion"] as? AnyObject
+        let header = "Version: \((version as? String)!)\nBuild Number: \((buildNumber as? String)!)\n"
+        let content = header + "\(self)\n"
+        try content.write(to: filePath, atomically: false, encoding: .utf8)
+      } catch {
+        throw error
+      }
+    }
+  }
+}
+
+extension FileManager {
+  static var cachesDirectory: URL? {
+    return `default`.urls(for: .cachesDirectory, in: .userDomainMask).first
+  }
+}

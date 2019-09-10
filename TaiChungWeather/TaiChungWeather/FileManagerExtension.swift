@@ -13,10 +13,6 @@ extension FileManager {
     return `default`.urls(for: .documentDirectory, in: .userDomainMask).first
   }
 
-  static var cachesDirectory: URL? {
-    return `default`.urls(for: .cachesDirectory, in: .userDomainMask).first
-  }
-
   static func fileDirectory(with pathComponent: String) throws -> URL? {
     guard let cachesDirectory = FileManager.cachesDirectory else { return nil }
     let fileDirectoryPath = cachesDirectory.appendingPathComponent(pathComponent)

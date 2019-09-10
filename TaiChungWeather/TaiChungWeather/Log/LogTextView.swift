@@ -25,6 +25,7 @@ class LogTextView: UITextView {
 
   private func setupStyle() {
     backgroundColor = .white
+    alpha = 0.7
     textColor = .black
   }
 }

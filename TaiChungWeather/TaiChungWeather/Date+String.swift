@@ -125,3 +125,14 @@ extension Date {
     return dateFormatter.string(from: date)
   }
 }
+
+extension String {
+  func date(dateFormat: DateFormat) -> Date? {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = dateFormat.rawValue
+    
+    guard let date = dateFormatter.date(from: self) else { return nil }
+    
+    return date
+  }
+}

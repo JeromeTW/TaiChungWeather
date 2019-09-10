@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02025E7F23266ACF00730648 /* TaiChungWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02025E7E23266ACF00730648 /* TaiChungWeatherTests.swift */; };
+		02025E8723266CC300730648 /* 36_08.xml in Resources */ = {isa = PBXBuildFile; fileRef = 02025E8623266CC300730648 /* 36_08.xml */; };
+		02025E8823266E1E00730648 /* WeatherParserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BFBF66231BEF4E00CE35EA /* WeatherParserDelegate.swift */; };
+		02025E8923266FF500730648 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C5673020258F0C00A5DAB8 /* Date+String.swift */; };
 		02067621231FE4A80024BC99 /* NSPersistentContainerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02067620231FE4A80024BC99 /* NSPersistentContainerExtension.swift */; };
 		0222920020273AE00034FE6A /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022291FF20273AE00034FE6A /* WeatherTableViewCell.swift */; };
 		022292032027DCED0034FE6A /* WeatherListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022292022027DCED0034FE6A /* WeatherListViewController.swift */; };
@@ -51,7 +55,21 @@
 		175B2CE79FE9E5E2051722C3 /* Pods_TaiChungWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C8B4650C26D40FC233D3EA /* Pods_TaiChungWeather.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		02025E8123266ACF00730648 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0237296B2023365C009D4187 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 023729722023365C009D4187;
+			remoteInfo = TaiChungWeather;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		02025E7C23266ACF00730648 /* TaiChungWeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaiChungWeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		02025E7E23266ACF00730648 /* TaiChungWeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaiChungWeatherTests.swift; sourceTree = "<group>"; };
+		02025E8023266ACF00730648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02025E8623266CC300730648 /* 36_08.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = 36_08.xml; sourceTree = "<group>"; };
 		02067620231FE4A80024BC99 /* NSPersistentContainerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPersistentContainerExtension.swift; sourceTree = "<group>"; };
 		022291FE202737120034FE6A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		022291FF20273AE00034FE6A /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
@@ -102,6 +120,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		02025E7923266ACF00730648 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		023729702023365C009D4187 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -113,6 +138,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02025E7D23266ACF00730648 /* TaiChungWeatherTests */ = {
+			isa = PBXGroup;
+			children = (
+				02025E7E23266ACF00730648 /* TaiChungWeatherTests.swift */,
+				02025E8623266CC300730648 /* 36_08.xml */,
+				02025E8023266ACF00730648 /* Info.plist */,
+			);
+			path = TaiChungWeatherTests;
+			sourceTree = "<group>";
+		};
 		0222920120273B890034FE6A /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				023729752023365C009D4187 /* TaiChungWeather */,
+				02025E7D23266ACF00730648 /* TaiChungWeatherTests */,
 				023729742023365C009D4187 /* Products */,
 				3281A5F726B6D29CD6536E12 /* Pods */,
 				226EEFBA9121BA95C554302B /* Frameworks */,
@@ -163,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				023729732023365C009D4187 /* TaiChungWeather.app */,
+				02025E7C23266ACF00730648 /* TaiChungWeatherTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -280,6 +317,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		02025E7B23266ACF00730648 /* TaiChungWeatherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02025E8523266ACF00730648 /* Build configuration list for PBXNativeTarget "TaiChungWeatherTests" */;
+			buildPhases = (
+				02025E7823266ACF00730648 /* Sources */,
+				02025E7923266ACF00730648 /* Frameworks */,
+				02025E7A23266ACF00730648 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				02025E8223266ACF00730648 /* PBXTargetDependency */,
+			);
+			name = TaiChungWeatherTests;
+			productName = TaiChungWeatherTests;
+			productReference = 02025E7C23266ACF00730648 /* TaiChungWeatherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		023729722023365C009D4187 /* TaiChungWeather */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 023729852023365C009D4187 /* Build configuration list for PBXNativeTarget "TaiChungWeather" */;
@@ -307,10 +362,16 @@
 		0237296B2023365C009D4187 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = jerome;
 				TargetAttributes = {
+					02025E7B23266ACF00730648 = {
+						CreatedOnToolsVersion = 10.3;
+						DevelopmentTeam = 47FGBWZVJ9;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 023729722023365C009D4187;
+					};
 					023729722023365C009D4187 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 47FGBWZVJ9;
@@ -333,11 +394,20 @@
 			projectRoot = "";
 			targets = (
 				023729722023365C009D4187 /* TaiChungWeather */,
+				02025E7B23266ACF00730648 /* TaiChungWeatherTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		02025E7A23266ACF00730648 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02025E8723266CC300730648 /* 36_08.xml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		023729712023365C009D4187 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -434,6 +504,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		02025E7823266ACF00730648 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02025E8823266E1E00730648 /* WeatherParserDelegate.swift in Sources */,
+				02025E7F23266ACF00730648 /* TaiChungWeatherTests.swift in Sources */,
+				02025E8923266FF500730648 /* Date+String.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0237296F2023365C009D4187 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -479,6 +559,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		02025E8223266ACF00730648 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 023729722023365C009D4187 /* TaiChungWeather */;
+			targetProxy = 02025E8123266ACF00730648 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		0237297A2023365C009D4187 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -516,6 +604,71 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		02025E8323266ACF00730648 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 47FGBWZVJ9;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				INFOPLIST_FILE = TaiChungWeatherTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = me.jerome.TaiChungWeatherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaiChungWeather.app/TaiChungWeather";
+			};
+			name = Debug;
+		};
+		02025E8423266ACF00730648 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 47FGBWZVJ9;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				INFOPLIST_FILE = TaiChungWeatherTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = me.jerome.TaiChungWeatherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaiChungWeather.app/TaiChungWeather";
+			};
+			name = Release;
+		};
 		023729832023365C009D4187 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -648,6 +801,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		02025E8523266ACF00730648 /* Build configuration list for PBXNativeTarget "TaiChungWeatherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02025E8323266ACF00730648 /* Debug */,
+				02025E8423266ACF00730648 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0237296E2023365C009D4187 /* Build configuration list for PBXProject "TaiChungWeather" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
