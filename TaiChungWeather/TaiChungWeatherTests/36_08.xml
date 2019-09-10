@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+<title><![CDATA[ 中央氣象局:臺中市今明天氣預報 ]]></title>
+<link>https://www.cwb.gov.tw/</link>
+<description><![CDATA[ 中央氣象局36小時天氣預報 RSS 服務--臺中市 ]]></description>
+<language>zh-tw</language>
+<copyright><![CDATA[ 使用聲明 
+          1.本局可授權個人以 RSS reader 方式使用本局RSS。
+          2.個人和非營利網站以及Blog，可以在私人、非商業用途內呈現本局 RSS內的標題資訊，詳細內容必須以連結方式連回本局，呈現資訊時必須標明該來源是「中央氣象局」，且不得更改 RSS內容及解析本 RSS 相關資訊用以製作衍生產品。
+		  3.本局保留適時修改此服務內容及格式的權利。 ]]></copyright>
+<lastBuildDate>Mon, 09 Sep 2019 08:28:17 GMT</lastBuildDate>
+<ttl>1</ttl>
+<pubDate>Mon, 09 Sep 2019 08:28:17 GMT</pubDate>
+<image>
+<title><![CDATA[ 中央氣象局:臺中市今明天氣預報 ]]></title>
+<link>https://www.cwb.gov.tw/</link>
+<url>https://www.cwb.gov.tw/rss/img/Mark.jpg</url>
+</image><item>
+<pubDate>Mon, 09 Sep 2019 08:28:17 GMT</pubDate>
+<title><![CDATA[ 臺中市09/09 今晚至明晨 晴時多雲 溫度: 25 ~ 30 降雨機率: 0% (09/09 17:00發布)]]></title>
+<link>https://www.cwb.gov.tw/V8/C/W/County/County.html?CID=66&amp;T=201909091700</link>
+<description><![CDATA[
+明日白天 晴時多雲 溫度: 25 ~ 34 降雨機率: 20% <br>
+明晚後天 晴時多雲 溫度: 26 ~ 30 降雨機率: 0% ]]></description> 
+</item>
+<item>
+	<pubDate>Mon, 09 Sep 2019 08:28:17 GMT</pubDate>
+	<title><![CDATA[ 臺中市 一週天氣預報(09/09 17:00發布)]]></title>
+	<link>https://www.cwb.gov.tw/V8/C/W/County/County.html?CID=66&amp;T=201909091700</link>
+	<description><![CDATA[
+	09/09 晚上 溫度:25 ~ 30 晴時多雲<BR>
+	09/10 白天 溫度:25 ~ 34 晴時多雲<BR>
+	09/10 晚上 溫度:26 ~ 30 晴時多雲<BR>
+	09/11 白天 溫度:26 ~ 34 晴時多雲<BR>
+	09/11 晚上 溫度:26 ~ 31 晴時多雲<BR>
+	09/12 白天 溫度:26 ~ 34 晴時多雲<BR>
+	09/12 晚上 溫度:26 ~ 31 晴時多雲<BR>
+	09/13 白天 溫度:26 ~ 34 晴時多雲<BR>
+	09/13 晚上 溫度:26 ~ 31 晴時多雲<BR>
+	09/14 白天 溫度:26 ~ 34 晴時多雲<BR>
+	09/14 晚上 溫度:26 ~ 31 晴時多雲<BR>
+	09/15 白天 溫度:26 ~ 33 晴午後短暫雷陣雨<BR>
+	09/15 晚上 溫度:26 ~ 30 多雲短暫陣雨<BR>
+	09/16 白天 溫度:26 ~ 33 晴午後短暫雷陣雨<BR>
+	]]> </description> 
+	</item>
+	</channel>
+</rss>
