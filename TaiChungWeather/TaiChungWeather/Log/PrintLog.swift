@@ -60,7 +60,8 @@ extension String {
         let version = infoDictionary["CFBundleShortVersionString"] as? AnyObject
         let buildNumber = infoDictionary["CFBundleVersion"] as? AnyObject
         let header = "Version: \((version as? String)!)\nBuild Number: \((buildNumber as? String)!)\n"
-        let content = header + "\(self)\n"
+        let APPVersionsHistory = "Versions History: " + UserDefaults.standard.APPVersionsHistory + "\n"
+        let content = header + APPVersionsHistory + "\(self)\n"
         try content.write(to: filePath, atomically: false, encoding: .utf8)
       } catch {
         throw error
@@ -72,5 +73,45 @@ extension String {
 extension FileManager {
   static var cachesDirectory: URL? {
     return `default`.urls(for: .cachesDirectory, in: .userDomainMask).first
+  }
+}
+
+extension UserDefaults {
+  var version: String {
+    let infoDictionary = Bundle.main.infoDictionary!
+    return infoDictionary["CFBundleShortVersionString"] as! String
+  }
+  
+  func setAPPVersionAndHistory() {
+    let historyKey = "APPVersionsHistory"
+    if var versionHistory = self.string(forKey: historyKey) {
+      if lastVersion != version {
+        // 如果版本號不同了，記錄在 APPVersionsHistory 中。
+        versionHistory += " -> \(version)"
+        set(versionHistory, forKey: historyKey)
+      }
+    } else {
+      set(version, forKey: historyKey)
+    }
+    setAPPVersion()
+  }
+  
+  var APPVersionsHistory: String {
+    let key = "APPVersionsHistory"
+    guard let result = string(forKey: key) else {
+      assertionFailure("Not set APPVersionsHistory")
+      return ""
+    }
+    return result
+  }
+  
+  private func setAPPVersion() {
+    let key = "APPVersion"
+    set(version, forKey: key)
+  }
+  
+  var lastVersion: String? {
+    let key = "APPVersion"
+    return string(forKey: key)
   }
 }

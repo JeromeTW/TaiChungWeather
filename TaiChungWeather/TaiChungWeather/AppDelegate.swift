@@ -41,6 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       }
     }
     #endif
+    UserDefaults.standard.setAPPVersionAndHistory()
     setupLogConfigure()
     setupLogTextView()
     printLog("NSHomeDirectory:\(NSHomeDirectory())", level: .debug)
