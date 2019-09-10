@@ -34,7 +34,8 @@ class WeatherParserDelegate: NSObject, XMLParserDelegate {
     guard weatherItem != nil else {
       return
     }
-    if currentElement == "pubdate" {
+    if currentElement == "pubDate" {
+      print("pubdate string:\(string)")
       weatherItem.pubDate = Date.dateFromString(dateTimeString: string)!
     }
   }
